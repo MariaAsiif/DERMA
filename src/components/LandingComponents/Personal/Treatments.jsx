@@ -19,7 +19,7 @@ const Treatments = () => {
                                     </div>
                                     <h2 className='xl:text-[18px] text-[18px] text-[#171928] font-intr font-normal uppercase '>{item?.heading}</h2>
                                     <span className='text-[#C9E065] font-normal font-sans  uppercase text-[14px] leading-[20px]'>{item?.subHeading}</span>
-                                    <div className=' pb-5  h-[140px] relative'>
+                                    <div className=' pb-5  h-[140px] relative z-30'>
                                         <p className='text-[15px] leading-[27px] max-w-[230px] font-sans  mx-auto'> {item?.desc}
                                         </p>
                                         <button className='bg-[#1F3D64] font-sans absolute bottom-0 xl:right-[35%] right-[38%] max-w-[80px]   text-[#C9E065] mt-2 rounded-full px-2 font-semibold text-[10px] py-1'>Learn More</button>

@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
 
   return (
     <div className='relative'>
-      <div className='fixed w-full shadow-md'>
+      <div className='fixed w-full shadow-md z-50'>
         <TopMarquee />
         <Header type={scrollTop} />
       </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-const Specialist = () => {
+const Specialist = ({open}) => {
   const [activeTab, setActiveTab] = useState(0)
   return (
     <>
@@ -12,7 +12,7 @@ const Specialist = () => {
           <p className='xl:text-[20px] text-[16px] font-normal xl:leading-[50px] font-sans  pt-[15px] '>Dr Maham Khan is an experienced doctor known for her warmth, approachability, and dedication to dermatology. Having trained at the renowned Imperial College Healthcare she now works at leading hospitals in London. She is an internationally renowned dermatologist, who has worked within the NHS for many years. She has gained further experience in the field by doing Masters in Clinical Dermatology from the prestigious St John's Institute of Dermatology. She has carried out cosmetic Dermatology Procedures at Harley Street, London. She has a special interest in acne, skin cancer and inflammatory skin conditions. She believes in a holistic approach to patient management.
           </p>
 
-          <button className='bg-[#1F3D64] font-sans text-[#C9E065] rounded-md py-4 px-8 mt-[35px] uppercase font-semibold xl:text-[22px] text-[18px]'>make appointment</button>
+          <button onClick={() => open(true)} className='bg-[#1F3D64] font-sans text-[#C9E065] rounded-md py-4 px-8 mt-[35px] uppercase font-semibold xl:text-[22px] text-[18px]'>make appointment</button>
         </div>
         <div className='pt-[50px]'>
           <div className='border-b'>

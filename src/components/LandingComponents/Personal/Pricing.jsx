@@ -1,16 +1,12 @@
 
 import React from 'react'
 import { useState } from 'react'
-import Popup from '../../../util/popup/Popup'
-import RequestForCall from './RequestForCall'
 
-const Pricing = () => {
+const Pricing = ({open}) => {
     const [activePrice, setActivePrice] = useState(1)
-    const [show, setShow] = useState(false)
     const priceList = [{ heading: 'BLISS', price: '49', desc: '' }, { heading: 'REJUVENATE', price: '99', desc: '' }, { heading: 'GLAMOUR', price: '149', desc: '' }]
     return (
         <>
-            {show && <Popup modalOpen={true} onClose={() => setShow(false)} data={<RequestForCall />} />}
             <div className='container mx-auto xl:px-10  px-5 pt-[40px] appointment' id="appointment">
                 <h1 className='uppercase xl:text-[40px] text-[25px] font-sans  text-center font-bold text-[#333333]'>SIMPLE <span className='text-[#C9E065] '>PRICING</span></h1>
                 <h2 className='xl:text-[30px] text-[21px] font-sans  font-normal text-[#898989] text-center '>Choose a pricing plan that fits for you.</h2>
@@ -26,7 +22,7 @@ const Pricing = () => {
                                 <p className='text-[#1F3D64] font-sans  font-normal text-[18px] leading-[30px]'>Dummy Text</p>
                                 <p className='text-[#1F3D64] font-sans  font-normal text-[18px] leading-[30px]'>Dummy Text</p>
                                 <p className='text-[#1F3D64] font-sans  font-normal text-[18px] leading-[30px]'>Dummy Text</p>
-                                <button onClick={() => setShow(true)} className={` mt-[20px] text-center border  px-5 py-2 ${activePrice === i ? 'bg-[#C9E065] border-[#C9E065] shadow-md rounded text-white' : 'bg-transparent text-[#1F3D64] border-[#1F3D64]'} font-jose uppercase xl:text-[18px] md:text-[16px] text-[14px] font-bold`}>choose this plan</button>
+                                <button onClick={() => open(true)} className={` mt-[20px] text-center border  px-5 py-2 ${activePrice === i ? 'bg-[#C9E065] border-[#C9E065] shadow-md rounded text-white' : 'bg-transparent text-[#1F3D64] border-[#1F3D64]'} font-jose uppercase xl:text-[18px] md:text-[16px] text-[14px] font-bold`}>choose this plan</button>
                             </div>
 
                         ))
