@@ -1,7 +1,9 @@
 
 import React from 'react'
+import { useState } from 'react'
 
 const Pricing = () => {
+    const [activePrice, setActivePrice] = useState(1)
     const priceList = [{ heading: 'BLISS', price: '49', desc: '' }, { heading: 'REJUVENATE', price: '99', desc: '' }, { heading: 'GLAMOUR', price: '149', desc: '' }]
     return (
         <>
@@ -13,14 +15,14 @@ const Pricing = () => {
                 <div className='grid xl:grid-cols-3 md:grid-cols-3 gap-5 pt-[30px]'>
                     {
                         priceList.map((item, i) => (
-                            <div key={i} className={`   border-2 pb-5 flex flex-col justify-center items-center rounded ${i === 1 ? 'border-[#C9E065]' :'border-[#1F3D64]'}`}>
-                                <h2 className={`text-[20px] ${i === 1 ? 'text-[#C9E065]' :'text-[#1F3D64]'} font-semibold font-sans  pt-5`}>{item?.heading}</h2>
-                                <h2 className={`flex font-bold font-sans  text-[60px] ${i === 1 ?'text-[#C9E065]': 'text-[#1F3D64]'} `}><span className='text-[30px] font-normal'>$</span>{item?.price}</h2>
+                            <div key={i} onClick={() => setActivePrice(i)} className={`  border-2 pb-5 flex cursor-pointer flex-col justify-center items-center rounded ${activePrice === i ? 'border-[#C9E065]' : 'border-[#1F3D64]'}`}>
+                                <h2 className={`text-[20px] ${ activePrice === i ? 'text-[#C9E065]' : 'text-[#1F3D64]'} font-semibold font-sans  pt-5`}>{item?.heading}</h2>
+                                <h2 className={`flex font-bold font-sans  text-[60px] ${activePrice === i ? 'text-[#C9E065]' : 'text-[#1F3D64]'} `}><span className='text-[30px] font-normal'>$</span>{item?.price}</h2>
                                 <p className='text-[#1F3D64] font-sans  font-normal text-[18px] leading-[30px]'>Dummy Text</p>
                                 <p className='text-[#1F3D64] font-sans  font-normal text-[18px] leading-[30px]'>Dummy Text</p>
                                 <p className='text-[#1F3D64] font-sans  font-normal text-[18px] leading-[30px]'>Dummy Text</p>
                                 <p className='text-[#1F3D64] font-sans  font-normal text-[18px] leading-[30px]'>Dummy Text</p>
-                                <button className={` mt-[20px] text-center border  px-5 py-2 ${i === 1 ?'bg-[#C9E065] border-[#C9E065] shadow-md rounded text-white': 'bg-transparent text-[#1F3D64] border-[#1F3D64]'} font-jose uppercase xl:text-[18px] md:text-[16px] text-[14px] font-bold`}>choose this plan</button>
+                                <button className={` mt-[20px] text-center border  px-5 py-2 ${activePrice === i ? 'bg-[#C9E065] border-[#C9E065] shadow-md rounded text-white' : 'bg-transparent text-[#1F3D64] border-[#1F3D64]'} font-jose uppercase xl:text-[18px] md:text-[16px] text-[14px] font-bold`}>choose this plan</button>
                             </div>
 
                         ))
