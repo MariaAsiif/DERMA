@@ -1,5 +1,7 @@
 import React from 'react'
-import follow from '../../assests/instagrambanner.png'
+import follow1 from '../../assests/before after for website.png'
+import follow2 from '../../assests/before after for website (1).png'
+import follow3 from '../../assests/before after for website (2).png'
 import send from '../../assests/pseudo.png'
 const Footer = () => {
   return (
@@ -7,8 +9,13 @@ const Footer = () => {
       <div className='pt-[50px]'>
         <div className='container mx-auto px-10 pb-5
  '>
-          <h2 className='text-center font-sans  font-medium text-[23px] pb-5'>Follow on Instagram</h2>
-          <img src={follow} alt="folow" className='object-cover' />
+          <h2 className='text-center font-sans  font-medium text-[23px] pb-5'>Before | After</h2>
+          <div className='flex items-center justify-center'>
+          <img src={follow1} alt="folow" className='object-cover w-[30%]' />
+          <img src={follow2} alt="folow" className='object-cover w-[30%]' />
+          <img src={follow3} alt="folow" className='object-cover w-[30%]' />
+
+          </div>
         </div>
 
         {/* bottom footer */}

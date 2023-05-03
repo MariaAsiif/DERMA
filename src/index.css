@@ -1,6 +1,13 @@
 
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* CUSTUM CSS  */
+
+#nav-item .active > h2 {
+    border-bottom: 1px solid #333;
+    font-weight: bold;
+     border-bottom: 3pt solid #C9E065;
+}
