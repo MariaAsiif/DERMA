@@ -6,10 +6,10 @@ module.exports = {
   ],
   theme: {
     extend: {
-     
+
       screens: {
-        'tablet': {'min': '600px', 'max': '767px'},
-        'xtra-small': { 'min': '520px', 'max': '599px'},
+        'tablet': { 'min': '600px', 'max': '767px' },
+        'xtra-small': { 'min': '520px', 'max': '599px' },
         // => @media (min-width: 640px) { ... }
       },
       backgroundImage: {
@@ -23,6 +23,13 @@ module.exports = {
         'votreImg': "url(./assests/svg/Vehicle renting.svg)",
         'contactImg': "url(./assests/contact.png)",
       }
+    },
+    fontFamily: {
+      'Herr': ['Herr Von Muellerhoff', 'cursive'],
+      'jose': ['Josefin Sans', "sans-serif"],
+      'sans ': ['Open Sans', 'sans-serif'],
+      'intr': ['Inter', 'sans-serif'],
+      'mons': ['Montserrat', 'sans-serif'],
     },
 
   },

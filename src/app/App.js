@@ -1,10 +1,12 @@
 import React from 'react'
-import Personal from '../pages/Personal'
-
+import {
+  RouterProvider,
+} from "react-router-dom";
+import { router  } from '../routes/Routes';
 const App = () => {
   return (
     <>
-      <Personal />
+       <RouterProvider router={router} />
     </>
   )
 }
