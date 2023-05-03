@@ -12,10 +12,10 @@ const Popup = ({ modalOpen, onClose, data }) => {
 
     return (
         <>
-            <Modal open={modalOpen} className="" onClose={onClose} center>
-                <div className="bg-white rounded shadow-lg overflow-auto p-5">
+            <Modal classNames="rounded-md" open={modalOpen} className="" onClose={onClose} center>
+                <div className="">
                     {/* Modal header */}
-                    <div className=''>
+                    <div className=' pt-5'>
                         {data}
                     </div>
                 </div>
