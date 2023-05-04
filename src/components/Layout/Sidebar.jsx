@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { BsArrowLeft } from 'react-icons/bs';
-import { Link, useLocation } from 'react-router-dom';
+import {  useLocation } from 'react-router-dom';
 import logo from '../../assests/lure-logo 1.png'
 
 function Sidebar({

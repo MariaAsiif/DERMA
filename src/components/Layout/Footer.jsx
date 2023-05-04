@@ -3,6 +3,11 @@ import follow1 from '../../assests/before after for website.png'
 import follow2 from '../../assests/before after for website (1).png'
 import follow3 from '../../assests/before after for website (2).png'
 import send from '../../assests/pseudo.png'
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+// import required modules
+import { Autoplay } from "swiper";
 const Footer = () => {
   return (
     <>
@@ -10,12 +15,42 @@ const Footer = () => {
         <div className='container mx-auto px-10 pb-5
  '>
           <h2 className='text-center font-sans  font-medium text-[23px] pb-5'>Before | After</h2>
-          <div className='flex items-center justify-center'>
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={30}
+            pagination={{
+              clickable: true,
+            }}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            modules={[Autoplay]}
+            className="mySwiper"
+          >
+
+            <SwiperSlide>
+              <img src={follow1} alt="folow" className='object-cover ' />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={follow2} alt="folow" className='object-cover ' />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={follow3} alt="folow" className='object-cover ' />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={follow1} alt="folow" className='object-cover ' />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={follow2} alt="folow" className='object-cover ' />
+            </SwiperSlide>
+          </Swiper>
+          {/* <div className='flex items-center justify-center'>
           <img src={follow1} alt="folow" className='object-cover w-[30%]' />
           <img src={follow2} alt="folow" className='object-cover w-[30%]' />
-          <img src={follow3} alt="folow" className='object-cover w-[30%]' />
+          <img src={follow3} alt="folow" className='object-cover w-[30%]' /> */}
 
-          </div>
+          {/* </div> */}
         </div>
 
         {/* bottom footer */}

@@ -2,8 +2,11 @@ import React, { useState, useEffect } from 'react'
 import Header from './Header'
 import Footer from './Footer'
 import TopMarquee from './TopMarquee'
+import Popup from '../../util/popup/Popup'
+import RequestForCall from '../../components/LandingComponents/Personal/RequestForCall'
 
 const Layout = ({ children }) => {
+  const [show, setShow] = useState(false)
   const [scrollTop, setScrollTop] = useState(0)
 
   const isSticky = () => {
@@ -20,20 +23,27 @@ const Layout = ({ children }) => {
   }, [scrollTop]);
 
 
+  // const handleClick = () => {
+  //   setShow(!show);
+  // }
+
+
 
   return (
-    <div className='relative'>
-      <div className='fixed w-full shadow-md z-50'>
-        <TopMarquee />
-        <Header type={scrollTop} />
+    <>
+
+      {show && <Popup modalOpen={show} onClose={() => setShow(false)} data={<RequestForCall />} />}
+      <div className='relative'>
+        <div className='fixed w-full shadow-md z-50'>
+          <TopMarquee />
+          <Header type={scrollTop} open={setShow} />
+        </div>
+        <main className='xl:pt-32 pt-20'>
+          { children }
+        </main>
+        <Footer />
       </div>
-      <main className='xl:pt-32 pt-20'>
-        {
-          children
-        }
-      </main>
-      <Footer />
-    </div>
+    </>
   )
 }
 

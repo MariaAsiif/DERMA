@@ -16,7 +16,6 @@ const Personal = () => {
     return (
         <Layout>
             {show && <Popup modalOpen={show} onClose={() => setShow(false)} data={<RequestForCall />} />}
-
             <Banner  />
             <Specialist open={setShow}/>
             <Treatments />

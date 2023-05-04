@@ -4,9 +4,9 @@ import { GoThreeBars } from "react-icons/go";
 import Sidebar from './Sidebar';
 import { Link as ScrollLink } from "react-scroll";
 // import { useLocation } from 'react-router-dom'
-const Header = ({ type }) => {
+const Header = ({ type, open }) => {
     // const location = useLocation().pathname
-    const location = "/"
+    // const location = "/"
     const [sideNavShow, setSideNavShow] = useState(false);
 
     return (
@@ -29,19 +29,19 @@ const Header = ({ type }) => {
                             <ul className='flex pr-10 items-center justify-between text-[16px] '>
                                 <li className='pt-4 ' id="nav-item">
                                     <ScrollLink
-                                       activeClass="active"
+                                        activeClass="active"
                                         to="banner"
                                         spy={true}
                                         smooth={true}
                                         offset={-70}
                                         duration={500}   >
-                                    <h2 className={` pb-3 px-3 cursor-pointer`}>HOME</h2>
+                                        <h2 className={` pb-3 px-3 cursor-pointer`}>HOME</h2>
                                     </ScrollLink>
 
                                 </li>
                                 <li className='pt-3 ' id="nav-item">
                                     <ScrollLink
-                                       activeClass="active"
+                                        activeClass="active"
                                         to="about"
                                         spy={true}
                                         smooth={true}
@@ -52,7 +52,7 @@ const Header = ({ type }) => {
                                 </li>
                                 <li className='pt-3 ' id="nav-item">
                                     <ScrollLink
-                                       activeClass="active"
+                                        activeClass="active"
                                         to="treatment"
                                         spy={true}
                                         smooth={true}
@@ -63,7 +63,7 @@ const Header = ({ type }) => {
                                 </li>
                                 <li className='pt-3 ' id="nav-item">
                                     <ScrollLink
-                                       activeClass="active"
+                                        activeClass="active"
                                         to="appointment"
                                         spy={true}
                                         smooth={true}
@@ -95,7 +95,7 @@ const Header = ({ type }) => {
                                     </ScrollLink>
                                 </li>
                                 <li>
-                                    <div className='border rounded-full py-2 bg-[#1F3D64] text-[#C9E065] px-5'><h2 className='font-bold text-[16px]'>REQUEST CALL BACK</h2></div>
+                                    <div onClick={() => open(true)} className='border cursor-pointer rounded-full py-2 bg-[#1F3D64] text-[#C9E065] px-5'><h2 className='font-bold text-[16px]'>REQUEST CALL BACK</h2></div>
                                 </li>
                             </ul>
                         </div>
