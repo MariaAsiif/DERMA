@@ -9,16 +9,16 @@ const Results = () => {
   return (
     <>
       <div className='container mx-auto  xl:px-20 px-5 pt-[50px] '>
-        <h2 className='text-[#C9E065]  leading-0 text-[60px] font-normal font-Herr '>Acne Result</h2>
-        <div className='flex justify-between items-center -mt-[30px]'>
-          <h1 className='text-[#1F3D64]  uppercase leading-0 text-[36px] font-sans font-medium'>effective treatments with spectacular results</h1>
+        <h2 className='text-[#C9E065]  leading-0 lg:text-[60px] text-[40px] md:text-[50px] font-normal font-Herr '>Acne Result</h2>
+        <div className='flex lg:flex-nowrap flex-wrap justify-between items-center lg:-mt-[30px]'>
+          <h1 className='text-[#1F3D64]  uppercase leading-0 lg:text-[36px] md:text-[28px] text-[20px] font-sans font-medium'>effective treatments with spectacular results</h1>
 
-          <button className='rounded-full font-bold font-sans mt-3 bg-[#1F3D64] text-[#C9E065] hover:bg-[#C9E065] hover:text-[#1F3D64] uppercase px-8 py-3 '>view more</button>
+          <button className='rounded-full lg:text-[16px] text-[14px] font-bold font-sans mt-3 bg-[#1F3D64] text-[#C9E065] hover:bg-[#C9E065] hover:text-[#1F3D64] uppercase px-8 py-3 '>view more</button>
 
         </div>
 
         <div className='pt-[50px]'>
-          <div className='grid grid-cols-2 gap-5'>
+          <div className='grid lg:grid-cols-2 md:grid-cols-2 gap-5'>
             <div className=''>
               <div className='grid grid-cols-2'>
                 <img src={r1} alt={r1} className='object-cover' />

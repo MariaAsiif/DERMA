@@ -10,9 +10,9 @@ const SkinCare = () => {
     <>
       <div className='flex pt-[80px]'>
         <div className='w-full'>
-          <div className='lg:ml-[9%]'>
-            <h2 className='text-[#C9E065]  leading-0 text-[60px] font-normal font-Herr '>Our Services</h2>
-            <h1 className='text-[#1F3D64] -mt-[30px] uppercase leading-0 text-[41px] font-sans font-semibold'>Skin Care Treatment Options</h1>
+          <div className='lg:ml-[9%] md:ml-[4%] ml-[4%]'>
+            <h2 className='text-[#C9E065]  leading-0 lg:text-[60px] md:text-[50px] text-[40px] font-normal font-Herr '>Our Services</h2>
+            <h1 className='text-[#1F3D64] lg:-mt-[30px] uppercase leading-0 lg:text-[41px] text-[25px] md:text-[35px] font-sans font-semibold'>Skin Care Treatment Options</h1>
             <div>
               <div className='grid xl:grid-cols-3 md:grid-cols-2 gap-5 pt-[40px]'>
                 {
@@ -35,14 +35,14 @@ const SkinCare = () => {
                 }
               </div>
               <div className='flex justify-center items-center'>
-                <button className='rounded-full text-[16px] font-bold font-sans mt-10 bg-[#1F3D64] text-[#C9E065] hover:bg-[#C9E065] hover:text-[#1F3D64] uppercase px-8 py-3 '>View All Services</button>
+                <button className='rounded-full lg:text-[16px] text-[14px] font-bold font-sans mt-10 bg-[#1F3D64] text-[#C9E065] hover:bg-[#C9E065] hover:text-[#1F3D64] uppercase px-8 py-3 '>View All Services</button>
               </div>
 
             </div>
 
           </div>
         </div>
-        <div>
+        <div className='lg:block hidden md:block'>
           <img src={skinImg} alt={skinImg} className='object-cover w-full h-full rounded-l-[50px]' />
         </div>
       </div>

@@ -13,8 +13,8 @@ const Review = () => {
     <>
       <div className='container mx-auto  xl:px-20 px-5 pt-[80px]'>
         <div className='text-center'>
-          <h2 className='text-[#C9E065]  leading-0 text-[60px] font-normal font-Herr '>Our Patients Reviews</h2>
-          <h1 className='text-[#1F3D64] -mt-[30px] uppercase leading-0 text-[41px] font-sans font-semibold'>Our Patients satisfaction review</h1>
+          <h2 className='text-[#C9E065]  leading-0 lg:text-[60px] md:text-[50px] text-[40px] font-normal font-Herr '>Our Patients Reviews</h2>
+          <h1 className='text-[#1F3D64] lg:-mt-[30px] uppercase leading-0 lg:text-[41px] md:text-[30px] text-[22px] font-sans font-semibold'>Our Patients satisfaction review</h1>
         </div>
 
         <div className='pt-[40px]'>
@@ -25,11 +25,30 @@ const Review = () => {
             pagination={{
               clickable: true,
             }}
+
+            breakpoints={{
+              375: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+              },
+              1024: {
+                slidesPerView: 4,
+                spaceBetween: 50,
+              },
+            }}
           
             modules={[Pagination]}
             className="swiper_review"
           >
-            <div className='grid grid-cols-4 gap-5 '>
+            <div className='grid lg:grid-cols-4 gap-5 '>
               {Array(5).fill(5).map((_, i) => (
                 <SwiperSlide key={i}>
                   <div className=' p-4 rounded-md  bg-white' style={{ boxShadow: '0px 12px 12px rgba(0, 0, 0, 0.16)', border: ' 3px solid rgba(28, 28, 28, 0.1)' }}>

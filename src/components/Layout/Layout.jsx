@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import Header from './Header'
-// import Footer from './Footer'
+import Footer from './Footer'
 import TopMarquee from './TopMarquee'
 import Popup from '../../util/popup/Popup'
 import RequestForCall from '../../components/LandingComponents/Personal/RequestForCall'
 import HomeFooter from './HomeFooter'
+import { useLocation } from 'react-router-dom'
 
 const Layout = ({ children }) => {
   const [show, setShow] = useState(false)
   const [scrollTop, setScrollTop] = useState(0)
+
+  const location = useLocation().pathname
 
   const isSticky = () => {
     const scrollData = window.scrollY;
@@ -40,10 +43,13 @@ const Layout = ({ children }) => {
           <Header type={scrollTop} open={setShow} />
         </div>
         <main className='xl:pt-32 pt-20'>
-          { children }
+          {children}
         </main>
-        {/* <Footer /> */}
-        <HomeFooter/>
+        {location === "/personal" ?
+          <Footer />
+          :
+          <HomeFooter />
+        }
       </div>
     </>
   )
