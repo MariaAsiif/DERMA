@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import Header from './Header'
-import Footer from './Footer'
+// import Footer from './Footer'
 import TopMarquee from './TopMarquee'
 import Popup from '../../util/popup/Popup'
 import RequestForCall from '../../components/LandingComponents/Personal/RequestForCall'
+import HomeFooter from './HomeFooter'
 
 const Layout = ({ children }) => {
   const [show, setShow] = useState(false)
@@ -41,7 +42,8 @@ const Layout = ({ children }) => {
         <main className='xl:pt-32 pt-20'>
           { children }
         </main>
-        <Footer />
+        {/* <Footer /> */}
+        <HomeFooter/>
       </div>
     </>
   )

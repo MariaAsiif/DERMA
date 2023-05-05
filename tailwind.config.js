@@ -13,15 +13,8 @@ module.exports = {
         // => @media (min-width: 640px) { ... }
       },
       backgroundImage: {
-        'footerTop': "url('./assests/webFooter.png')",
-        'banner': "url('./assests/banner.png')",
-        'footerBg': "url('./assests/svg/Footerbackground.svg')",
-        'notreImg': "url(./assests/notre.png)",
-        'notreMobiity': "url(./assests/svg/HelpCenter.svg)",
-        'helpSupport': "url(./assests/line.png)",
-        'appImg': "url(./assests/app.png)",
-        'votreImg': "url(./assests/svg/Vehicle renting.svg)",
-        'contactImg': "url(./assests/contact.png)",
+        'sliderImage': "url('./assests/Slider.png')",
+        
       }
     },
     fontFamily: {

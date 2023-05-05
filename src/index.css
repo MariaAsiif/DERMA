@@ -4,10 +4,37 @@
 @tailwind utilities;
 
 
-/* CUSTUM CSS  */
+/* CUSTUM CSS   */
 
+
+
+/* HEADER  */
 #nav-item .active > h2 {
     border-bottom: 1px solid #333;
     font-weight: bold;
      border-bottom: 3pt solid #C9E065;
+}
+
+
+/* SWIPER   */
+
+.slider_swiper   .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+    top: 70% !important;
+    right: 0px !important;
+    left: 20% !important;
+
+}
+
+
+.swiper_review{
+    padding-bottom: 80px !important;
+    height: 100%;
+}
+
+ .swiper-pagination-bullet{
+    background-color: #C9E065 !important;
+}
+
+.slider_swiper .swiper-pagination-bullet .swiper-pagination-bullet-active{
+    background-color: #1F3D64 !important;
 }
