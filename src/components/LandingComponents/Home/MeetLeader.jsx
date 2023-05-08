@@ -4,7 +4,7 @@ import faeImag from '../../../assests/Rectangle 7.png'
 const MeetLeader = () => {
   return (
     <>
-      <div className='container mx-auto  xl:px-10 px-5 pt-[80px]  relative'>
+      <div className='container mx-auto  xl:px-10 px-5 pt-[80px] mb-[80px] relative'>
         <div className='border-4 lg:h-[400px] rounded-2xl  border-[#C9E065] lg:px-0 px-3 lg:py-0 py-3'>
           <div className='max-w-[800px] lg:ml-[50%] md:ml-[50%] lg:pt-0 md:pt-0 pt-[20rem]'>
             <h2 className='text-[#C9E065]  leading-0  text-[60px] font-normal font-Herr text-center'>About <br /> Us</h2>

@@ -6,11 +6,10 @@ import Footer from './Footer'
 const HomeFooter = () => {
     return (
         <>
-            <div className=' pt-[80px]'>
+            <div className=''>
                 <SummerSkin />
                 <BookAppointment />
             </div>
-
             <Footer />
         </>
     )

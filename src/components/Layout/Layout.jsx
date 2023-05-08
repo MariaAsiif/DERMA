@@ -6,6 +6,7 @@ import Popup from '../../util/popup/Popup'
 import RequestForCall from '../../components/LandingComponents/Personal/RequestForCall'
 import HomeFooter from './HomeFooter'
 import { useLocation } from 'react-router-dom'
+import HomeHeader from './HomeHeader'
 
 const Layout = ({ children }) => {
   const [show, setShow] = useState(false)
@@ -40,7 +41,11 @@ const Layout = ({ children }) => {
       <div className='relative'>
         <div className='fixed w-full shadow-md z-50'>
           <TopMarquee />
-          <Header type={scrollTop} open={setShow} />
+          {location === "/personal" ?
+            <Header type={scrollTop} open={setShow} />
+            :
+            <HomeHeader type={scrollTop} open={setShow} />
+          }
         </div>
         <main className='xl:pt-32 pt-20'>
           {children}
