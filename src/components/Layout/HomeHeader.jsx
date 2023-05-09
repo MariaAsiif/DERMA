@@ -57,7 +57,7 @@ const HomeHeader = ({ type, open }) => {
                                     <Link
                                         className={`${location ==="/Surgeries" ? 'active' : ''}`}
 
-                                        to="/"
+                                        to="/surgery"
                                     >
                                         <h2 className={` pb-3 px-3 cursor-pointer uppercase `}>Surgeries</h2>
                                     </Link>

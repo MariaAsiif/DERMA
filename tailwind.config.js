@@ -14,7 +14,7 @@ module.exports = {
       },
       backgroundImage: {
         'sliderImage': "url('./assests/Slider.png')",
-        
+
       }
     },
     fontFamily: {
@@ -23,6 +23,7 @@ module.exports = {
       'sans ': ['Open Sans', 'sans-serif'],
       'intr': ['Inter', 'sans-serif'],
       'mons': ['Montserrat', 'sans-serif'],
+      'antic': ['Antic Didone', 'serif']
     },
 
   },

@@ -1,4 +1,4 @@
-import React,{ useState } from 'react'
+import React, { useState } from 'react'
 import s1 from '../../../assests/s1.png'
 import s2 from '../../../assests/s2.png'
 import s3 from '../../../assests/s3.png'
@@ -6,6 +6,7 @@ import s4 from '../../../assests/s4.png'
 import s5 from '../../../assests/s5.png'
 import s6 from '../../../assests/s6.png'
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md'
+import { Link } from 'react-router-dom'
 const ServicesList = () => {
     const [active, setActive] = useState(1)
 
@@ -15,7 +16,7 @@ const ServicesList = () => {
             <div className='container mx-auto  xl:px-20 px-5 pt-[80px]'>
                 <div className='grid xl:grid-cols-2 md:grid-cols-2 xl:gap-20 md:gap-10 gap-5'>
                     {Services.map((item, i) => (
-                        <div key={i} onClick={() => setActive(i)} className={`  ${active === i && ' border-2 border-[#C9E065]' } p-3 cursor-pointer rounded-md`}>
+                        <Link to={`/service-detail/${i}`} key={i} onClick={() => setActive(i)} className={`  ${active === i && ' border-2 border-[#C9E065]'} p-3 cursor-pointer rounded-md`}>
                             <img src={item?.pic} alt={item?.pic} className='object-cover' />
                             <h2 className={` ${active === i ? 'font-bold' : 'font-normal'} font-intr text-[23px] leading-[26px] uppercase pt-8`}>{item?.heading}</h2>
                             <div className='border-2 my-6 border-[#1F3D64] w-[80px]'></div>
@@ -30,7 +31,7 @@ const ServicesList = () => {
                                     <MdOutlineKeyboardArrowRight className={`text-[20px]  `} />
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
 

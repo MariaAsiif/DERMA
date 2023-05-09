@@ -1,27 +1,24 @@
+
 import React from 'react'
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md'
-// import sr1 from '../../../assests/sr1.png'
 import sr2 from '../../../assests/srv2.png'
 import sr3 from '../../../assests/sr3.png'
-// import sr4 from '../../../assests/check.png'
 import { GoCheck } from 'react-icons/go'
-import { Link } from 'react-router-dom'
-const ServicesDetails = ({ serviceDetail }) => {
-  const list = ["Acne", "Eczema", "Rosacea", "Anti-Aging", "Melasma", "Pigmentation"]
-  // const [active, setActive] = useState(0)
-
+const SurgeryDetail = ({setActive , serviceDetail}) => {
+  const list = ["Skin tags Removal", "Mole Removal", "Wart Removal", "Cyst", "Acne Scarring"]
+ 
 
   return (
     <>
       {/* Section 1  */}
       <div className='container mx-auto  xl:px-10 px-5 lg:py-8 py-5 '>
-      <div className='flex xl:flex-nowrap flex-wrap justify-between pt-[50px]'>
+        <div className='flex xl:flex-nowrap flex-wrap justify-between pt-[50px]'>
           <div className='xl:w-[30%] w-full md:w-[40%]'>
-            <ul>
+            <ul >
               {
                 list.map((item, i) => (
-                  <li key={i} >
-                    <Link to={`/service-detail/${i}`} className={`${serviceDetail?.id === i ? 'bg-[#1F3D64] text-[#C9E065]' : 'border-[#1F3D64] bg-transparent border-2'} cursor-pointer mb-2 px-3 py-2 flex justify-between items-center relative rounded-full `}>
+                  <li key={i}   >
+                    <div onClick={() => setActive(i)} className={`${serviceDetail?.id === i ? 'bg-[#1F3D64] text-[#C9E065]' : 'border-[#1F3D64] bg-transparent border-2'} cursor-pointer mb-2 px-3 py-2 flex justify-between items-center relative rounded-full  `}>
                       <div className='flex items-center'>
                         <h2 className='lg:text-[16px] text-[14px]  font-normal font-mons uppercase'>{item}</h2>
                         <img src={sr2} alt={sr2} className="object-contain w-[30px] h-[30px]" />
@@ -32,7 +29,7 @@ const ServicesDetails = ({ serviceDetail }) => {
                       <div className={`border rounded-full   ${serviceDetail?.id === i ? 'bg-[#C9E065] text-[#1F3D64] absolute top-[30%] -right-3 ' : ' bg-[#1F3D64] text-white  '}`}>
                         <MdOutlineKeyboardArrowRight className={`text-[22px]  `} />
                       </div>
-                    </Link>
+                    </div>
                   </li>
                 ))
               }
@@ -69,7 +66,7 @@ const ServicesDetails = ({ serviceDetail }) => {
       <div className='bg-gradient-to-r from-[#BACD67] to-[#A8B95D] relative '>
         <div className='container mx-auto  xl:px-10 px-5 lg:py-8 py-5 '>
 
-          <div className={`${serviceDetail?.symptoms ? 'grid xl:grid-cols-3 md:grid-cols-2' : 'grid xl:grid-cols-2  md:grid-cols-2'} gap-5`}>
+          <div className={`${serviceDetail?.symptoms ? 'grid xl:grid-cols-3' : 'grid xl:grid-cols-2 md:grid-cols-2'} gap-5`}>
             <div className='bg-white rounded-2xl px-8 py-10'>
               <h2 className='text-[30px] text-[#1E3D64] font-normal font-intr leading-[30px]'>Types of {serviceDetail?.subHeading}</h2>
               <div className='border-2 w-[70px] border-[#C9E065] mt-4'></div>
@@ -117,7 +114,7 @@ const ServicesDetails = ({ serviceDetail }) => {
                 <div className='border-2 w-[70px] border-[#C9E065] mt-4'></div>
                 <ul className='pt-5'>
                   {
-                    serviceDetail?.symptoms?.map((item, i) => (
+                    serviceDetail?.symptoms.map((item, i) => (
 
 
                       <li key={i} className='pb-5'>
@@ -146,4 +143,4 @@ const ServicesDetails = ({ serviceDetail }) => {
   )
 }
 
-export default ServicesDetails
+export default SurgeryDetail
