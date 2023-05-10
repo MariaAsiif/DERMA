@@ -2,11 +2,13 @@ import React, { useState } from 'react'
 import logo from '../../assests/lure-logo 1.png'
 import { GoThreeBars } from "react-icons/go";
 import Sidebar from './Sidebar';
-import { useLocation , Link } from 'react-router-dom'
+import { useLocation, Link } from 'react-router-dom'
+import { RiArrowDropDownLine } from 'react-icons/ri'
 const HomeHeader = ({ type, open }) => {
     const location = useLocation().pathname
     // const location = "/"
     const [sideNavShow, setSideNavShow] = useState(false);
+    const list = ["Acne", "Eczema", "Rosacea", "Anti-Aging", "Melasma", "Pigmentation"]
 
     return (
         <>
@@ -24,11 +26,11 @@ const HomeHeader = ({ type, open }) => {
                                 onClick={() => setSideNavShow(true)}
                             />
                         </div>
-                        <div className='w-full lg:block hidden '>
+                        <div className='w-full lg:block hidden nav-content '>
                             <ul className='flex pr-10 items-center justify-between text-[16px] '>
                                 <li className='pt-4 ' id="nav-item">
                                     <Link
-                                        className={`${location ==="/" ? 'active' : ''}`}
+                                        className={`${location === "/" ? 'active' : ''}`}
                                         to="/"
                                     >
                                         <h2 className={` pb-3 px-3 cursor-pointer uppercase`}>HOME</h2>
@@ -37,14 +39,42 @@ const HomeHeader = ({ type, open }) => {
                                 </li>
                                 <li className='pt-3 ' id="nav-item">
                                     <Link
-                                        className={`${location ==="/aboutus" ? 'active' : ''}`}
+                                        className={`${location === "/aboutus" ? 'active' : ''}`}
 
                                         to="/aboutus"
                                     >
                                         <h2 className={` pb-3 px-3 cursor-pointer uppercase `}>ABOUT</h2>
                                     </Link>
                                 </li>
-                                <li className='pt-3 ' id="nav-item">
+                                <li className="main-li uppercase">
+                                    <h2  className="flex items-center">services <RiArrowDropDownLine className="text-[30px]" /></h2>
+                                    <div className={`show !w-auto `}>
+                                        <div className="bg-white h-[43px]"></div>
+                                        <div className="p-3">
+                                            <div className="row">
+                                                <div className="col-lg-4 w-full   flex items-baseline flex-col ">
+                                                    {/* <h3 className="text-[20px] font-medium">recruit</h3> */}
+                                                    <div className="flex flex-col justify-start items-start cursor-pointer">
+                                                        {
+                                                            list.map((item, i) => (
+                                                                <span key={i} className="hover:bg-[#81AE37] px-5 w-full text-left ">
+                                                                    <Link className="" to={`/service-detail/${i}`}>{item}</Link>
+                                                                </span>
+
+                                                            ))
+                                                        }
+
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </li>
+                                {/* <li className='pt-3 ' id="nav-item">
                                     <Link
                                         className={`${location ==="/services" ? 'active' : ''}`}
 
@@ -52,19 +82,48 @@ const HomeHeader = ({ type, open }) => {
                                     >
                                         <h2 className={` pb-3 px-3 cursor-pointer uppercase `}>SERVICES</h2>
                                     </Link>
-                                </li>
-                                <li className='pt-3 ' id="nav-item">
+                                </li> */}
+                                {/* <li className='pt-3 ' id="nav-item">
                                     <Link
-                                        className={`${location ==="/Surgeries" ? 'active' : ''}`}
+                                        className={`${location === "/Surgeries" ? 'active' : ''}`}
 
                                         to="/surgery"
                                     >
                                         <h2 className={` pb-3 px-3 cursor-pointer uppercase `}>Surgeries</h2>
                                     </Link>
+                                </li> */}
+
+<li className="main-li uppercase">
+                                    <h2  className="flex items-center">services <RiArrowDropDownLine className="text-[30px]" /></h2>
+                                    <div className={`show !w-auto `}>
+                                        <div className="bg-white h-[43px]"></div>
+                                        <div className="p-3">
+                                            <div className="row">
+                                                <div className="col-lg-4 w-full   flex items-baseline flex-col ">
+                                                    {/* <h3 className="text-[20px] font-medium">recruit</h3> */}
+                                                    <div className="flex flex-col justify-start items-start cursor-pointer">
+                                                        {
+                                                            list.map((item, i) => (
+                                                                <span key={i} className="hover:bg-[#81AE37] px-5 w-full text-left ">
+                                                                    <Link className="" to={`/service-detail/${i}`}>{item}</Link>
+                                                                </span>
+
+                                                            ))
+                                                        }
+
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
                                 </li>
                                 <li className='pt-3 ' id="nav-item">
                                     <Link
-                                        className={`${location ==="/booking" ? 'active' : ''}`}
+                                        className={`${location === "/booking" ? 'active' : ''}`}
 
                                         to="/booking"
                                     >
@@ -73,7 +132,7 @@ const HomeHeader = ({ type, open }) => {
                                 </li>
                                 <li className='pt-3 ' id="nav-item">
                                     <Link
-                                        className={`${location ==="/contactus" ? 'active' : ''}`}
+                                        className={`${location === "/contactus" ? 'active' : ''}`}
 
                                         to="/contactus"
                                     >

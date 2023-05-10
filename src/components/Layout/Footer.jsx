@@ -93,7 +93,7 @@ const Footer = () => {
                     <h2 className='text-[10px] font-bold font-sans uppercase
                   '>email address</h2>
                     <div className='flex items-center'>
-                      <h2 className='text-[#1F3D64] font-sans font-semibold mx-3 text-[10px]'>Sign up</h2>
+                      <h2 className='text-[#1F3D64] font-sans font-semibold mx-3 text-[10px]'>Subscribe </h2>
                       <img src={send} alt='send' className='object-cover' />
                     </div>
                   </div>

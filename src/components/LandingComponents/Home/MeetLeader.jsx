@@ -19,7 +19,7 @@ const MeetLeader = () => {
         <div className='absolute lg:top-16 top-16 md:top-40'>
           <img src={leaderImg} alt={leaderImg} className='object-cover lg:w-[40%] lg:h-full md:w-full w-[335px] h-[335px]' />
         </div>
-        <div className='absolute lg:top-[32%] md:top-[35%] md:left-[35%] top-[30%] left-[30%]'>
+        <div className='absolute xl:top-[32%] xl:left-[33%] md:top-[35%] md:left-[35%] top-[30%] left-[30%]'>
           <img src={faeImag} alt={faeImag} className='object-cover lg:w-[80%] w-[50%] md:w-[40%] ' />
         </div>
       </div>

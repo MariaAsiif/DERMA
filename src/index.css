@@ -38,3 +38,23 @@
 .slider_swiper .swiper-pagination-bullet .swiper-pagination-bullet-active{
     background-color: #1F3D64 !important;
 }
+
+
+/* Home Header CSS */
+
+.nav-content ul li .show {
+    display: none;
+    color: white !important;
+    background: rgba(0, 0, 0, 0.73);
+    text-decoration: none;
+    list-style-type: none;
+  }
+  
+  .nav-content ul li:hover > .show {
+    display: block; 
+    background: rgba(0, 0, 0, 0.73);
+    border-radius: 2px;
+    width: 60%;
+    position: absolute;
+    top: 70%;
+  }
