@@ -8,8 +8,10 @@ import "swiper/css";
 import "swiper/css/pagination";
 // import required modules
 import { Pagination } from "swiper";
-import { BsStarFill } from 'react-icons/bs';
+// import { BsStarFill } from 'react-icons/bs';
 const Review = () => {
+  const review = [{ UserName: "Luna wong", desc: " Very efficient and painless treatment" }, { UserName: "claudia baltag", desc: " Highly effective acne treatment that cleared my skin in no time!" }, { UserName: "Amy Le Mar", desc: " Impressive results! This acne treatment minimized my blemishes and prevented new ones." }, { UserName: "John Paul Collier", desc: "Regained my confidence thanks to this effective acne treatment" }, { UserName: "Nichola Burrows", desc: " Clear skin at last! This acne treatment exceeded my expectations" }]
+
   return (
     <>
       <div className='container mx-auto  xl:px-20 px-5 xl:pt-[80px] pt-[40px]'>
@@ -50,15 +52,15 @@ const Review = () => {
             className="swiper_review"
           >
             <div className='grid lg:grid-cols-2 gap-5 '>
-              {Array(5).fill(5).map((_, i) => (
+              {review.map((item, i) => (
                 <SwiperSlide key={i}>
                   <div className='flex xl:flex-nowrap md:flex-nowrap flex-wrap '>
-                    <div className='flex justify-center items-center w-full'>
-                      <img src={rv1} alt={rv1} className='object-contain xl:w-[150px] xl:h-[50px]' />
+                    <div className='flex justify-center items-center xl:w-auto w-full '>
+                      <img src={rv1} alt={rv1} className='object-cover' />
                     </div>
-                    <div className=' pl-3'>
-                      <p className='text-[17px] italic text-[#5C636E] font-normal font-intr '>I personally appreciate attention while being at a dermetologist’s. Here you guys are devoted to details and practice individual approach to every client.</p>
-                      <h2 className='text-[#1D1D1D] text-[11px] uppercase font-sans font-bold pt-3'>Amy Houston</h2>
+                    <div className='pl-3' >
+                      <p className='text-[17px] italic text-[#5C636E] font-normal font-intr '>{item?.desc}</p>
+                      <h2 className='text-[#1D1D1D] text-[11px] uppercase font-sans font-bold pt-3'>{item?.UserName}</h2>
                     </div>
                   </div>
 

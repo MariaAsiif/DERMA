@@ -6,7 +6,7 @@ import Invest from '../components/LandingComponents/Home/Invest'
 import SkinCare from '../components/LandingComponents/Home/SkinCare'
 import Review from '../components/LandingComponents/Home/Review'
 import WhyChoose from '../components/LandingComponents/Home/WhyChoose'
-import Results from '../components/LandingComponents/Home/Results'
+// import Results from '../components/LandingComponents/Home/Results'
 import MeetLeader from '../components/LandingComponents/Home/MeetLeader'
 import whatsapp from '../assests/whatsapp.png'
 import consult from '../assests/Group 77.png'
@@ -20,7 +20,7 @@ const Home = () => {
                 <SkinCare />
                 <Review />
                 <WhyChoose />
-                <Results />
+                {/* <Results /> */}
                 <MeetLeader />
                 <div className='fixed bottom-2 z-40 right-4'>
                     <div className='bg-[#5CBD20] rounded-md border-2 borde-white xl:px-4 md:px-2 px-2  xl:w-[230px] md:w-[230px]  py-2'>
