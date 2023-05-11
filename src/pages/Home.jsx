@@ -22,20 +22,20 @@ const Home = () => {
                 <WhyChoose />
                 <Results />
                 <MeetLeader />
-                <div className='fixed bottom-0 z-40 right-4'>
-                    <div className='bg-[#5CBD20] rounded-md border-2 borde-white px-4 w-[230px]  py-2'>
+                <div className='fixed bottom-2 z-40 right-4'>
+                    <div className='bg-[#5CBD20] rounded-md border-2 borde-white xl:px-4 md:px-2 px-2  xl:w-[230px] md:w-[230px]  py-2'>
                         <div className='flex '>
-                            <img src={whatsapp} alt={whatsapp} className='object-cover' />
-                            <div className='pl-2'>
+                            <img src={whatsapp} alt={whatsapp} className='object-cover ' />
+                            <div className='pl-2 xl:block md:block hidden'>
                                 <h2 className=' text-white text-[15px] font-sans font-medium'>Contact on</h2>
                                 <h1 className=' text-white text-[20px] font-sans font-bold'>WhatsApp</h1>
                             </div>
                         </div>
                     </div>
-                    <div className='bg-[#1F3D64] rounded-md border-2 borde-white w-[250px] px-4 py-2 mt-4'>
+                    <div className='bg-[#1F3D64] rounded-md border-2 borde-white xl:w-[230px] md:w-[230px] xl:px-4 md:px-2 px-2 py-2 mt-4'>
                         <div className='flex '>
                             <img src={consult} alt={consult} className='object-cover' />
-                            <div className='pl-2'>
+                            <div className='pl-2 xl:block md:block hidden'>
                                 <h2 className=' text-white text-[15px] font-sans font-medium'>Book a Free</h2>
                                 <h1 className=' text-white text-[20px] font-sans font-bold'>Consultation</h1>
                             </div>

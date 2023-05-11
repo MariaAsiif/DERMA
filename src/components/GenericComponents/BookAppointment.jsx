@@ -9,7 +9,7 @@ const BookAppointment = () => {
           <div className='bg-[#1F3D64] rounded-2xl h-full p-3 '>
             <div className='pt-3 relative h-full'>
               <h2 className='text-center uppercase font-normal font-intr text-[23px] text-white'>Book An Appointment</h2>
-              <div className='grid grid-cols-2 gap-10 pt-4 px-5'>
+              <div className='grid xl:grid-cols-2 md:grid-cols-2 gap-10 pt-4 px-5'>
                 <div className='flex flex-col'>
                   {/* <label htmlFor="">NAME</label> */}
                   <input type='text' placeholder='NAME' className='border-b text-white border-white bg-transparent focus:outline-none' />
