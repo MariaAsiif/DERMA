@@ -4,13 +4,12 @@ import s2 from '../../../assests/s2.png'
 import s3 from '../../../assests/s3.png'
 import s4 from '../../../assests/s4.png'
 import s5 from '../../../assests/s5.png'
-import s6 from '../../../assests/s6.png'
+// import s6 from '../../../assests/s6.png'
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md'
 import { Link } from 'react-router-dom'
 const ServicesList = () => {
     const [active, setActive] = useState(1)
-
-    const Services = [{ pic: s1, heading: 'Pigmentation', desc: "Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum…" }, { pic: s2, heading: 'Acne', desc: "Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum…" }, { pic: s3, heading: 'Eczema', desc: "Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum…" }, { pic: s4, heading: 'Pigmentation', desc: "Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum…" }, { pic: s5, heading: 'Anti-Aging', desc: "Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum…" }, { pic: s6, heading: 'Melasma', desc: "Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum…" }]
+    const Services = [{ pic: s1, heading: 'Hair loss', desc: "Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum…" }, { pic: s2, heading: 'Acne', desc: "Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum…" }, { pic: s3, heading: 'Alopecia', desc: "Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum…" }, { pic: s4, heading: 'Skin tag', desc: "Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum…" }, { pic: s5, heading: 'Mole check', desc: "Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum…" }]
     return (
         <>
             <div className='container mx-auto  xl:px-20 px-5 pt-[80px]'>

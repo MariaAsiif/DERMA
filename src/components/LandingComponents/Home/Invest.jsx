@@ -10,7 +10,7 @@ const Invest = () => {
             <div className='max-w-[600px] lg:ml-[37%] lg:pt-[50px] pt-[250px]'>
               <h2 className='text-[#1F3D64] font-sans uppercase  font-medium lg:text-[28px] text-[20px] '>Invest in your skin because it will always pay off in the long run
               </h2>
-              <p className='text-[16px] lg:leading-[48px] leading-[30px] font-sans  font-normal'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non nunc eros. Suspendisse scelerisque felis ante, et mattis felis scelerisque sodales. Aenean id imperdiet lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla.Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+              <p className='text-[16px] lg:leading-[48px] leading-[30px] font-sans  font-normal'>Investing in your skin is a wise decision that yields long-term benefits. At our acne clinic, we prioritize the well-being of your skin and provide effective solutions for a variety of acne-related concerns. Our team of expert dermatologists is dedicated to delivering personalized care to help you achieve a clear and healthy complexion. </p>
 
               <button className='rounded-full font-bold lg:text-auto text-[14px] font-sans mt-3 bg-[#1F3D64] text-[#C9E065] hover:bg-[#C9E065] hover:text-[#1F3D64] uppercase px-8 py-3 '>contact us</button>
             </div>

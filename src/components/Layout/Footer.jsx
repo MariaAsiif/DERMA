@@ -2,6 +2,7 @@ import React from 'react'
 import follow1 from '../../assests/before after for website.png'
 import follow2 from '../../assests/before after for website (1).png'
 import follow3 from '../../assests/before after for website (2).png'
+import follow4 from '../../assests/bf-1.png'
 import send from '../../assests/pseudo.png'
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
@@ -18,6 +19,24 @@ const Footer = () => {
           <Swiper
             slidesPerView={3}
             spaceBetween={30}
+            breakpoints={{
+              375: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 50,
+              },
+            }}
             pagination={{
               clickable: true,
             }}
@@ -39,7 +58,7 @@ const Footer = () => {
               <img src={follow3} alt="folow" className='object-cover ' />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={follow1} alt="folow" className='object-cover ' />
+              <img src={follow4} alt="folow" className='object-cover ' />
             </SwiperSlide>
             <SwiperSlide>
               <img src={follow2} alt="folow" className='object-cover ' />

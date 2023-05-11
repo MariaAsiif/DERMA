@@ -8,7 +8,7 @@ const HomeHeader = ({ type, open }) => {
     const location = useLocation().pathname
     // const location = "/"
     const [sideNavShow, setSideNavShow] = useState(false);
-    const list = ["Acne", "Eczema", "Rosacea", "Anti-Aging", "Melasma", "Pigmentation"]
+    const list = ["Acne", "Hair loss", "Alopecia", "Skin tag", "Mole check"]
 
     return (
         <>
@@ -17,9 +17,9 @@ const HomeHeader = ({ type, open }) => {
                 {/* <div className="bg-white  shadow-md border border-gray-100 py-2"> */}
                 <div className="container mx-auto xl:px-10 px-5">
                     <div className='flex xl:justify-center justify-between  items-center'>
-                        <div className='w-[30%]'>
-                            <img src={logo} alt="personal" className='object-cover xl:w-auto w-[30%]' />
-                        </div>
+                        <Link to="/" className='w-[30%]'>
+                            <img src={logo} alt="personal" className='object-cover xl:w-auto md:w-[30%] w-[40%]' />
+                        </Link>
                         <div className='xl:hidden'>
                             <GoThreeBars
                                 className="text-[30px] cursor-pointer text-[#1E154E]  mt-1"
@@ -46,8 +46,8 @@ const HomeHeader = ({ type, open }) => {
                                         <h2 className={` pb-3 px-3 cursor-pointer uppercase `}>ABOUT</h2>
                                     </Link>
                                 </li>
-                                <li className="main-li uppercase">
-                                    <h2  className="flex items-center">services <RiArrowDropDownLine className="text-[30px]" /></h2>
+                                <li className="main-li cursor-pointer uppercase">
+                                    <Link to="/services" className="flex items-center">services <RiArrowDropDownLine className="text-[30px]" /></Link>
                                     <div className={`show !w-auto `}>
                                         <div className="bg-white h-[43px]"></div>
                                         <div className="p-3">
@@ -74,38 +74,20 @@ const HomeHeader = ({ type, open }) => {
 
 
                                 </li>
-                                {/* <li className='pt-3 ' id="nav-item">
-                                    <Link
-                                        className={`${location ==="/services" ? 'active' : ''}`}
+                             
 
-                                        to="/services"
-                                    >
-                                        <h2 className={` pb-3 px-3 cursor-pointer uppercase `}>SERVICES</h2>
-                                    </Link>
-                                </li> */}
-                                {/* <li className='pt-3 ' id="nav-item">
-                                    <Link
-                                        className={`${location === "/Surgeries" ? 'active' : ''}`}
-
-                                        to="/surgery"
-                                    >
-                                        <h2 className={` pb-3 px-3 cursor-pointer uppercase `}>Surgeries</h2>
-                                    </Link>
-                                </li> */}
-
-<li className="main-li uppercase">
-                                    <h2  className="flex items-center">services <RiArrowDropDownLine className="text-[30px]" /></h2>
+                                {/* <li className="main-li cursor-pointer uppercase">
+                                    <Link to="/surgery" className="flex items-center">Surgeries <RiArrowDropDownLine className="text-[30px]" /></Link>
                                     <div className={`show !w-auto `}>
                                         <div className="bg-white h-[43px]"></div>
                                         <div className="p-3">
                                             <div className="row">
                                                 <div className="col-lg-4 w-full   flex items-baseline flex-col ">
-                                                    {/* <h3 className="text-[20px] font-medium">recruit</h3> */}
                                                     <div className="flex flex-col justify-start items-start cursor-pointer">
                                                         {
-                                                            list.map((item, i) => (
+                                                            listSur.map((item, i) => (
                                                                 <span key={i} className="hover:bg-[#81AE37] px-5 w-full text-left ">
-                                                                    <Link className="" to={`/service-detail/${i}`}>{item}</Link>
+                                                                    <Link className="" to={`/surgery-detail/${i}`}>{item}</Link>
                                                                 </span>
 
                                                             ))
@@ -120,7 +102,7 @@ const HomeHeader = ({ type, open }) => {
                                     </div>
 
 
-                                </li>
+                                </li> */}
                                 <li className='pt-3 ' id="nav-item">
                                     <Link
                                         className={`${location === "/booking" ? 'active' : ''}`}
