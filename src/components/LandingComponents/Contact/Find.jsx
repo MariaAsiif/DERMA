@@ -6,15 +6,16 @@ import twitter from '../../../assests/twitter.png'
 import phone from '../../../assests/phone.png'
 import message from '../../../assests/messge.png'
 import insta from '../../../assests/isnsta.png'
-
+import SingleMap from '../Contact/Map'
 const Find = () => {
   return (
     <>
       <div className=' relative '>
         <div className='bg-[#C9E065]  lg:h-[450px] md:h-[450px] h-[600px]  max-w-[970px] mr-auto lg:py-0 md:py-4 py-4 '>
           <div className='container mx-auto  xl:px-20 px-5'>
-            <div className='max-w-[600px] xl:pt-[50px] md:pt-[40px] xl:ml-0 md:ml-[120px] flex xl:justify-end md:justify-end justify-center'>
-              <img src={map} alt={map} className='object-cover xl:w-[90%] md:w-[80%]  w-[80%] ' />
+            <div className='max-w-[600px] overflow-hidden xl:pt-[40px] md:pt-[40px] xl:ml-0 md:ml-[120px] flex xl:justify-start md:justify-end justify-center'>
+              {/* <img src={map} alt={map} className='object-cover xl:w-[90%] md:w-[80%]  w-[80%] ' /> */}
+              <SingleMap/>
             </div>
 
           </div>
