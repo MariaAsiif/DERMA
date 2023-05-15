@@ -1,6 +1,11 @@
 import React from 'react'
 
 const BookingForm = () => {
+const list = ["Acne", "Hair loss", "Alopecia", "Skin tag", "Mole check"]
+
+
+
+
     return (
         <>
             <div className='xl:pt-[80px] text-center'>
@@ -21,19 +26,17 @@ const BookingForm = () => {
                         </div>
                         <div className='grid xl:grid-cols-2 md:grid-cols-2 xl:gap-10 md:gap-10'>
                             <select className='focus:outline-none font-sans font-normal my-5 w-full border-b border-[#1F3D64] placeholder:text-[#1F3D64]'>
-                                <option>SELECT COUNTRY</option>
+                                <option>London</option>
                             </select>
                             <select className='focus:outline-none font-sans font-normal my-5 w-full border-b border-[#1F3D64] placeholder:text-[#1F3D64]'>
                                 <option>SELECT SERVICE</option>
+                                {list.map((item, i) => (
+                                    <option key={i}>{item}</option>
+                                ))}
                             </select>
 
                         </div>
-
                         <textarea placeholder='MESSAGE' rows={2} className=' font-sans focus:outline-none font-normal my-5 w-full border-b border-[#1F3D64] placeholder:text-[#1F3D64]'></textarea>
-
-
-
-
                         <div className='flex justify-center items-center py-5'>
                             <button className=' w-[55%] py-3 text-[10px] font-semibold font-sans  rounded-full bg-[#1F3D64] text-white text-center uppercase'>book now</button>
                         </div>
