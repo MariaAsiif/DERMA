@@ -5,7 +5,7 @@ import follow3 from '../../assests/before after for website (2).png'
 import follow4 from '../../assests/bf-1.png'
 import send from '../../assests/pseudo.png'
 import { Swiper, SwiperSlide } from "swiper/react";
-import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
+// import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
 // Import Swiper styles
 import "swiper/css";
 // import required modules
@@ -52,32 +52,35 @@ const Footer = () => {
           >
 
             <SwiperSlide>
-              <ReactCompareSlider
+              <img src={follow1} alt="folow" className='object-cover w-[30%]' />
+              {/* <ReactCompareSlider
                 itemOne={<ReactCompareSliderImage src={follow2} srcSet={follow2} alt="Image one" />}
                 itemTwo={<ReactCompareSliderImage src={follow1} srcSet={follow1} alt="Image two" />}
-              />
+              /> */}
             </SwiperSlide>
             <SwiperSlide>
-              <ReactCompareSlider
+              <img src={follow2} alt="folow" className='object-cover w-[30%]' />
+
+              {/* <ReactCompareSlider
                 itemOne={<ReactCompareSliderImage src={follow3} srcSet={follow3} alt="Image one" />}
                 itemTwo={<ReactCompareSliderImage src={follow4} srcSet={follow4} alt="Image two" />}
-              />
+              /> */}
             </SwiperSlide>
             <SwiperSlide>
-              <ReactCompareSlider
+              <img src={follow3} alt="folow" className='object-cover w-[30%]' />
+              {/* <ReactCompareSlider
                 itemOne={<ReactCompareSliderImage src={follow2} srcSet={follow2} alt="Image one" />}
                 itemTwo={<ReactCompareSliderImage src={follow1} srcSet={follow1} alt="Image two" />}
-              />
+              /> */}
             </SwiperSlide>
             <SwiperSlide>
-              <ReactCompareSlider
+              <img src={follow4} alt="folow" className='object-cover w-[30%]' />
+              {/* <ReactCompareSlider
                 itemOne={<ReactCompareSliderImage src={follow2} srcSet={follow2} alt="Image one" />}
                 itemTwo={<ReactCompareSliderImage src={follow1} srcSet={follow1} alt="Image two" />}
-              />
+              /> */}
             </SwiperSlide>
-            <SwiperSlide>
-              <img src={follow2} alt="folow" className='object-cover ' />
-            </SwiperSlide>
+
           </Swiper>
           {/* <div className='flex items-center justify-center'>
           <img src={follow1} alt="folow" className='object-cover w-[30%]' />
