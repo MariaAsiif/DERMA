@@ -52,14 +52,14 @@ const Footer = () => {
           >
 
             <SwiperSlide>
-              <img src={follow1} alt="folow" className='object-cover w-[30%]' />
+              <img src={follow1} alt="folow" className='object-cover ' />
               {/* <ReactCompareSlider
                 itemOne={<ReactCompareSliderImage src={follow2} srcSet={follow2} alt="Image one" />}
                 itemTwo={<ReactCompareSliderImage src={follow1} srcSet={follow1} alt="Image two" />}
               /> */}
             </SwiperSlide>
             <SwiperSlide>
-              <img src={follow2} alt="folow" className='object-cover w-[30%]' />
+              <img src={follow2} alt="folow" className='object-cover ' />
 
               {/* <ReactCompareSlider
                 itemOne={<ReactCompareSliderImage src={follow3} srcSet={follow3} alt="Image one" />}
@@ -67,14 +67,14 @@ const Footer = () => {
               /> */}
             </SwiperSlide>
             <SwiperSlide>
-              <img src={follow3} alt="folow" className='object-cover w-[30%]' />
+              <img src={follow3} alt="folow" className='object-cover ' />
               {/* <ReactCompareSlider
                 itemOne={<ReactCompareSliderImage src={follow2} srcSet={follow2} alt="Image one" />}
                 itemTwo={<ReactCompareSliderImage src={follow1} srcSet={follow1} alt="Image two" />}
               /> */}
             </SwiperSlide>
             <SwiperSlide>
-              <img src={follow4} alt="folow" className='object-cover w-[30%]' />
+              <img src={follow4} alt="folow" className='object-cover ' />
               {/* <ReactCompareSlider
                 itemOne={<ReactCompareSliderImage src={follow2} srcSet={follow2} alt="Image one" />}
                 itemTwo={<ReactCompareSliderImage src={follow1} srcSet={follow1} alt="Image two" />}
