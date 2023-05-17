@@ -19,23 +19,23 @@ export const Services = [
         "id": 0,
         "Heading": "Healthy Skin Begins Here",
         "subHeading": "Hair loss",
-        "desc": "Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam ipsum, sem quam semper libero.",
-        "subdesc": "Quisque rutrum. Aenean imperdiet.. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.",
+        "desc": "Hair loss, also known as alopecia, refers to the condition of experiencing a significant reduction in hair density or hair thinning. It can affect the scalp, eyebrows, eyelashes, and other parts of the body. Hair loss can occur gradually or suddenly, and it can be temporary or permanent, depending on the underlying causes.",
+        "subdesc": "",
         "contact": "Contact us to schedule your Treatment today!",
         "pic": p2,
         "typesOf": [
-            "Freckles: There are small brown spots on your skin usually in areas that are exposed to the sun called freckles. Usually freckles aren't harmful.",
-            "Melasma: It is characterised by brown or blue-gray patches on the skin or freckle-like marks.",
-            "Solar lentigines: is a harmless patch of darkened skin that appears on the face and arms. Exposure to UV radiation causes melanocyte proliferation and melanin accumulation in the skin cells (keratinocytes).",
-            "Post-inflammatory Hyperpigmentation: Pimple scaring also known as post-inflammatory hyperpigmentation (PIH) can be even more aggravating and distressing than pimples themselves."
+            "Androgenetic Alopecia: Also known as male or female pattern baldness, androgenetic alopecia is the most common type of hair loss. It is characterized by a gradual thinning of hair, usually starting from the temples or crown of the head. In men, this type of hair loss often leads to a receding hairline and bald patches. In women, it typically results in overall hair thinning.",
+            "Alopecia Areata: Alopecia areata is an autoimmune condition that causes hair loss in patches. It occurs when the immune system mistakenly attacks the hair follicles, leading to sudden hair loss. The affected areas may be smooth and round, and the hair loss can occur on the scalp, eyebrows, eyelashes, or other parts of the body.",
+            "Telogen Effluvium: Telogen effluvium is a temporary form of hair loss that occurs when there is a disruption in the hair growth cycle. It can be triggered by factors such as physical or emotional stress, hormonal changes, illness, nutritional deficiencies, or certain medications. Hair shedding is usually more noticeable during washing or brushing, and the condition often resolves on its own over time..",
+            "Traction Alopecia: Traction alopecia is hair loss caused by excessive tension or pulling on the hair. It is commonly seen in individuals who frequently wear tight hairstyles such as ponytails, braids, or cornrows. The constant strain on the hair follicles can lead to hair breakage and thinning in the affected areas.",
+            "Trichotillomania:Trichotillomania is a psychological condition characterized by an irresistible urge to pull out one's hair. People with this disorder may compulsively pull hair from the scalp, eyebrows, eyelashes, or other areas. The repeated hair pulling can result in noticeable hair loss and bald patches",
         ],
         "causesOf": [
-            "Cuts",
-            "Burns",
-            "Lupus",
-            "Exposure to sun",
-            "Skin inflammation",
-            "Reaction of drug use"
+            "Stress and Lifestyle Factors",
+            "Medical Conditions",
+            "Hormonal Changes",
+            "Genetics",
+            "Age",
         ]
     },
     {
