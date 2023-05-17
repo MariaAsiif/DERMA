@@ -86,23 +86,21 @@ export const Services = [
         "id": 3,
         "Heading": "Healthy Skin Begins Here",
         "subHeading": "Skin tag",
-        "desc": "Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam ipsum, sem quam semper libero.",
-        "subdesc": "Quisque rutrum. Aenean imperdiet.. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.",
+        "desc": "medically known as acrochordons, are small, soft, benign growths that typically appear as tiny, flesh-colored or slightly darker skin flaps. These benign growths are composed of collagen fibers and blood vessels and can vary in size and shape. Skin tags are most commonly found in areas where the skin folds or experiences friction, such as the neck, armpits, under the breasts, groin area, and eyelids.",
+        "subdesc": "",
         "contact": "Contact us to schedule your Treatment today!",
         "pic": p4,
         "typesOf": [
-            "Freckles: There are small brown spots on your skin usually in areas that are exposed to the sun called freckles. Usually freckles aren't harmful.",
-            "Melasma: It is characterised by brown or blue-gray patches on the skin or freckle-like marks.",
-            "Solar lentigines: is a harmless patch of darkened skin that appears on the face and arms. Exposure to UV radiation causes melanocyte proliferation and melanin accumulation in the skin cells (keratinocytes).",
-            "Post-inflammatory Hyperpigmentation: Pimple scaring also known as post-inflammatory hyperpigmentation (PIH) can be even more aggravating and distressing than pimples themselves."
+            "Pedunculated Skin Tags: Pedunculated skin tags are the most common type and are characterized by a stalk or narrow base that attaches the tag to the skin. These skin tags tend to be more mobile and can dangle from the surface of the skin.",
+            "Skin Tags without a Stalk: Skin tags without a stalk, also known as sessile skin tags, appear as flat or slightly raised bumps directly attached to the skin's surface. Unlike pedunculated skin tags, they do not have a distinct stalk.",
+           
         ],
         "causesOf": [
-            "Cuts",
-            "Burns",
-            "Lupus",
-            "Exposure to sun",
-            "Skin inflammation",
-            "Reaction of drug use"
+            "Friction and Skin Rubbing",
+            "Genetic Predisposition",
+            "Hormonal Changes",
+            "Obesity",
+            "Age",
         ]
     },
     {
