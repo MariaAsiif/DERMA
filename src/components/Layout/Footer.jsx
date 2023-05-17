@@ -10,6 +10,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 // import required modules
 import { Autoplay } from "swiper";
+import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <>
@@ -97,30 +98,34 @@ const Footer = () => {
             <div className="flex xl:flex-nowrap  flex-wrap justify-between ">
               <div className='xl:w-[40%] md:w-[40%]'>
                 <h2 className='font-semibold font-sans  text-[20px] text-[#171928]'>About Us</h2>
-                <p className='pt-6 font-sans  leading-[28px] font-normal text-[15px]'>
-                  Lorem ipsum dolor sit amet,
-                  consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut
-                  labore et dolore magna
+                <p className='pt-6 font-sans  leading-[28px] font-normal text-[15px] max-w-[280px]'>
+                When you book a consultation with one of our specialists, they will conduct a detailed examination, diagnose your condition, and develop a customized treatment plan tailored to your specific needs.
                 </p>
               </div>
               <div className='xl:w-[25%] md:w-[25%] '>
                 <h2 className='font-semibold text-[20px] xl:pt-0 pt-2 text-[#171928] font-sans '>Quick Links</h2>
                 <div className='xl:pt-6 pt-3'>
                   <ul className=''>
-                    <li className='text-[#1D1D1D] pb-2 font-sans font-semibold text-[15px] '>About</li>
-                    <li className='text-[#1D1D1D] pb-2 font-sans font-semibold text-[15px] '>Surgeries</li>
-                    <li className='text-[#1D1D1D] pb-2 font-sans font-semibold text-[15px] '>Services</li>
-                    <li className='text-[#1D1D1D] pb-2 font-sans font-semibold text-[15px] '>Contact</li>
+                    <Link to="/aboutUs">
+                      <li className='text-[#1D1D1D] pb-2 font-sans font-semibold text-[15px] '>About</li>
+                    </Link>
+                    <Link to="/services">
+                      <li className='text-[#1D1D1D] pb-2 font-sans font-semibold text-[15px] '>Surgeries</li>
+                    </Link>
+                    <Link to="/services">
+                      <li className='text-[#1D1D1D] pb-2 font-sans font-semibold text-[15px] '>Services</li>
+                    </Link>
+                    <Link to="/contactus">
+                      <li className='text-[#1D1D1D] pb-2 font-sans font-semibold text-[15px] '>Contact</li>
+                    </Link>
                   </ul>
                 </div>
               </div>
               <div className='xl:w-[40%] md:w-[40%] '>
                 <h2 className='font-semibold xl:text-center font-sans xl:pt-0 pt-2 text-[20px] text-[#171928]'>Contact Us</h2>
                 <div className='xl:pt-6 pt-3 xl:text-center'>
-                  <p>176 W Street Name, New York, NY 10014
-                    Mon-Fri: 10am - 7pm EST</p>
-                  <span>info@londonacneuk.com</span>
+                  <p>4 Harley Street, London, W1G 9BP</p>
+                  <span>info@londonacneclinic.co.uk</span>
                 </div>
               </div>
               <div className='col-span-2 xl:pt-0 pt-3'>
