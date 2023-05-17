@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Layout from '../components/Layout/Layout'
 import BannerSlider from '../components/LandingComponents/Home/BannerSlider'
 import Services from '../components/LandingComponents/Home/Services'
@@ -10,9 +10,14 @@ import WhyChoose from '../components/LandingComponents/Home/WhyChoose'
 import MeetLeader from '../components/LandingComponents/Home/MeetLeader'
 import whatsapp from '../assests/whatsapp.png'
 import consult from '../assests/Group 77.png'
+import Popup from '../util/popup/Popup'
+import RequestForCall from '../components/LandingComponents/Personal/RequestForCall'
 const Home = () => {
+  const [show, setShow] = useState(false)
+
     return (
         <Layout>
+             {show && <Popup modalOpen={show} onClose={() => setShow(false)} data={<RequestForCall />} />}
             <div className='relative'>
                 <BannerSlider />
                 <Services />
@@ -40,7 +45,7 @@ const Home = () => {
                             </div>
                         </div>
                     </a>
-                    <div className='bg-[#1F3D64] rounded-md border-2 borde-white xl:w-[230px] md:w-[230px] xl:px-4 md:px-2 px-2 py-2 mt-4'>
+                    <div onClick={() => setShow(true)} className='bg-[#1F3D64] cursor-pointer rounded-md border-2 borde-white xl:w-[230px] md:w-[230px] xl:px-4 md:px-2 px-2 py-2 mt-4'>
                         <div className='flex '>
                             <img src={consult} alt={consult} className='object-cover' />
                             <div className='pl-2 xl:block md:block hidden'>
