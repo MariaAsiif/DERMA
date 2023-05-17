@@ -16,64 +16,69 @@ const Doctor = () => {
                         <ul className='xl:pt-40  pt-5'>
                             <li>
                                 <div className='max-w-[300px]'>
-                                    <div className='flex'>
-                                        <h2 className='xl:text-[24px] md:text-[16px] text-[14px] font-medium font-mons mx-6'>High Hospitality</h2>
-                                        <img src={d1} alt={d1} className="object-cover"  />
+                                    <div className='flex justify-between'>
+                                        <div>
+                                            <h2 className='xl:text-[20px] md:text-[16px] text-[14px] font-medium font-mons mx-6'>High Hospitality</h2>
+                                        </div>
+                                        <div>
+                                            <img src={d1} alt={d1} className="object-cover w-[50px] h-[50px]" />
+                                        </div>
+
                                     </div>
-                                    <p className='text-right font-medium font-mons text-[16px] pt-1'>Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies</p>
+                                    <p className='text-right font-medium font-mons text-[16px] pt-1'>where hospitality, expertise, and certified services converge</p>
                                 </div>
                             </li>
                             <li className='py-14'>
                                 <div className='max-w-[300px]'>
-                                    <div className='flex'>
-                                        <h2 className='xl:text-[24px] md:text-[16px] text-[14px] font-medium font-mons mx-5'>New Equipment</h2>
-                                        <img src={d2} alt={d2} className="object-cover"  />
+                                    <div className='flex justify-between'>
+                                        <h2 className='xl:text-[20px] md:text-[16px] text-[14px] font-medium font-mons mx-5'>New Equipment</h2>
+                                        <img src={d2} alt={d2} className="object-cover w-[50px] h-[50px]" />
                                     </div>
-                                    <p className='text-right font-medium font-mons text-[16px] pt-1'>Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies</p>
+                                    <p className='text-right font-medium font-mons text-[16px] pt-1'>Providing round-the-clock online assistance and availability for your convenience</p>
                                 </div>
                             </li>
                             <li>
                                 <div className='max-w-[300px]'>
-                                    <div className='flex'>
-                                        <h2 className='xl:text-[24px] md:text-[16px] text-[14px] font-medium font-mons mx-6'>Pure Medicines</h2>
-                                        <img src={d3} alt={d3} className="object-cover"  />
+                                    <div className='flex justify-between'>
+                                        <h2 className='xl:text-[20px] md:text-[16px] text-[14px] font-medium font-mons mx-6'>Choose LondonAcne Clinic</h2>
+                                        <img src={d3} alt={d3} className="object-cover w-[50px] h-[50px]" />
                                     </div>
-                                    <p className='text-right font-medium font-mons text-[16px] pt-1'>Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies</p>
+                                    <p className='text-right font-medium font-mons text-[16px] pt-1'>For a premium skincare experience, backed by our team of certified professionals.</p>
                                 </div>
                             </li>
                         </ul>
                     </div>
                     <div className='mx-5 '>
-                        <img src={doctor} alt={doctor} className="object-cover"  />
+                        <img src={doctor} alt={doctor} className="object-cover " />
 
                     </div>
                     <div className=''>
                         <ul className='xl:pt-40  pt-5'>
                             <li>
                                 <div className='max-w-[300px]'>
-                                    <div className='flex'>
-                                        <img src={d4} alt={d4} className="object-cover"  />
-                                        <h2 className='xl:text-[24px] md:text-[16px] text-[14px] font-medium font-mons mx-3'>24/7 Ambulance</h2>
+                                    <div className='flex '>
+                                        <img src={d4} alt={d4} className="object-cover w-[50px] h-[50px]" />
+                                        <h2 className='xl:text-[20px] md:text-[16px] text-[14px] font-medium font-mons mx-3'>24 Online availability</h2>
                                     </div>
-                                    <p className='text-left font-medium font-mons text-[16px] pt-1'>Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies</p>
+                                    <p className='text-left font-medium font-mons text-[16px] pt-1'>Experience the epitome of hospitality at LondonAcne Clinic, where your comfort is our priority.</p>
                                 </div>
                             </li>
                             <li className='py-14'>
                                 <div className='max-w-[300px]'>
-                                    <div className='flex'>
-                                        <img src={d5} alt={d5} className="object-cover"  />
-                                        <h2 className='xl:text-[24px] md:text-[16px] text-[14px] font-medium font-mons mx-3'>Experts Team</h2>
+                                    <div className='flex '>
+                                        <img src={d5} alt={d5} className="object-cover w-[50px] h-[50px]" />
+                                        <h2 className='xl:text-[20px] md:text-[16px] text-[14px] font-medium font-mons mx-3'>Experts Team</h2>
                                     </div>
-                                    <p className='text-left font-medium font-mons text-[16px] pt-1'>Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies</p>
+                                    <p className='text-left font-medium font-mons text-[16px] pt-1'>Your trusted partner in achieving clear, radiant skin through personalized treatments.</p>
                                 </div>
                             </li>
                             <li>
                                 <div className='max-w-[300px]'>
                                     <div className='flex'>
-                                        <img src={d6} alt={d6} className="object-cover"  />
-                                        <h2 className='xl:text-[24px] md:text-[16px] text-[14px] font-medium font-mons mx-3'>Certified Services</h2>
+                                        <img src={d6} alt={d6} className="object-cover w-[50px] h-[50px]" />
+                                        <h2 className='xl:text-[20px] md:text-[16px] text-[14px] font-medium font-mons mx-3'>Certified Services</h2>
                                     </div>
-                                    <p className='text-left font-medium font-mons text-[16px] pt-1'>Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies</p>
+                                    <p className='text-left font-medium font-mons text-[16px] pt-1'>Our team of experts at LondonAcne Clinic is dedicated to your skin's wellbeing, offering tailored solutions for every individual</p>
                                 </div>
                             </li>
                         </ul>
