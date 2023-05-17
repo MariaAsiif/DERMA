@@ -42,46 +42,43 @@ export const Services = [
         "id": 1,
         "Heading": "Healthy Skin Begins Here",
         "subHeading": "Acne",
-        "desc": "Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam ipsum, sem quam semper libero.",
-        "subdesc": "Quisque rutrum. Aenean imperdiet.. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.",
+        "desc": "Acne is a chronic skin disorder that occurs when hair follicles become clogged with oil, dead skin cells, and bacteria. It usually appears as pimples, blackheads, or whiteheads, and commonly affects areas of the body with a high concentration of oil glands, such as the face, chest, and back. Acne can range in severity from mild to severe and may cause physical discomfort as well as psychological distress for those who experience it.",
+        "subdesc": "",
         "contact": "Contact us to schedule your Treatment today!",
         "pic": p1,
         "typesOf": [
-            "Freckles: There are small brown spots on your skin usually in areas that are exposed to the sun called freckles. Usually freckles aren't harmful.",
-            "Melasma: It is characterised by brown or blue-gray patches on the skin or freckle-like marks.",
-            "Solar lentigines: is a harmless patch of darkened skin that appears on the face and arms. Exposure to UV radiation causes melanocyte proliferation and melanin accumulation in the skin cells (keratinocytes).",
-            "Post-inflammatory Hyperpigmentation: Pimple scaring also known as post-inflammatory hyperpigmentation (PIH) can be even more aggravating and distressing than pimples themselves."
+            "Comedonal Acne: Comedonal acne is characterized by non-inflammatory lesions, such as blackheads and whiteheads. These lesions occur when hair follicles become clogged with oil and dead skin cells, leading to the formation of small bumps on the skin's surface. Comedonal acne is often mild and can be managed effectively with appropriate skincare routines.",
+            "Inflammatory Acne: Inflammatory acne is more severe than comedonal acne and is characterized by red, swollen, and painful pimples or pustules. In some cases, it can lead to the formation of nodules or cysts beneath the skin's surface. Inflammatory acne requires a comprehensive treatment approach, including topical or oral medications, to reduce inflammation and prevent scarring.",
+            
         ],
         "causesOf": [
-            "Cuts",
-            "Burns",
-            "Lupus",
-            "Exposure to sun",
-            "Skin inflammation",
-            "Reaction of drug use"
+            "Excess Sebum Production",
+            "Hormonal Imbalances",
+            "Dead Skin Cell Buildup",
+            "Bacterial Infections",
+            
         ]
     },
     {
         "id": 2,
         "Heading": "Healthy Skin Begins Here",
         "subHeading": "Alopecia",
-        "desc": "Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam ipsum, sem quam semper libero.",
-        "subdesc": "Quisque rutrum. Aenean imperdiet.. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.",
+        "desc": "Alopecia refers to a medical condition characterized by hair loss or thinning, which can occur on the scalp or other parts of the body. It can manifest in different forms, ranging from mild to severe, and may result in partial or complete hair loss. Alopecia can have a significant impact on an individual's self-esteem and emotional well-being.",
+        "subdesc": "",
         "contact": "Contact us to schedule your Treatment today!",
         "pic": p3,
         "typesOf": [
-            "Freckles: There are small brown spots on your skin usually in areas that are exposed to the sun called freckles. Usually freckles aren't harmful.",
-            "Melasma: It is characterised by brown or blue-gray patches on the skin or freckle-like marks.",
-            "Solar lentigines: is a harmless patch of darkened skin that appears on the face and arms. Exposure to UV radiation causes melanocyte proliferation and melanin accumulation in the skin cells (keratinocytes).",
-            "Post-inflammatory Hyperpigmentation: Pimple scaring also known as post-inflammatory hyperpigmentation (PIH) can be even more aggravating and distressing than pimples themselves."
+            "Androgenetic Alopecia:Androgenetic alopecia, also known as male or female pattern baldness, is the most common type of hair loss. It typically occurs due to a combination of genetic predisposition and hormonal factors. In men, this type of alopecia results in a receding hairline and thinning on the crown of the head. In women, it causes overall hair thinning, especially on the top of the scalp.",
+            " Alopecia Areata: Alopecia areata is an autoimmune condition that causes sudden hair loss in circular or patchy patterns. It occurs when the immune system mistakenly attacks the hair follicles, leading to their shrinkage and temporary hair loss. In some cases, alopecia areata can progress to alopecia totalis (total scalp hair loss) or alopecia universalis (complete hair loss on the scalp and body).",
+            "Telogen Effluvium: Telogen effluvium is a type of hair loss that occurs due to disruptions in the hair growth cycle. It is often triggered by physical or emotional stress, hormonal changes, nutritional deficiencies, or certain medications. Telogen effluvium causes a significant amount of hair follicles to enter the resting (telogen) phase, resulting in excessive shedding and noticeable hair thinning.",
+            
         ],
         "causesOf": [
-            "Cuts",
-            "Burns",
-            "Lupus",
-            "Exposure to sun",
-            "Skin inflammation",
-            "Reaction of drug use"
+            "Genetic factor",
+            "Autoimmune Reactions",
+            "Hormonal Imbalances",
+            "Stress and Lifestyle Factors",
+            
         ],
         "symptoms": ["Itchy hot and stinging feelings.", "Redness.", "The appearance of small blood vessels (papules and pustules) on the skin.", "Pimples.", "Facial Flushing."]
     },
