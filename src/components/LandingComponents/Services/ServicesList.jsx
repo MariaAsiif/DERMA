@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import s1 from '../../../assests/hair loss.jpg'
-import s2 from '../../../assests/s2.png'
+import s2 from '../../../assests/acne.jpg'
 import s3 from '../../../assests/alopecia.jpg'
 import s4 from '../../../assests/skin tagg.jpg'
 import s5 from '../../../assests/mole check.jpg'
