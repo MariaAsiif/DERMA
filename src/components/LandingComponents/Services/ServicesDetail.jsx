@@ -7,7 +7,7 @@ import sr3 from '../../../assests/sr3.png'
 import { GoCheck } from 'react-icons/go'
 import { Link } from 'react-router-dom'
 const ServicesDetails = ({ serviceDetail }) => {
-  const list = [ "Hair loss", "Acne", "Alopecia", "Skin tag", "Mole check"]
+  const list = [ "Hair loss", "Acne", "Alopecia", "Skin tag", "Mole Removal"]
   // const [active, setActive] = useState(0)
 
 
@@ -71,7 +71,7 @@ const ServicesDetails = ({ serviceDetail }) => {
 
           <div className={`${serviceDetail?.symptoms ? 'grid xl:grid-cols-3 md:grid-cols-2' : 'grid xl:grid-cols-2  md:grid-cols-2'} gap-5`}>
             <div className='bg-white rounded-2xl px-8 py-10'>
-              <h2 className='text-[30px] text-[#1E3D64] font-normal font-intr leading-[30px]'>Types of {serviceDetail?.subHeading}</h2>
+              <h2 className='text-[30px] text-[#1E3D64] font-normal font-intr leading-[30px]'>{ serviceDetail.id === 4 ?"Procedures " :"Types of" } {serviceDetail?.subHeading}</h2>
               <div className='border-2 w-[70px] border-[#C9E065] mt-4'></div>
               <ul className='pt-5'>
                 {

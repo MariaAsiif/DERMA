@@ -111,24 +111,23 @@ export const Services = [
     {
         "id": 4,
         "Heading": "Healthy Skin Begins Here",
-        "subHeading": "Mole check",
-        "desc": "Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam ipsum, sem quam semper libero.",
-        "subdesc": "Quisque rutrum. Aenean imperdiet.. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.",
+        "subHeading": "Mole Removal",
+        "desc": "Mole removal refers to the medical procedure of removing a mole from the skin's surface. Moles, also known as nevi, are small clusters of pigmented cells that can appear on various parts of the body. While most moles are harmless, some individuals may choose to have them removed for cosmetic reasons or if there are concerns about their potential to develop into skin cancer.",
+        "subdesc": "",
         "contact": "Contact us to schedule your Treatment today!",
         "pic": p5,
         "typesOf": [
-            "Freckles: There are small brown spots on your skin usually in areas that are exposed to the sun called freckles. Usually freckles aren't harmful.",
-            "Melasma: It is characterised by brown or blue-gray patches on the skin or freckle-like marks.",
-            "Solar lentigines: is a harmless patch of darkened skin that appears on the face and arms. Exposure to UV radiation causes melanocyte proliferation and melanin accumulation in the skin cells (keratinocytes).",
-            "Post-inflammatory Hyperpigmentation: Pimple scaring also known as post-inflammatory hyperpigmentation (PIH) can be even more aggravating and distressing than pimples themselves."
+            "Surgical Excision: Surgical excision involves removing the mole by cutting it out entirely. This procedure is typically performed under local anesthesia. The dermatologist will numb the area around the mole, then carefully remove the mole and close the wound with stitches. Surgical excision is commonly used for larger or suspicious moles, as it allows for the mole to be examined further through pathology testing.",
+            "Shave Excision: Shave excision is a procedure where the mole is shaved off the surface of the skin using a scalpel or razor. This method is typically used for smaller, raised moles. The dermatologist will numb the area, then carefully shave off the mole, usually leaving the skin smooth and allowing it to heal naturally without stitches. Shave excision is a quick and straightforward procedure.",
+            "Laser Removal: Laser removal involves using laser technology to break down the pigmented cells within the mole. The laser targets the melanin in the mole, gradually lightening or removing it. Laser removal is generally suitable for smaller, flat moles. Multiple laser sessions may be required for optimal results."
         ],
         "causesOf": [
-            "Cuts",
-            "Burns",
-            "Lupus",
-            "Exposure to sun",
-            "Skin inflammation",
-            "Reaction of drug use"
+            "Suspicion of Skin Cancer",
+            "Hormonal Changes",
+            "Sun Exposure",
+            "Childhood Sunburns",
+            "Age",
+            "Fair Skin"
         ]
     },
  
