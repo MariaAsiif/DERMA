@@ -18,7 +18,7 @@ const SingleMap = () => {
 
     return (
         <>
-            <div style={{ height: '60vh', width: '100%' }}>
+            <div className='xl:!h-[60vh] xl:w-[100%] md:!h-[30vh] md:!w-[80%] !h-[40vh] !w-[100%]' >
                 <GoogleMapReact
                     bootstrapURLKeys={{ key: 'AIzaSyD0tGMAgpuMIlO51AcuBmxpOWtRGa76Fro' }}
                     defaultCenter={{ lat: lat, lng: lng }}
