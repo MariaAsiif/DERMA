@@ -1,6 +1,7 @@
 {
   "name": "yuween-app",
   "version": "0.1.0",
+  "homepage": "https://londonacneclinic.com/",
   "private": true,
   "dependencies": {
     "@hookform/resolvers": "^2.9.11",
