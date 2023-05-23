@@ -108,6 +108,9 @@ let lists = [follow1 , follow2 , follow3 , follow4 , follow5 , follow6 , follow7
                     <Link to="/contactus">
                       <li className='text-[#1D1D1D] pb-2 font-sans font-semibold text-[15px] '>Contact</li>
                     </Link>
+                    <Link to="/">
+                      <li className='text-[#1D1D1D] pb-2 font-sans font-semibold text-[15px] '>Policies </li>
+                    </Link>
                   </ul>
                 </div>
               </div>

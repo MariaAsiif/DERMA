@@ -7,23 +7,23 @@ import sr3 from '../../../assests/sr3.png'
 import { GoCheck } from 'react-icons/go'
 import { Link } from 'react-router-dom'
 const ServicesDetails = ({ serviceDetail }) => {
-  const list = [ "Hair loss", "Acne", "Alopecia", "Skin tag", "Mole Removal"]
+  const list = ["Hair loss", "Acne", "Alopecia", "Skin tag", "Mole Removal"]
   // const [active, setActive] = useState(0)
 
- const  handleName= (name) =>  {
-    if (name.includes(":")) {
-      return name.replace(":", ":<br/>");
-    } else {
-      return name;
-    }
-  }
+  //  const  handleName= (name) =>  {
+  //     if (name.includes(":")) {
+  //       return name.replace(":", ":<br/>");
+  //     } else {
+  //       return name;
+  //     }
+  //   }
 
 
   return (
     <>
       {/* Section 1  */}
       <div className='container mx-auto  xl:px-10 px-5 lg:py-8 py-5 '>
-      <div className='flex xl:flex-nowrap flex-wrap justify-between pt-[50px]'>
+        <div className='flex xl:flex-nowrap flex-wrap justify-between pt-[50px]'>
           <div className='xl:w-[30%] w-full md:w-[40%]'>
             <ul>
               {
@@ -60,9 +60,12 @@ const ServicesDetails = ({ serviceDetail }) => {
             <p className='text-[16px] text-[#7B5F43] font-mons font-medium pt-[10px] leading-[32px]'>{serviceDetail?.contact}</p>
 
             <div className='relative xl:max-w-[180px] md:max-w-[205px] max-w-[165px]   '>
-              <button className={`bg-transparent border-2 border-[#1F3D64] text-[#1F3D64] 
+              <Link to="/booking">
+                <button className={`bg-transparent border-2 border-[#1F3D64] text-[#1F3D64] 
                                 rounded-full lg:text-[16px] text-[14px]  font-normal font-mons mt-3  uppercase px-8 py-2.5 
-                                `}>book now</button>
+                                `}>book now
+                </button>
+              </Link>
 
               <div className={`border rounded-full absolute top-[40%] right-0  bg-[#1F3D64] text-white `}>
                 <MdOutlineKeyboardArrowRight className={`text-[20px]  `} />
@@ -71,15 +74,15 @@ const ServicesDetails = ({ serviceDetail }) => {
 
           </div>
         </div>
-      </div>
+      </div >
 
       {/* Section 2 */}
-      <div className='bg-gradient-to-r from-[#BACD67] to-[#A8B95D] relative '>
+      <div div className='bg-gradient-to-r from-[#BACD67] to-[#A8B95D] relative ' >
         <div className='container mx-auto  xl:px-10 px-5 lg:py-8 py-5 '>
 
           <div className={`${serviceDetail?.symptoms ? 'grid xl:grid-cols-3 md:grid-cols-2' : 'grid xl:grid-cols-2  md:grid-cols-2'} gap-5`}>
             <div className='bg-white rounded-2xl px-8 py-10'>
-              <h2 className='text-[30px] text-[#1E3D64] font-normal font-intr leading-[30px]'>{ serviceDetail.id === 4 ?"Procedures " :"Types of" } {serviceDetail?.subHeading}</h2>
+              <h2 className='text-[30px] text-[#1E3D64] font-normal font-intr leading-[30px]'>{serviceDetail.id === 4 ? "Procedures " : "Types of"} {serviceDetail?.subHeading}</h2>
               <div className='border-2 w-[70px] border-[#C9E065] mt-4'></div>
               <ul className='pt-5'>
                 {

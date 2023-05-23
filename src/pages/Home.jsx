@@ -13,11 +13,11 @@ import consult from '../assests/Group 77.png'
 import Popup from '../util/popup/Popup'
 import RequestForCall from '../components/LandingComponents/Personal/RequestForCall'
 const Home = () => {
-  const [show, setShow] = useState(false)
+    const [show, setShow] = useState(false)
 
     return (
         <Layout>
-             {show && <Popup modalOpen={show} onClose={() => setShow(false)} data={<RequestForCall />} />}
+            {show && <Popup modalOpen={show} onClose={() => setShow(false)} data={<RequestForCall />} />}
             <div className='relative'>
                 <BannerSlider />
                 <Services />
@@ -28,12 +28,7 @@ const Home = () => {
                 {/* <Results /> */}
                 <MeetLeader />
                 <div className='fixed bottom-2 z-40 right-4'>
-                    <a
-                        href="https://wa.me/02039165407"
-                        class="whatsapp_float"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=007706695644">
                         <div className='bg-[#5CBD20] rounded-md border-2 borde-white xl:px-4 md:px-2 px-2  xl:w-[230px] md:w-[230px]  py-2'>
 
                             <div className='flex '>

@@ -15,7 +15,7 @@ const Schedule = () => {
           <div className='absolute xl:top-[22.5%] top-10 left-[8%] xl:max-w-[500px] md:max-w-[400px]'>
             <h2 className='text-[#B58F2E]  leading-0 lg:text-[60px] md:text-[50px] text-[40px] font-normal font-Herr '>Book Now for a Better You </h2>
             <h1 className='text-[#1F3D64] lg:-mt-[30px] uppercase leading-0 lg:text-[32px] md:text-[25px] text-[22px] font-sans font-semibold'>Schedule Your Appointment</h1>
-            <p className='text-[#5C636E] leading-[28px]  font-normal font-sans  text-[15px]'>eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            <p className='text-[#5C636E] leading-[28px]  font-normal font-sans  text-[15px]'>Our team of experts is ready to help you achieve your goals. Schedule your appointment today and start your journey towards a healthier and happier life!</p>
 
           </div>
         </div>

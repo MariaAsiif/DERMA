@@ -2,13 +2,17 @@ import React from 'react'
 import SummerSkin from '../GenericComponents/SummerSkin'
 import BookAppointment from '../GenericComponents/BookAppointment'
 import Footer from './Footer'
+import { useLocation } from 'react-router-dom'
 
-const HomeFooter = ({setShow}) => {
+const HomeFooter = ({ setShow }) => {
+    let location = useLocation().pathname
     return (
         <>
             <div className=''>
                 <SummerSkin />
-                <BookAppointment setShow={setShow}/>
+                {location !== "/booking" &&
+                    <BookAppointment setShow={setShow} />
+                }
             </div>
             <Footer />
         </>

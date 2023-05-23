@@ -1,6 +1,7 @@
 import React from 'react'
 import leaderImg from '../../../assests/Dr Maham Khan.webp'
 import faeImag from '../../../assests/Rectangle 7.png'
+import { Link } from 'react-router-dom'
 const MeetLeader = () => {
   return (
     <>
@@ -11,7 +12,7 @@ const MeetLeader = () => {
             <h1 className='text-[#1F3D64]  -mt-[30px] uppercase leading-0 lg:text-[36px] text-[20px] font-sans font-medium'>Meet Our Leading Specialist</h1>
             <p className='text-[14px] text-[#1C1C1C] leading-[25px] text-justify max-w-[550px] font-sans  font-normal'>Dr Maham Khan is an experienced doctor known for her warmth, approachability, and dedication to dermatology. Having trained at the renowned Imperial College Healthcare she now works at leading hospitals in London. She is an internationally renowned dermatologist, who has worked within the NHS for many years. She has gained further experience in the field by doing Masters in Clinical Dermatology from the prestigious St John's Institute of Dermatology. She has carried out cosmetic Dermatology Procedures at Harley Street, London. She has a special interest in acne, skin cancer and inflammatory skin conditions. She believes in a holistic approach to patient management. </p>
 
-            <button className='rounded-full lg:text-[16px] text-[14px] font-bold font-sans mt-3 bg-[#1F3D64] text-[#C9E065] hover:bg-[#C9E065] hover:text-[#1F3D64] uppercase px-8 py-3 '>book an appointment</button>
+            <Link to="/booking" className='rounded-full lg:text-[16px] text-[14px] font-bold font-sans mt-3 bg-[#1F3D64] text-[#C9E065] hover:bg-[#C9E065] hover:text-[#1F3D64] uppercase px-8 py-3 '>book an appointment</Link>
 
 
           </div>
