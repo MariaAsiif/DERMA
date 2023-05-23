@@ -1,12 +1,14 @@
 import React from 'react'
-import map from '../../../assests/map.png'
+// import map from '../../../assests/map.png'
 import location from '../../../assests/location.png'
-import facebook from '../../../assests/facebook.png'
-import twitter from '../../../assests/twitter.png'
+// import facebook from '../../../assests/facebook.png'
+// import twitter from '../../../assests/twitter.png'
 import phone from '../../../assests/phone.png'
 import message from '../../../assests/messge.png'
-import insta from '../../../assests/isnsta.png'
+// import insta from '../../../assests/isnsta.png'
+import { FaFacebookF } from 'react-icons/fa'
 import SingleMap from '../Contact/Map'
+import { AiOutlineInstagram, AiOutlineTwitter } from 'react-icons/ai'
 const Find = () => {
   return (
     <>
@@ -15,7 +17,7 @@ const Find = () => {
           <div className='container mx-auto  xl:px-20 px-5'>
             <div className='xl:max-w-[750px] md:max-w-[400px] overflow-hidden xl:pt-[40px] md:pt-[40px] xl:ml-0 md:ml-[350px] flex xl:justify-start md:justify-end justify-center'>
               {/* <img src={map} alt={map} className='object-cover xl:w-[90%] md:w-[80%]  w-[80%] ' /> */}
-              <SingleMap/>
+              <SingleMap />
             </div>
 
           </div>
@@ -45,14 +47,21 @@ const Find = () => {
                 <img src={phone} alt={phone} className='object-cover' />
                 <div className='mx-3 mt-3'>
                   <h1 className='text-[14px] font-sans  font-semibold'>Phone:</h1>
-                  <p className='text-[15px] font-sans  font-normal'>020 3916 5407 <br/> 077 0669 5644</p>
+                  <p className='text-[15px] font-sans  font-normal'>020 3916 5407 <br /> 077 0669 5644</p>
                 </div>
               </div>
-              <div className='flex flex-row items-center'>
-                <img src={twitter} alt={twitter} className='object-cover ' />
-                <img src={insta} alt={insta} className='object-cover ' />
-                <img src={facebook} alt={facebook} className='object-cover ' />
-                
+              <div className='flex flex-row items-center justify-center'>
+                <AiOutlineTwitter className='text-[20px]' />
+                <a href="https://www.instagram.com/drmahamk/" target='_blank'>
+                  <AiOutlineInstagram className='text-[20px] mx-4' />
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100091451258849" target='_blank'>
+                  <FaFacebookF className='text-[20px]' />
+                </a>
+                {/* <img src={twitter} alt={twitter} className='object-contain w-[40px] h-[40px]' />
+                <img src={insta} alt={insta} className='object-contain w-[40px] h-[40px]' />
+                <img src={facebook} alt={facebook} className='object-contain w-[40px] h-[40px]' /> */}
+
               </div>
             </div>
 

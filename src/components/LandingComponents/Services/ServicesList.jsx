@@ -15,22 +15,26 @@ const ServicesList = () => {
             <div className='container mx-auto  xl:px-20 px-5 pt-[80px]'>
                 <div className='grid xl:grid-cols-2 md:grid-cols-2 xl:gap-20 md:gap-10 gap-5'>
                     {Services.map((item, i) => (
-                        <Link to={`/service-detail/${i}`} key={i} onClick={() => setActive(i)} className={`  ${active === i && ' border-2 border-[#C9E065]'} p-3 cursor-pointer rounded-md`}>
-                            <img src={item?.pic} alt={item?.pic} className='object-cover' />
-                            <h2 className={` ${active === i ? 'font-bold' : 'font-normal'} font-intr text-[23px] leading-[26px] uppercase pt-8`}>{item?.heading}</h2>
-                            <div className='border-2 my-6 border-[#1F3D64] w-[80px]'></div>
-                            <p className='text-medium font-mons text-[16px] leading-[30px]'>{item?.desc}</p>
-                            <div className='relative xl:max-w-[205px] md:max-w-[205px] max-w-[185px]   '>
-                                <button className={`
-                                ${active === i ? 'bg-[#1F3D64] text-[#C9E065] ' : 'bg-transparent border-2 border-[#1F3D64] text-[#1F3D64]  '}
-                                rounded-full lg:text-[16px] text-[14px]  font-normal font-mons mt-10  uppercase px-8 py-2.5 
+                        <div className='group'>
+                            <div className={`${i === i && ' group-hover:border-2 group-hover:border-[#C9E065]'} p-2`}>
+                                <Link to={`/service-detail/${i}`} key={i} className={`   p-3 cursor-pointer rounded-md `}>
+                                    <img src={item?.pic} alt={item?.pic} className='object-cover' />
+                                    <h2 className={` ${i === i ? 'font-bold' : 'font-normal'} font-intr text-[23px] leading-[26px] uppercase pt-8`}>{item?.heading}</h2>
+                                    <div className='border-2 my-6 border-[#1F3D64] w-[80px]'></div>
+                                    <p className='text-medium font-mons text-[16px] leading-[30px]'>{item?.desc}</p>
+                                    <div className='relative xl:max-w-[205px] md:max-w-[205px] max-w-[185px]   '>
+                                        <button className={`
+                                ${i === i ? 'group-hover:bg-[#1F3D64] group-hover:text-[#C9E065] ' : 'bg-transparent  text-[#1F3D64]  '}
+                                rounded-full lg:text-[16px] text-[14px] border  font-normal font-mons mt-10  uppercase px-8 py-2.5 
                                 `}>View  Services</button>
 
-                                <div className={`border rounded-full absolute top-[60%] right-0  ${active === i ? 'bg-[#C9E065] text-[#1F3D64] ' : ' bg-[#1F3D64] text-white  '}`}>
-                                    <MdOutlineKeyboardArrowRight className={`text-[20px]  `} />
-                                </div>
+                                        <div className={`border rounded-full absolute top-[60%] right-0  ${i === i ? 'group-hover:bg-[#C9E065] group-hover:text-[#1F3D64] ' : ' bg-[#1F3D64] text-white  '}`}>
+                                            <MdOutlineKeyboardArrowRight className={`text-[20px]  `} />
+                                        </div>
+                                    </div>
+                                </Link>
                             </div>
-                        </Link>
+                        </div>
                     ))}
                 </div>
 
