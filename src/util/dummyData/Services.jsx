@@ -28,7 +28,8 @@ export const Services = [
             "Alopecia Areata: Alopecia areata is an autoimmune condition that causes hair loss in patches. It occurs when the immune system mistakenly attacks the hair follicles, leading to sudden hair loss. The affected areas may be smooth and round, and the hair loss can occur on the scalp, eyebrows, eyelashes, or other parts of the body.",
             "Telogen Effluvium: Telogen effluvium is a temporary form of hair loss that occurs when there is a disruption in the hair growth cycle. It can be triggered by factors such as physical or emotional stress, hormonal changes, illness, nutritional deficiencies, or certain medications. Hair shedding is usually more noticeable during washing or brushing, and the condition often resolves on its own over time..",
             "Traction Alopecia: Traction alopecia is hair loss caused by excessive tension or pulling on the hair. It is commonly seen in individuals who frequently wear tight hairstyles such as ponytails, braids, or cornrows. The constant strain on the hair follicles can lead to hair breakage and thinning in the affected areas.",
-            "Trichotillomania:Trichotillomania is a psychological condition characterized by an irresistible urge to pull out one's hair. People with this disorder may compulsively pull hair from the scalp, eyebrows, eyelashes, or other areas. The repeated hair pulling can result in noticeable hair loss and bald patches",
+            "Trichotillomania:Trichotillomania is a psychological condition characterized by an irresistible urge to pull out one's hair. People with this disorder may compulsively pull hair from the scalp, eyebrows, eyelashes, or other areas. The repeated hair pulling can result in noticeable hair loss and bald patches f",
+            
         ],
         "causesOf": [
             "Stress and Lifestyle Factors",

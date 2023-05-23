@@ -3,6 +3,12 @@ import follow1 from '../../assests/before after for website.png'
 import follow2 from '../../assests/before after for website (1).png'
 import follow3 from '../../assests/before after for website (2).png'
 import follow4 from '../../assests/bf-1.png'
+import follow5 from '../../assests/f3.png'
+import follow6 from '../../assests/bf5.png'
+import follow7 from '../../assests/bf7.png'
+import follow8 from '../../assests/bf8.png'
+import follow9 from '../../assests/bf9.png'
+import follow10 from '../../assests/bf10-.png'
 import send from '../../assests/pseudo.png'
 import { Swiper, SwiperSlide } from "swiper/react";
 // import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
@@ -12,9 +18,11 @@ import "swiper/css";
 import { Autoplay } from "swiper";
 import { Link } from 'react-router-dom'
 const Footer = () => {
+
+let lists = [follow1 , follow2 , follow3 , follow4 , follow5 , follow6 , follow7, follow8,follow9,follow10] 
   return (
     <>
-      <div className='pt-[50px]'>
+      <div className='pt-[50px]' id="before_after">
         <div className='container mx-auto px-10 pb-5
  '>
           <h2 className='text-center font-sans  font-medium text-[23px] pb-5'>Before | After</h2>
@@ -52,41 +60,23 @@ const Footer = () => {
             className="mySwiper"
           >
 
-            <SwiperSlide>
-              <img src={follow1} alt="folow" className='object-cover ' />
-              {/* <ReactCompareSlider
+            {/* <ReactCompareSlider
                 itemOne={<ReactCompareSliderImage src={follow2} srcSet={follow2} alt="Image one" />}
                 itemTwo={<ReactCompareSliderImage src={follow1} srcSet={follow1} alt="Image two" />}
               /> */}
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={follow2} alt="folow" className='object-cover ' />
+            {
+              lists.map((item, i) => (
+                <SwiperSlide key={i}>
+                  <img src={item} alt="folow" className='object-cover ' />
 
-              {/* <ReactCompareSlider
-                itemOne={<ReactCompareSliderImage src={follow3} srcSet={follow3} alt="Image one" />}
-                itemTwo={<ReactCompareSliderImage src={follow4} srcSet={follow4} alt="Image two" />}
-              /> */}
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={follow3} alt="folow" className='object-cover ' />
-              {/* <ReactCompareSlider
-                itemOne={<ReactCompareSliderImage src={follow2} srcSet={follow2} alt="Image one" />}
-                itemTwo={<ReactCompareSliderImage src={follow1} srcSet={follow1} alt="Image two" />}
-              /> */}
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={follow4} alt="folow" className='object-cover ' />
-              {/* <ReactCompareSlider
-                itemOne={<ReactCompareSliderImage src={follow2} srcSet={follow2} alt="Image one" />}
-                itemTwo={<ReactCompareSliderImage src={follow1} srcSet={follow1} alt="Image two" />}
-              /> */}
-            </SwiperSlide>
+                </SwiperSlide>
+              ))
+
+
+            }
 
           </Swiper>
-          {/* <div className='flex items-center justify-center'>
-          <img src={follow1} alt="folow" className='object-cover w-[30%]' />
-          <img src={follow2} alt="folow" className='object-cover w-[30%]' />
-          <img src={follow3} alt="folow" className='object-cover w-[30%]' /> */}
+
 
           {/* </div> */}
         </div>
@@ -99,7 +89,7 @@ const Footer = () => {
               <div className='xl:w-[40%] md:w-[40%]'>
                 <h2 className='font-semibold font-sans  text-[20px] text-[#171928]'>About Us</h2>
                 <p className='pt-6 font-sans  leading-[28px] font-normal text-[15px] max-w-[280px]'>
-                When you book a consultation with one of our specialists, they will conduct a detailed examination, diagnose your condition, and develop a customized treatment plan tailored to your specific needs.
+                  When you book a consultation with one of our specialists, they will conduct a detailed examination, diagnose your condition, and develop a customized treatment plan tailored to your specific needs.
                 </p>
               </div>
               <div className='xl:w-[25%] md:w-[25%] '>

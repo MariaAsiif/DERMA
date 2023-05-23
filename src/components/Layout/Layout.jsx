@@ -51,9 +51,9 @@ const Layout = ({ children }) => {
           {children}
         </main>
         {location === "/personal" ?
-          <Footer />
+          <Footer   />
           :
-          <HomeFooter />
+          <HomeFooter setShow={setShow} />
         }
       </div>
     </>

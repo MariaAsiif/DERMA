@@ -12,7 +12,7 @@ import { Truncate } from '../../../util/TrucateString';
 import avatar from '../../../assests/avatar.png'
 const Review = () => {
 
-  const review = [{ UserName: "Luna wong", desc: " Very efficient and painless treatment" }, { UserName: "claudia baltag", desc: " Highly effective acne treatment that cleared my skin in no time!" }, { UserName: "Amy Le Mar", desc: " Impressive results! This acne treatment minimized my blemishes and prevented new ones." }, { UserName: "John Paul Collier", desc: "Regained my confidence thanks to this effective acne treatment" }, { UserName: "Nichola Burrows", desc: " Clear skin at last! This acne treatment exceeded my expectations" }]
+  const review = [{ UserName: "Taylor Perkins", desc: " Very efficient and painless treatment" }, { UserName: "George Thomas", desc: " Highly effective acne treatment that cleared my skin in no time!" }, { UserName: "Amy Le Mar", desc: " Impressive results! This acne treatment minimized my blemishes and prevented new ones." }, { UserName: "Olivia Greens", desc: "Regained my confidence thanks to this effective acne treatment" }, { UserName: "Liam Jones ", desc: " Clear skin at last! This acne treatment exceeded my expectations" }]
   return (
     <>
       <div className='container mx-auto  xl:px-20 px-5 pt-[80px]'>

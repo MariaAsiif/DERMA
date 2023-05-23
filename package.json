@@ -4,6 +4,7 @@
   "homepage": "https://londonacneclinic.com/",
   "private": true,
   "dependencies": {
+    "@hassanmojab/react-modern-calendar-datepicker": "^3.1.7",
     "@hookform/resolvers": "^2.9.11",
     "@reduxjs/toolkit": "^1.9.3",
     "@testing-library/jest-dom": "^5.16.5",

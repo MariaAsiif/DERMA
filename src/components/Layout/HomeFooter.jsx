@@ -3,12 +3,12 @@ import SummerSkin from '../GenericComponents/SummerSkin'
 import BookAppointment from '../GenericComponents/BookAppointment'
 import Footer from './Footer'
 
-const HomeFooter = () => {
+const HomeFooter = ({setShow}) => {
     return (
         <>
             <div className=''>
                 <SummerSkin />
-                <BookAppointment />
+                <BookAppointment setShow={setShow}/>
             </div>
             <Footer />
         </>

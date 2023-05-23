@@ -1,9 +1,35 @@
-import React from 'react'
-
+import React, { useState } from 'react'
+import DatePicker from '@hassanmojab/react-modern-calendar-datepicker';
+import '@hassanmojab/react-modern-calendar-datepicker/lib/DatePicker.css';
 const BookingForm = () => {
-const list = ["Acne", "Hair loss", "Alopecia", "Skin tag", "Mole check"]
+    const list = ["Acne", "Hair loss", "Alopecia", "Skin tag", "Mole check"]
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+    const [quoteDate, setquoteDate] = useState({
+        day: dd,
+        month: mm,
+        year: yyyy,
+    });
 
 
+    // ****************** Datepicker Content ***********
+    const renderCustomInput = ({ ref }) => (
+        <div className=' cursor-pointe w-full'>
+            <input
+                readOnly
+                ref={ref} // necessary  placeholder="yyy-mm-dd"
+                value={
+                    quoteDate
+                        ? `${quoteDate.year}/${quoteDate.month}/${quoteDate.day}`
+                        : ''
+                }
+                className={`font-sans focus:outline-none font-normal  my-5 w-full border-b border-[#1F3D64] placeholder:text-[#1F3D64] `}
+            />
+            
+        </div>
+    );
 
 
     return (
@@ -20,7 +46,18 @@ const list = ["Acne", "Hair loss", "Alopecia", "Skin tag", "Mole check"]
 
                         </div>
                         <div className='grid xl:grid-cols-2 md:grid-cols-2 xl:gap-10 md:gap-10'>
-                            <input type="text" placeholder='DATE OF BIRTH || HH:MM' className=' font-sans focus:outline-none font-normal my-5 w-full border-b border-[#1F3D64] placeholder:text-[#1F3D64]' />
+                            <div className='!w-full '>
+                                <DatePicker
+                                    value={quoteDate}
+                                    style={{width:'100% !important'}}
+                                    name='quoteDate'
+                                    onChange={(date) => setquoteDate(date)}
+                                    renderInput={renderCustomInput} // render a custom input
+                                    shouldHighlightWeekends
+                                    calendarPopperPosition='bottom'
+                                />
+                            </div>
+                            {/* <input type="text" placeholder='DATE OF BIRTH || HH:MM' className=' font-sans focus:outline-none font-normal my-5 w-full border-b border-[#1F3D64] placeholder:text-[#1F3D64]' /> */}
                             <input type="text" placeholder='PHONE NUMBER' className=' font-sans focus:outline-none font-normal my-5 w-full border-b border-[#1F3D64] placeholder:text-[#1F3D64]' />
 
                         </div>

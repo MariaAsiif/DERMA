@@ -1,7 +1,7 @@
 
 import React from 'react'
 import footerImg from '../../assests/footer.png'
-const BookAppointment = () => {
+const BookAppointment = ({setShow}) => {
   return (
     <>
       <div className='container mx-auto text-center xl:px-10 px-5 pt-[80px]'>
@@ -27,7 +27,7 @@ const BookAppointment = () => {
 
               </div>
 
-              <button className='rounded-full w-full font-semibold font-sans mt-6 lg:left-0 lg:absolute lg:bottom-5  bg-white text-[#1F3D64] text-[14px]  uppercase px-8 py-3 '>request an appointment</button>
+              <button onClick={() => setShow(true)} className='rounded-full w-full font-semibold font-sans mt-6 lg:left-0 lg:absolute lg:bottom-5  bg-white text-[#1F3D64] text-[14px]  uppercase px-8 py-3 '>request an appointment</button>
             </div>
           </div>
           <div>

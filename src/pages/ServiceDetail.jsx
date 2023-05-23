@@ -2,7 +2,7 @@ import React,{useState , useEffect} from 'react'
 import Layout from '../components/Layout/Layout'
 import BannerGeneric from '../components/GenericComponents/BannerGeneric'
 import ServicesDetails from '../components/LandingComponents/Services/ServicesDetail'
-import Doctor from '../components/GenericComponents/Doctor'
+// import Doctor from '../components/GenericComponents/Doctor'
 import {Services} from '../util/dummyData/Services'
 import { useParams } from 'react-router-dom'
 
@@ -22,7 +22,7 @@ const ServiceDetail = () => {
         <Layout>
             <BannerGeneric heading={"Our Services"} subHeading={serviceDetail?.subHeading} />
             <ServicesDetails serviceDetail={serviceDetail} />
-            <Doctor />
+            {/* <Doctor /> */}
 
         </Layout>
     )

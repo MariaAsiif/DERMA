@@ -3,7 +3,7 @@ import Layout from '../components/Layout/Layout'
 import BannerGeneric from '../components/GenericComponents/BannerGeneric'
 import ServicesList from '../components/LandingComponents/Services/ServicesList'
 import ServicesTreatment from '../components/LandingComponents/Services/ServicesTreatment'
-import Doctor from '../components/GenericComponents/Doctor'
+// import Doctor from '../components/GenericComponents/Doctor'
 
 const Services = () => {
   return (
@@ -11,7 +11,7 @@ const Services = () => {
       <BannerGeneric heading={"We Best Serivces"} subHeading={"OUR SERVICES"} />
       <ServicesList />
       <ServicesTreatment />
-      <Doctor />
+      {/* <Doctor /> */}
     </Layout>
   )
 }

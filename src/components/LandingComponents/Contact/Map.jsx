@@ -2,8 +2,8 @@ import React from 'react'
 import GoogleMapReact from 'google-map-react';
 const SingleMap = () => {
 
-    const lat = 51.520090
-    const lng = -0.147470
+    const lat = 51.519510
+    const lng = -0.146960
 
     const renderMarkers = (map, maps) => {
         let marker = new maps.Marker({

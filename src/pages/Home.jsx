@@ -49,7 +49,7 @@ const Home = () => {
                         <div className='flex '>
                             <img src={consult} alt={consult} className='object-cover' />
                             <div className='pl-2 xl:block md:block hidden'>
-                                <h2 className=' text-white text-[15px] font-sans font-medium'>Book a Free</h2>
+                                <h2 className=' text-white text-[15px] font-sans font-medium'>Book </h2>
                                 <h1 className=' text-white text-[20px] font-sans font-bold'>Consultation</h1>
                             </div>
                         </div>

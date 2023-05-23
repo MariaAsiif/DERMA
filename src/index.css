@@ -58,3 +58,9 @@
     position: absolute;
     top: 70%;
   }
+
+
+  /* Date Picker CSS */
+  .DatePicker{
+    width: 100% !important;
+  }

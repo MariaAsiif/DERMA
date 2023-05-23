@@ -10,6 +10,14 @@ const ServicesDetails = ({ serviceDetail }) => {
   const list = [ "Hair loss", "Acne", "Alopecia", "Skin tag", "Mole Removal"]
   // const [active, setActive] = useState(0)
 
+ const  handleName= (name) =>  {
+    if (name.includes(":")) {
+      return name.replace(":", ":<br/>");
+    } else {
+      return name;
+    }
+  }
+
 
   return (
     <>

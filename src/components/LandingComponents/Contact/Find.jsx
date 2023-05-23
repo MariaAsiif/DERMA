@@ -24,7 +24,7 @@ const Find = () => {
             <h1 className='text-[#1F3D64] lg:-mt-[30px] uppercase leading-0 lg:text-[40px] md:text-[30px] text-[22px] font-intr font-normal'>How to Find Us</h1>
             <p className='text-[#5C636E] leading-[28px]  font-normal font-sans  text-[15px]'>eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
 
-            <div className='grid xl:grid-cols-2 gap-15'>
+            <div className='grid xl:grid-cols-2 gap-20'>
               <div className='flex flex-row items-center'>
                 <img src={message} alt={message} className='object-cover' />
                 <div className='mx-3 mt-3'>
@@ -32,9 +32,9 @@ const Find = () => {
                   <p className='text-[15px] font-sans  font-normal'>info@londonacneclinic.co.uk</p>
                 </div>
               </div>
-              <div className='flex flex-row items-center'>
-                <img src={location} alt={location} className='object-cover' />
-                <div className='mx-3 mt-3'>
+              <div className='flex '>
+                <img src={location} alt={location} className='object-contain ' />
+                <div className='mx-3 pt-3 mt-3'>
                   <h1 className='text-[14px] font-sans  font-semibold'>Adress:</h1>
                   <p className='text-[15px] font-sans  font-normal'>4 Harley Street, London, W1G 9BP</p>
                 </div>
