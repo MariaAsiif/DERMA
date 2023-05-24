@@ -7,7 +7,7 @@ const Mession = () => {
       <div className=' relative '>
         <div className='bg-[#C9E065]  lg:h-[400px] md:h-[380px] h-full max-w-[1000px] ml-auto lg:py-0 md:py-4 py-4 '>
           <div className='container mx-auto   xl:px-20 px-5'>
-            <div className='max-w-[600px] lg:ml-[30%] md:ml-[60%] lg:pt-[60px] md:pt-[60px]  pt-[200px]'>
+            <div className='max-w-[600px] lg:ml-[30%] md:ml-[60%] lg:pt-[60px] md:pt-[60px]  pt-[330px]'>
               <img src={mes} alt={mes} className='object-cover lg:w-[80%] w-full md:w-full' />
             </div>
 

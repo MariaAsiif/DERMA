@@ -9,9 +9,11 @@ const Header = ({ type, open }) => {
     // const location = "/"
     const [sideNavShow, setSideNavShow] = useState(false);
 
+
+
     return (
         <>
-            <Sidebar sidebarOpen={sideNavShow} setSidebarOpen={setSideNavShow} />
+            <Sidebar sidebarOpen={sideNavShow} setSidebarOpen={setSideNavShow} show={() => open(true)} />
             <div className={`bg-white lg:w-full w-full h-auto py-2  ${type === true ? 'lg:top-0 2xl:top-0 md:top-0 top-0 border-t-0' : 'top-10'} border-t z-40 `}>
                 {/* <div className="bg-white  shadow-md border border-gray-100 py-2"> */}
                 <div className="container mx-auto xl:px-10 px-5">

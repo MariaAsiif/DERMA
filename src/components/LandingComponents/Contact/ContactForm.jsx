@@ -23,7 +23,7 @@ const ContactForm = () => {
                     <h1 className='text-[#1F3D64] lg:-mt-[30px] uppercase leading-0 lg:text-[41px] md:text-[30px] text-[22px] font-sans font-semibold'>HAVE ANY QUESTIONS?</h1>
 
                     <form className='pt-6 max-w-[600px] mx-auto' onSubmit={handleSubmit(onSubmit)}>
-                        <div className='grid xl:grid-cols-2 md:grid-cols-2 xl:gap-10 md:gap-10'>
+                        <div className='grid xl:grid-cols-2 md:grid-cols-2 xl:gap-10 md:gap-10 gap-5'>
                             <div>
                                 <input type="text" placeholder='NAME' {...register('name')} className={`font-sans focus:outline-none font-normal  w-full border-b ${errors.name ? 'border-red-500' : ' border-[#1F3D64]'} placeholder:text-[#1F3D64]`} />
                                 {errors.name && (

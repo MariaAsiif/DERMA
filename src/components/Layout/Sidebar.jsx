@@ -4,16 +4,12 @@ import { Link, useLocation } from 'react-router-dom';
 import logo from '../../assests/lure-logo 1.png'
 // import { RiArrowDropDownLine } from 'react-icons/ri';
 
-function Sidebar({
-    sidebarOpen,
-    setSidebarOpen
-}) {
+const  Sidebar = ({ sidebarOpen,setSidebarOpen , show} ) => {
 
     const location = useLocation().pathname
 
     // const trigger = useRef(null);
     const sidebar = useRef(null);
-
 
 
 
@@ -40,7 +36,7 @@ function Sidebar({
     }, [sidebarOpen]);
 
 
-    const list = ["Acne", "Hair loss", "Alopecia", "Skin tag", "Mole check"]
+    // const list = ["Acne", "Hair loss", "Alopecia", "Skin tag", "Mole check"]
 
 
     return (
@@ -171,11 +167,11 @@ function Sidebar({
 
                                             to="/contactus"
                                         >
-                                            <h2 className={` pb-3 px-3 cursor-pointer uppercase`}>Contacts</h2>
+                                            <h2 className={` pb-3 mb-2 px-3 cursor-pointer uppercase`}>Contacts</h2>
                                         </Link>
                                     </li>
-                                    <li>
-                                        <div  className='border cursor-pointer rounded-full py-2 bg-[#1F3D64] text-[#C9E065] px-5'><h2 className='font-bold text-[16px]'>REQUEST CALL BACK</h2></div>
+                                    <li > 
+                                        <div onClick={() => show()} className='border cursor-pointer rounded-full py-2 bg-[#1F3D64] text-[#C9E065] px-5'><h2 className='font-bold text-[16px] cursor-pointer'>REQUEST CALL BACK</h2></div>
                                     </li>
                                 </ul>
                         }

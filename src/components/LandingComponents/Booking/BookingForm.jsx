@@ -42,7 +42,7 @@ const BookingForm = () => {
                         ? `${quoteDate.year}/${quoteDate.month}/${quoteDate.day}`
                         : ''
                 }
-                className={`font-sans focus:outline-none font-normal  my-5 w-full border-b border-[#1F3D64] placeholder:text-[#1F3D64] `}
+                className={`font-sans focus:outline-none font-normal mt-5 w-full border-b border-[#1F3D64] placeholder:text-[#1F3D64] `}
             />
 
         </div>
@@ -101,7 +101,7 @@ const BookingForm = () => {
                     </form> */}
 
                     <form className='pt-6 max-w-[700px] mx-auto' onSubmit={handleSubmit(onSubmit)}>
-                        <div className='grid xl:grid-cols-2 md:grid-cols-2 xl:gap-10 md:gap-10'>
+                        <div className='grid xl:grid-cols-2 md:grid-cols-2 xl:gap-10 md:gap-10 gap-5'>
                             <div>
                                 <input type="text" placeholder='NAME' {...register('name')} className={`font-sans focus:outline-none font-normal bg-transparent text-[#1F3D64]  w-full border-b ${errors.name ? 'border-red-500' : ' border-[#1F3D64]'} placeholder:text-[#1F3D64]`} />
                                 {errors.name && (
@@ -109,7 +109,6 @@ const BookingForm = () => {
                                 )}
                             </div>
                             <div>
-
                                 <input type="text" placeholder='EMAIL' {...register('email')} className={`font-sans focus:outline-none font-normal bg-transparent text-[#1F3D64]  w-full border-b ${errors.email ? 'border-red-500' : ' border-[#1F3D64]'} placeholder:text-[#1F3D64]`} />
                                 {errors.email && (
                                     <p className="text-red-500 text-sm text-left pt-2">{errors.email.message}</p>
@@ -117,7 +116,7 @@ const BookingForm = () => {
                             </div>
 
                         </div>
-                        <div className='grid xl:grid-cols-2 md:grid-cols-2 xl:gap-10 md:gap-10'>
+                        <div className='grid xl:grid-cols-2 md:grid-cols-2 xl:gap-10 md:gap-10 gap-5'>
                             <div className='!w-full '>
                                 <DatePicker
                                     value={quoteDate}
@@ -131,7 +130,7 @@ const BookingForm = () => {
                             </div>
                             {/* <input type="text" placeholder='DATE OF BIRTH || HH:MM' className=' font-sans focus:outline-none font-normal my-5 w-full border-b border-[#1F3D64] placeholder:text-[#1F3D64]' /> */}
                             <div>
-                                <input type="text" {...register('phone')} placeholder='PHONE NUMBER' className={`focus:outline-none font-sans font-normal  mt-5  w-full text-[#1F3D64] ${errors.phone ? 'border-red-500' : ' border-[#1F3D64]'} border-b border-[#1F3D64] placeholder:text-black bg-transparent`} />
+                                <input type="text" {...register('phone')} placeholder='PHONE NUMBER' className={`focus:outline-none font-sans font-normal xl:mt-5 md:mt-5    w-full text-[#1F3D64] ${errors.phone ? 'border-red-500' : ' border-[#1F3D64]'} border-b border-[#1F3D64] placeholder:text-black bg-transparent`} />
                                 {errors.phone && (
                                     <p className="text-red-500 text-sm text-left pb-3 pt-2">{errors.phone.message}</p>
                                 )}
