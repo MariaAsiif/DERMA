@@ -62,14 +62,14 @@ const BookAppointment = ({ setShow }) => {
             <form className='pt-6 max-w-[700px] mx-auto' onSubmit={handleSubmit(onSubmit)}>
               <div className='grid xl:grid-cols-2 md:grid-cols-2 xl:gap-10 md:gap-10'>
                 <div>
-                  <input type="text" placeholder='NAME' {...register('name')} className={`font-sans focus:outline-none font-normal bg-transparent text-white  w-full border-b ${errors.name ? 'border-red-500' : ' border-[#1F3D64]'} placeholder:text-white`} />
+                  <input type="text" placeholder='NAME' {...register('name')} className={`font-sans focus:outline-none font-normal bg-transparent text-white  w-full border-b ${errors.name ? 'border-red-500' : ' border-white '} placeholder:text-white`} />
                   {errors.name && (
                     <p className="text-red-500 text-sm text-left pt-2">{errors.name.message}</p>
                   )}
                 </div>
                 <div>
 
-                  <input type="text" placeholder='EMAIL' {...register('email')} className={`font-sans focus:outline-none font-normal bg-transparent text-white  w-full border-b ${errors.email ? 'border-red-500' : ' border-[#1F3D64]'} placeholder:text-white`} />
+                  <input type="text" placeholder='EMAIL' {...register('email')} className={`font-sans focus:outline-none font-normal bg-transparent text-white  w-full border-b ${errors.email ? 'border-red-500' : ' border-white '} placeholder:text-white`} />
                   {errors.email && (
                     <p className="text-red-500 text-sm text-left pt-2">{errors.email.message}</p>
                   )}
@@ -90,7 +90,7 @@ const BookAppointment = ({ setShow }) => {
                 </div>
                 {/* <input type="text" placeholder='DATE OF BIRTH || HH:MM' className=' font-sans focus:outline-none font-normal my-5 w-full border-b border-[#1F3D64] placeholder:text-[#1F3D64]' /> */}
                 <div>
-                  <input type="text" {...register('phone')} placeholder='PHONE NUMBER' className=' font-sans focus:outline-none font-normal mt-5 w-full text-white border-b border-white placeholder:text-white bg-transparent' />
+                  <input type="text" {...register('phone')} placeholder='PHONE NUMBER' className={` font-sans focus:outline-none font-normal mt-5 w-full text-white border-b  placeholder:text-white bg-transparent ${errors.phone ? 'border-red-500' : ' border-white '}`} />
                   {errors.phone && (
                     <p className="text-red-500 text-sm text-left pb-3 pt-2">{errors.phone.message}</p>
                   )}
@@ -98,21 +98,26 @@ const BookAppointment = ({ setShow }) => {
 
               </div>
               <div className='grid xl:grid-cols-2 md:grid-cols-2 xl:gap-10 md:gap-10'>
-                <select className='focus:outline-none font-sans font-normal my-5 w-full text-white border-b border-white placeholder:text-white bg-transparent'>
-                  <option>London</option>
-                </select>
-                <select {...register('service')} className='focus:outline-none font-sans font-normal my-5 w-full text-white border-b border-white placeholder:text-black bg-transparent'>
-                  <option className='text-black' value="">SELECT SERVICE</option>
-                  {list.map((item, i) => (
-                    <option key={i} value={item} className='text-black'>{item}</option>
-                  ))}
-                </select>
-                {errors.service && (
-                  <p className="text-red-500 text-sm text-left pb-3">{errors.service.message}</p>
-                )}
+                <div>
+                  <select className='focus:outline-none font-sans font-normal my-5 w-full text-white border-b border-white placeholder:text-white bg-transparent'>
+                    <option>London</option>
+                  </select>
+
+                </div>
+                <div>
+                  <select {...register('service')} className={`focus:outline-none font-sans font-normal mt-5 w-full text-white border-b placeholder:text-black bg-transparent ${errors.service ? 'border-red-500' : ' border-white '}`}>
+                    <option className='text-black' value="">SELECT SERVICE</option>
+                    {list.map((item, i) => (
+                      <option key={i} value={item} className='text-black'>{item}</option>
+                    ))}
+                  </select>
+                  {errors.service && (
+                    <p className="text-red-500 text-sm text-left pb-3">{errors.service.message}</p>
+                  )}
+                </div>
 
               </div>
-              <textarea placeholder='DESCRIPTION' {...register('desc')} rows={2} className={`font-sans focus:outline-none font-normal mt-5  w-full border-b ${errors.desc ? 'border-red-500' : ' border-[#1F3D64]'} placeholder:text-white bg-transparent text-white`}></textarea>
+              <textarea placeholder='DESCRIPTION' {...register('desc')} rows={2} className={`font-sans focus:outline-none font-normal mt-5  w-full border-b ${errors.desc ? 'border-red-500' : ' border-white'} placeholder:text-white bg-transparent text-white`}></textarea>
               {errors.desc && (
                 <p className="text-red-500 text-sm text-left pb-3">{errors.desc.message}</p>
               )}

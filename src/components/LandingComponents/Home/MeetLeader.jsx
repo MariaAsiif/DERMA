@@ -1,6 +1,6 @@
 import React from 'react'
-import leaderImg from '../../../assests/Dr Maham Khan.webp'
-import faeImag from '../../../assests/Rectangle 7.png'
+import leaderImg from '../../../assests/dr-maham.jpg'
+// import faeImag from '../../../assests/Rectangle 7.png'
 import { Link } from 'react-router-dom'
 const MeetLeader = () => {
   return (
@@ -20,8 +20,8 @@ const MeetLeader = () => {
 
           </div>
         </div>
-        <div className='absolute lg:top-16 top-16 md:top-40 z-30 '>
-          <img src={leaderImg} alt={leaderImg} className='object-cover lg:w-[40%] lg:h-full md:w-[40%] w-[95%]' />
+        <div className='absolute lg:top-14 top-16 md:top-40 z-30 '>
+          <img src={leaderImg} alt={leaderImg} className='object-cover xl:w-full md:w-[70%] w-[95%]' />
         </div>
         {/* <div className='absolute xl:top-[32%] xl:left-[33%] md:top-[35%] md:left-[35%] top-[32%] left-[30%]'>
           <img src={faeImag} alt={faeImag} className='object-cover lg:w-[80%] w-[50%] md:w-[40%] ' />

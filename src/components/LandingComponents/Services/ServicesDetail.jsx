@@ -37,7 +37,7 @@ const ServicesDetails = ({ serviceDetail }) => {
                       {/* <div className={`border !bg-[#1F3D64] border-[#1F3D64] rounded-full bg-transparent  `}>
                         <MdOutlineKeyboardArrowRight className={`text-[23px] text-white `} />
                       </div> */}
-                      <div className={`border rounded-full   ${serviceDetail?.id === i ? 'bg-[#C9E065] text-[#1F3D64] absolute top-[30%] -right-3 ' : ' bg-[#1F3D64] text-white  '}`}>
+                      <div className={`border rounded-full   ${serviceDetail?.id === i ? 'bg-[#C9E065] text-[#1F3D64] absolute top-[22 %] -right-3 ' : ' bg-[#1F3D64] text-white  '}`}>
                         <MdOutlineKeyboardArrowRight className={`text-[22px]  `} />
                       </div>
                     </Link>
@@ -59,15 +59,15 @@ const ServicesDetails = ({ serviceDetail }) => {
 
             <p className='text-[16px] text-[#7B5F43] font-mons font-medium pt-[10px] leading-[32px]'>{serviceDetail?.contact}</p>
 
-            <div className='relative xl:max-w-[180px] md:max-w-[205px] max-w-[165px]   '>
+            <div className=' group relative xl:max-w-[180px] md:max-w-[205px] max-w-[165px]   '>
               <Link to="/booking">
-                <button className={`bg-transparent border-2 border-[#1F3D64] text-[#1F3D64] 
+                <button className={` group-hover:bg-[#1F3D64] group-hover:text-[#C9E065] bg-transparent border-2 border-[#1F3D64] text-[#1F3D64] 
                                 rounded-full lg:text-[16px] text-[14px]  font-normal font-mons mt-3  uppercase px-8 py-2.5 
                                 `}>book now
                 </button>
               </Link>
 
-              <div className={`border rounded-full absolute top-[40%] right-0  bg-[#1F3D64] text-white `}>
+              <div className={`border rounded-full absolute top-[40%] right-0 group-hover:bg-[#C9E065]  bg-[#1F3D64] text-white `}>
                 <MdOutlineKeyboardArrowRight className={`text-[20px]  `} />
               </div>
             </div>

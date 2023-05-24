@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import follow1 from '../../assests/before after for website.png'
 import follow2 from '../../assests/before after for website (1).png'
 import follow3 from '../../assests/before after for website (2).png'
@@ -17,9 +17,24 @@ import "swiper/css";
 // import required modules
 import { Autoplay } from "swiper";
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 const Footer = () => {
 
-let lists = [follow1 , follow2 , follow3 , follow4 , follow5 , follow6 , follow7, follow8,follow9,follow10] 
+  let lists = [follow1, follow2, follow3, follow4, follow5, follow6, follow7, follow8, follow9, follow10]
+
+
+  useEffect(() => {
+    async function logJSONData() {
+      const response = await axios.get(`https://www.instagram.com/web/search/topsearch/?query=drmahamk`);
+      // const jsonData = await response.json();
+      console.log(response);
+    }
+    logJSONData()
+  }, [])
+
+
+
+
   return (
     <>
       <div className='pt-[50px]' id="before_after">

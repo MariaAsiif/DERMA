@@ -1,5 +1,5 @@
 import React from 'react'
-import user from '../../../assests/Dr Maham Khan.webp'
+import user from '../../../assests/dr-maham.jpg'
 const Banner = () => {
     return (
         <>
