@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import follow1 from '../../assests/before after for website.png'
 import follow2 from '../../assests/before after for website (1).png'
 import follow3 from '../../assests/before after for website (2).png'
@@ -23,17 +23,40 @@ const Footer = () => {
   let lists = [follow1, follow2, follow3, follow4, follow5, follow6, follow7, follow8, follow9, follow10]
 
 
+  const [feeds, setFeedsData] = useState([]);
+  //use useRef to store the latest value of the prop without firing the effect
+  let token = "IGQVJVY1JLNkNmUEh6NlEzU2d3T0Y5NzZA4ZA0Jfa3c4T0xURlBXYnkydVNLOWtFSUJvY0laR0NVTzFhUGNHWlJKWDIyMXFuY3N5dm1tVlEtUldzWEpKMHA0aVhldm5FcmdsRDVDTl85UGxCcmZAfMUo5ZAgZDZD"
+  const tokenProp = useRef(token);
+  tokenProp.current = token;
+
   useEffect(() => {
-    async function logJSONData() {
-      const response = await axios.get(`https://www.instagram.com/web/search/topsearch/?query=drmahamk`);
-      // const jsonData = await response.json();
-      console.log(response);
+    // this is to avoid memory leaks
+    const abortController = new AbortController();
+
+    async function fetchInstagramPost() {
+      try {
+        axios
+          .get(`https://graph.instagram.com/me/media?fields=id,media_type,media_url,permalink,caption&limit=${20}&access_token=${tokenProp.current}`)
+          .then((resp) => {
+            let justImgs = resp.data.data.filter((f) => f.media_type === "IMAGE")
+            setFeedsData(justImgs)
+          })
+      } catch (err) {
+        console.log('error', err)
+      }
     }
-    logJSONData()
-  }, [])
+
+    // manually call the fecth function 
+    fetchInstagramPost();
+
+    return () => {
+      // cancel pending fetch request on component unmount
+      abortController.abort();
+    };
+  }, [10])
 
 
-
+  console.log("feeds", feeds)
 
   return (
     <>
@@ -136,20 +159,32 @@ const Footer = () => {
                   <span>info@londonacneclinic.co.uk</span>
                 </div>
               </div>
-              <div className='col-span-2 xl:pt-0 pt-3'>
-                <p className='text-[#1F3D64] font-sans text-[15px]'>Subscribe to our newsletter You can be always up to date with our Clinic and Cosmetic Center news!</p>
-                <div className='pt-5'>
+              <div className='col-span-2 xl:pt-0 '>
+                {/* <p className='text-[#1F3D64] font-sans text-[15px]'>Subscribe to our newsletter You can be always up to date with our Clinic and Cosmetic Center news!</p> */}
+                <div className=''>
                   <div className='flex justify-between items-center'>
-                    <h2 className='text-[10px] font-bold font-sans uppercase
-                  '>email address</h2>
-                    <div className='flex items-center'>
+                    <h2 className=' font-semibold xl:text-center font-sans xl:pt-0 pt-2 text-[20px] text-[#171928]
+                  '>Instagram Feed</h2>
+                    {/* <div className='flex items-center'>
                       <h2 className='text-[#1F3D64] font-sans font-semibold mx-3 text-[10px]'>Subscribe </h2>
                       <img src={send} alt='send' className='object-cover' />
-                    </div>
+                    </div> */}
                   </div>
                   <div className='pt-1'>
-                    <textarea rows={3} style={{ background: 'rgba(255, 255, 255, 0.28)' }} className='w-full bg-transparent border rounded'></textarea>
-                    <p className='text-[12px] text-[#565C66] font-sans font-normal'>London Acne © 2023. All rights reserved. Terms of use and Privacy Policy</p>
+                    <div className='grid grid-cols-3 gap-5'>
+                      {
+                        feeds.slice(0, 6).map((item, i) => (
+                          <a href={item?.permalink} target='_blank'>
+                            <img key={i} src={item?.media_url} alt={item?.media_url} className='object-cover w-[70px] h-[70px]' />
+                          </a>
+                        ))
+                      }
+                    </div>
+                    {/* <textarea rows={3} style={{ background: 'rgba(255, 255, 255, 0.28)' }} className='w-full bg-transparent border rounded'></textarea> */}
+                    <p className='text-[12px] text-[#565C66] font-sans font-normal'>
+                      {/* London Acne © 2023. All rights reserved. Terms of use and Privacy Policy */}
+                      Developed and Maintained by Devops Markaz Tech Pvt. Ltd.
+                    </p>
                   </div>
                 </div>
               </div>
