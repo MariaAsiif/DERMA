@@ -31,6 +31,10 @@ const Review = () => {
             }}
 
             breakpoints={{
+              280: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
               375: {
                 slidesPerView: 1,
                 spaceBetween: 20,

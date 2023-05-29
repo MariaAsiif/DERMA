@@ -7,7 +7,7 @@ import sr3 from '../../../assests/sr3.png'
 import { GoCheck } from 'react-icons/go'
 import { Link } from 'react-router-dom'
 const ServicesDetails = ({ serviceDetail }) => {
-  const list = ["Hair loss", "Acne", "Alopecia", "Skin tag", "Mole Removal"]
+  const list = ["Hair loss", "Acne", "Alopecia", "Skin tag", "Mole Removal" , "Hair-PRP","Allergy Testing"]
   // const [active, setActive] = useState(0)
 
   //  const  handleName= (name) =>  {

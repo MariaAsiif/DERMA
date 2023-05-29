@@ -8,7 +8,8 @@ const HomeHeader = ({ type, open }) => {
     const location = useLocation().pathname
     // const location = "/"
     const [sideNavShow, setSideNavShow] = useState(false);
-    const list = [ "Hair loss", "Acne", "Alopecia", "Skin tag", "Mole Removal"]
+    const list = ["Hair loss", "Acne", "Alopecia", "Skin tag", "Mole Removal" , "Hair-PRP","Allergy Testing"]
+
 
     return (
         <>

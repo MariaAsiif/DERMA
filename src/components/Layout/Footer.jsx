@@ -25,7 +25,7 @@ const Footer = () => {
 
   const [feeds, setFeedsData] = useState([]);
   //use useRef to store the latest value of the prop without firing the effect
-  let token = "IGQVJVY1JLNkNmUEh6NlEzU2d3T0Y5NzZA4ZA0Jfa3c4T0xURlBXYnkydVNLOWtFSUJvY0laR0NVTzFhUGNHWlJKWDIyMXFuY3N5dm1tVlEtUldzWEpKMHA0aVhldm5FcmdsRDVDTl85UGxCcmZAfMUo5ZAgZDZD"
+  let token = "IGQVJVemdyYzV1dU1yZAzEycjFQSEY2bHFKVUljcEduNnBoczA0RklqdmFOUVprUnVZAaTRLeHFUbTl2Vm9GYU5HUUJJMUduTnRYRTVfX2ptSmxTNktpRTRoRDVueFB4ZAlBqS2lwUWFzU0xfdEFwZA3ExOAZDZD"
   const tokenProp = useRef(token);
   tokenProp.current = token;
 
@@ -53,7 +53,7 @@ const Footer = () => {
       // cancel pending fetch request on component unmount
       abortController.abort();
     };
-  }, [10])
+  }, [])
 
 
   console.log("feeds", feeds)

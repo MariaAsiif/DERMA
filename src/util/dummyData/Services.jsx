@@ -13,6 +13,8 @@ import p2 from '../../assests/service1.jpg'
 import p3 from '../../assests/service3.jpg'
 import p4 from '../../assests/service4.jpg'
 import p5 from '../../assests/service5.jpg'
+import p6 from '../../assests/service6.jpg'
+import p7 from '../../assests/service7.jpg'
 export const Services = [
    
     {
@@ -124,6 +126,51 @@ export const Services = [
             "Childhood Sunburns",
             "Age",
             "Fair Skin"
+        ]
+    },
+    {
+        "id": 5,
+        "Heading": "Healthy Skin Begins Here",
+        "subHeading": "Hair PRP",
+        "desc": "Hair PRP, or Platelet-Rich Plasma therapy, is a non-surgical procedure that utilizes the healing properties of platelets from a patient's blood to stimulate hair growth and improve hair thickness. PRP is derived from the patient's own blood, which is processed to concentrate platelets rich in growth factors. These growth factors are then injected into the scalp, promoting natural hair growth and revitalizing dormant hair follicles.",
+        "subdesc": "",
+        "contact": "Contact us to schedule your Treatment today!",
+        "pic": p6,
+        "typesOf": [
+            "Standard PRP: In the standard PRP method, a small amount of blood is drawn from the patient. The blood sample is then processed in a centrifuge to separate the platelet-rich plasma from other components. The concentrated PRP, containing growth factors and cytokines, is injected into the scalp using fine needles.",
+            "PRP with Microneedling: Combining PRP with microneedling is a popular approach to enhance the effectiveness of the treatment. Microneedling involves creating tiny microchannels in the scalp using a dermaroller or microneedling device. PRP is then applied topically or injected into the scalp, allowing better absorption and distribution of growth factors.",
+            "PRP with ACell: ACell is a regenerative medicine product that can be combined with PRP to improve hair restoration results. ACell acts as a scaffold, supporting tissue regeneration and enhancing the effectiveness of PRP. The combined therapy of PRP with ACell has shown promising results in stimulating hair growth."
+        ],
+        "causesOf": [
+            "Hair Growth Stimulation",
+            "Non-Surgical and Safe",
+            "Natural Results",
+            "Minimal Downtime:",
+            "Customizable Treatment",
+            
+        ]
+    },
+    {
+        "id": 6,
+        "Heading": "Healthy Skin Begins Here",
+        "subHeading": "Allergy Testing",
+        "desc": "Allergy testing is a diagnostic procedure that helps identify specific substances (allergens) that trigger an allergic reaction in an individual. By identifying these triggers, healthcare professionals can develop tailored treatment plans to manage and minimize allergic symptoms.",
+        "subdesc": "",
+        "contact": "Contact us to schedule your Treatment today!",
+        "pic": p7,
+        "typesOf": [
+            "Skin Prick Test: The skin prick test is one of the most common allergy tests. Small amounts of suspected allergens are applied to the skin, typically on the forearm or back, using tiny pricks or scratches. If an individual is allergic to a particular substance, a small red bump or swelling (wheal) will develop at the site.",
+            "Blood Test: Blood tests, such as the specific IgE blood test, measure the levels of allergy-related antibodies (immunoglobulin E or IgE) in the blood. These tests can detect the presence of allergen-specific IgE antibodies, indicating sensitivity or allergy to specific substances.",
+            "Patch Test: Patch testing is primarily used to diagnose contact dermatitis, a delayed allergic reaction that occurs when the skin comes into contact with certain substances. Small amounts of potential allergens are applied to patches, which are then placed on the skin for a designated period. Skin reactions are assessed after removal of the patches.",
+            "Elimination Diet: An elimination diet involves temporarily removing certain foods or ingredients from the diet to determine if they are causing allergic reactions. Foods are then gradually reintroduced, one at a time, to identify specific triggers."
+
+        ],
+        "causesOf": [
+            "Accurate Identification of Allergens",
+            "ailored Treatment Plans",
+            "Improved Quality of Life",
+            "Allergen-Specific Education:",
+           
         ]
     },
  
