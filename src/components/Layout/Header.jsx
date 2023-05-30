@@ -97,7 +97,7 @@ const Header = ({ type, open }) => {
                                     </ScrollLink>
                                 </li>
                                 <li>
-                                    <div onClick={() => open(true)} className='border cursor-pointer rounded-full py-2 bg-[#1F3D64] text-[#C9E065] px-5'><h2 className='font-bold text-[16px]'>REQUEST CALL BACK</h2></div>
+                                    <div onClick={() => open(true)} className='border cursor-pointer rounded-full py-2 bg-[#1F3D64] transform delay-100 ease-out text-[#C9E065] hover:bg-white hover:text-[#1F3D64] text-[#C9E065] px-5'><h2 className='font-bold text-[16px]'>REQUEST CALL BACK</h2></div>
                                 </li>
                             </ul>
                         </div>

@@ -61,7 +61,7 @@ const ServicesDetails = ({ serviceDetail }) => {
 
             <div className=' group relative xl:max-w-[180px] md:max-w-[205px] max-w-[165px]   '>
               <Link to="/booking">
-                <button className={` group-hover:bg-[#1F3D64] group-hover:text-[#C9E065] bg-transparent border-2 border-[#1F3D64] text-[#1F3D64] 
+                <button className={` group-hover:bg-[#1F3D64] group-hover:text-[#be9162] bg-transparent border-2 border-[#1F3D64] text-[#1F3D64] 
                                 rounded-full lg:text-[16px] text-[14px]  font-normal font-mons mt-3  uppercase px-8 py-2.5 
                                 `}>book now
                 </button>

@@ -12,7 +12,7 @@ const Invest = () => {
               </h2>
               <p className='text-[16px] lg:leading-[48px] leading-[30px] font-sans  font-normal'>Investing in your skin is a wise decision that yields long-term benefits. At our acne clinic, we prioritize the well-being of your skin and provide effective solutions for a variety of acne-related concerns. Our team of expert dermatologists is dedicated to delivering personalized care to help you achieve a clear and healthy complexion. </p>
 
-              <button className='rounded-full font-bold lg:text-auto text-[14px] font-sans mt-3 bg-[#1F3D64] text-[#C9E065] hover:bg-[#C9E065] hover:text-[#1F3D64] uppercase px-8 py-3 '>contact us</button>
+              <button className='rounded-full font-bold lg:text-auto text-[14px] font-sans mt-3 bg-[#1F3D64] text-[#C9E065] transform delay-100 ease-out  hover:bg-white hover:text-[#1F3D64] uppercase px-8 py-3  '>contact us</button>
             </div>
 
 

@@ -163,7 +163,7 @@ const BookingForm = () => {
                             <p className="text-red-500 text-sm text-left pb-3">{errors.desc.message}</p>
                         )}
                         <div className='flex justify-center items-center py-5'>
-                            <button type='submit' className=' w-full  bg-[#1F3D64] text-white  uppercase px-8 py-3 text-[14px] font-semibold font-sans  rounded-full text-center '>book now</button>
+                            <button type='submit' className=' w-full  bg-[#1F3D64] text-white  uppercase px-8 py-3 text-[14px] font-semibold font-sans  rounded-full text-center transform delay-100 ease-out hover:border  hover:bg-white hover:border-[#1F3D64] hover:text-[#1F3D64] '>book now</button>
                         </div>
                     </form>
                 </div>

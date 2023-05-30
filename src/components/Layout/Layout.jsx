@@ -50,11 +50,14 @@ const Layout = ({ children }) => {
         <main className='xl:pt-32 pt-20'>
           {children}
         </main>
-        {location === "/personal" ?
-          <Footer   />
-          :
-          <HomeFooter setShow={setShow} />
-        }
+        <div >
+          {location === "/personal" ?
+            <Footer />
+            :
+            <HomeFooter setShow={setShow} />
+          }
+
+        </div>
       </div>
     </>
   )

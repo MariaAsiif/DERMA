@@ -135,19 +135,19 @@ const Footer = () => {
                 <div className='xl:pt-6 pt-3'>
                   <ul className=''>
                     <Link to="/aboutUs">
-                      <li className='text-[#1D1D1D] pb-2 font-sans font-semibold text-[15px] '>About</li>
+                      <li className='text-[#1D1D1D] hover:text-[#be9162] pb-2 font-sans font-semibold text-[15px] '>About</li>
                     </Link>
                     <Link to="/services">
-                      <li className='text-[#1D1D1D] pb-2 font-sans font-semibold text-[15px] '>Surgeries</li>
+                      <li className='text-[#1D1D1D] hover:text-[#be9162] pb-2 font-sans font-semibold text-[15px] '>Surgeries</li>
                     </Link>
                     <Link to="/services">
-                      <li className='text-[#1D1D1D] pb-2 font-sans font-semibold text-[15px] '>Services</li>
+                      <li className='text-[#1D1D1D] hover:text-[#be9162] pb-2 font-sans font-semibold text-[15px] '>Services</li>
                     </Link>
                     <Link to="/contactus">
-                      <li className='text-[#1D1D1D] pb-2 font-sans font-semibold text-[15px] '>Contact</li>
+                      <li className='text-[#1D1D1D] hover:text-[#be9162] pb-2 font-sans font-semibold text-[15px] '>Contact</li>
                     </Link>
-                    <Link to="/">
-                      <li className='text-[#1D1D1D] pb-2 font-sans font-semibold text-[15px] '>Policies </li>
+                    <Link to="/policies">
+                      <li className='text-[#1D1D1D] hover:text-[#be9162] pb-2 font-sans font-semibold text-[15px] '>Policies </li>
                     </Link>
                   </ul>
                 </div>

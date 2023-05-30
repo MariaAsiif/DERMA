@@ -34,7 +34,7 @@ const HomeHeader = ({ type, open }) => {
                                         className={`${location === "/" ? 'active' : ''}`}
                                         to="/"
                                     >
-                                        <h2 className={` pb-3 px-3 cursor-pointer uppercase`}>HOME</h2>
+                                        <h2 className={` pb-3 px-3 cursor-pointer uppercase hover:text-[#be9162]`}>HOME</h2>
                                     </Link>
 
                                 </li>
@@ -44,7 +44,7 @@ const HomeHeader = ({ type, open }) => {
 
                                         to="/aboutus"
                                     >
-                                        <h2 className={` pb-3 px-3 cursor-pointer uppercase `}>ABOUT</h2>
+                                        <h2 className={` pb-3 px-3 cursor-pointer uppercase hover:text-[#be9162] `}>ABOUT</h2>
                                     </Link>
                                 </li>
                                 <li className="main-li cursor-pointer uppercase">
@@ -110,7 +110,7 @@ const HomeHeader = ({ type, open }) => {
 
                                         to="/booking"
                                     >
-                                        <h2 className={` pb-3 px-3 cursor-pointer uppercase`}>Booking</h2>
+                                        <h2 className={` pb-3 px-3 cursor-pointer uppercase hover:text-[#be9162]`}>Booking</h2>
                                     </Link>
                                 </li>
                                 <li className='pt-3 ' id="nav-item">
@@ -119,11 +119,11 @@ const HomeHeader = ({ type, open }) => {
 
                                         to="/contactus"
                                     >
-                                        <h2 className={` pb-3 px-3 cursor-pointer uppercase`}>Contacts</h2>
+                                        <h2 className={` pb-3 px-3 cursor-pointer uppercase hover:text-[#be9162]`}>Contacts</h2>
                                     </Link>
                                 </li>
                                 <li>
-                                    <div onClick={() => open(true)} className='border cursor-pointer rounded-full py-2 bg-[#1F3D64] text-[#C9E065] px-5'><h2 className='font-bold text-[16px]'>REQUEST CALL BACK</h2></div>
+                                    <div onClick={() => open(true)} className='border cursor-pointer rounded-full py-2 bg-[#1F3D64] transform delay-100 ease-out text-[#C9E065] hover:bg-white hover:text-[#1F3D64] px-5'><h2 className='font-bold text-[16px]'>REQUEST CALL BACK</h2></div>
                                 </li>
                             </ul>
                         </div>

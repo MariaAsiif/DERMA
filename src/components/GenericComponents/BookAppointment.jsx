@@ -122,7 +122,7 @@ const BookAppointment = ({ setShow }) => {
                 <p className="text-red-500 text-sm text-left pb-3">{errors.desc.message}</p>
               )}
               <div className='flex justify-center items-center py-5'>
-                <button type='submit' className=' w-full  bg-white text-[#1F3D64]   uppercase px-8 py-3 text-[14px] font-semibold font-sans  rounded-full text-center '>book now</button>
+                <button type='submit' className=' w-full  bg-white text-[#1F3D64]   uppercase px-8 py-3 text-[14px] font-semibold font-sans transform delay-100 ease-out hover:border  hover:bg-[#C9E065] hover:border-[#1F3D64] hover:text-[#1F3D64] rounded-full text-center '>book now</button>
               </div>
             </form>
             {/* <div className='pt-3 relative h-full'>

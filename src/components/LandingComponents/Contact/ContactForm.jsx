@@ -52,7 +52,7 @@ const ContactForm = () => {
 
 
                         <div className='flex justify-center items-center py-5'>
-                            <button className=' w-[55%] py-3 text-[10px] font-semibold font-sans  rounded-full bg-[#1F3D64] text-white text-center uppercase'>Send Message</button>
+                            <button className=' w-[55%] py-3 text-[10px] font-semibold font-sans  rounded-full bg-[#1F3D64] text-white text-center transform delay-100 ease-out hover:border  hover:bg-white hover:border-[#1F3D64] hover:text-[#1F3D64] uppercase'>Send Message</button>
                         </div>
                     </form>
                 </div>
