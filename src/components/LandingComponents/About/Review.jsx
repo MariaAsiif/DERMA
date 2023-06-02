@@ -1,6 +1,6 @@
 import React from 'react'
 // Import Swiper React components
-import rv1 from '../../../assests/rv2.png'
+// import rv1 from '../../../assests/rv2.png'
 // import rv2 from '../../../assests/rv1.png'
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
@@ -9,13 +9,11 @@ import "swiper/css/pagination";
 // import required modules
 import { Pagination } from "swiper";
 // import { BsStarFill } from 'react-icons/bs';
-import R1 from '../../../assests/r_1.png'
-import R2 from '../../../assests/r_2.png'
-import R3 from '../../../assests/r_3.png'
-import R4 from '../../../assests/r_4.png'
-import R5 from '../../../assests/r_5.png'
+import R1 from '../../../assests/male.png'
+import R2 from '../../../assests/female.png'
+
 const Review = () => {
-  const review = [{ Pic: R1 , UserName: "Sophia", desc: " Very efficient and painless treatment" }, {Pic: R2 , UserName: "Grace", desc: " Highly effective acne treatment that cleared my skin in no time!" }, { Pic: R3 , UserName: "Lily", desc: " Impressive results! This acne treatment minimized my blemishes and prevented new ones." }, { Pic: R4 , UserName: "Emily", desc: "Regained my confidence thanks to this effective acne treatment" }, {Pic: R5 , UserName: "Charlotte", desc: " Clear skin at last! This acne treatment exceeded my expectations" }]
+  const review = [{ Pic: R1 , UserName: "Sophia", desc: " Very efficient and painless treatment" }, {Pic: R2 , UserName: "Grace", desc: " Highly effective acne treatment that cleared my skin in no time!" }, { Pic: R1 , UserName: "Lily", desc: " Impressive results! This acne treatment minimized my blemishes and prevented new ones." }, { Pic: R2 , UserName: "Emily", desc: "Regained my confidence thanks to this effective acne treatment" }, {Pic: R1 , UserName: "Charlotte", desc: " Clear skin at last! This acne treatment exceeded my expectations" }]
 
   return (
     <>
@@ -61,7 +59,7 @@ const Review = () => {
                 <SwiperSlide key={i}>
                   <div className='flex xl:flex-nowrap md:flex-nowrap flex-wrap '>
                     <div className='flex justify-center items-center xl:w-auto w-full '>
-                      <img src={rv1} alt={rv1} className='object-cover rounded-full ' />
+                      <img src={item?.Pic} alt={item?.Pic} className='object-cover rounded-full ' />
                     </div>
                     <div className='pl-3' >
                       <p className='text-[17px] italic text-[#5C636E] font-normal font-intr '>{item?.desc}</p>

@@ -5,9 +5,13 @@ import "swiper/css";
 import "swiper/css/pagination";
 // import required modules
 import { Autoplay , Pagination } from "swiper";
-import BannerImg from '../../../assests/Slider.png'
 import { Link } from 'react-router-dom';
+import banner1 from '../../../assests/image01.jpg'
+import banner2 from '../../../assests/image02.jpg'
+import banner3 from '../../../assests/Slider.png'
 const BannerSlider = () => {
+
+    const bannerImages = [banner1 , banner2 , banner3]
     return (
         <>
             <Swiper
@@ -26,11 +30,11 @@ const BannerSlider = () => {
                   modules={[Autoplay , Pagination]}
                 className="slider_swiper"
             >
-                {Array(5).fill(5).map((_, i) => (
+                {bannerImages.map((item, i) => (
                     <SwiperSlide key={i}>
                         <div className='relative'>
-                            <img src={BannerImg} alt={BannerImg} className='object-cover' />
-                            <div className='absolute  lg:top-60 md:top-[30%] top-[20%] right-1  lg:right-16 md:right-5'>
+                            <img src={item} alt={item} className='object-cover' />
+                            <div className={`absolute  lg:top-60 md:top-[30%] top-[20%]  ${i === 1 ? 'left-10' :'right-1  lg:right-16 md:right-5 '}`}>
                                 <div className='max-w-[800px] m-auto  '>
                                     <h1 className='lg:text-[64px] text-[15px]  md:text-[25px] text-[#B58F2E] leading-0 font-bold font-sans text-left uppercase '>UK's No. 1 </h1>
                                     <span className='leading-0 md:text-[30px] text-[18px] -mt-6 lg:text-[64px] leading-0 font-bold font-sans text-left uppercase text-[#1F3D64]'> clinic for acne </span>
