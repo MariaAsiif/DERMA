@@ -119,7 +119,7 @@ const HomeHeader = ({ type, open }) => {
 
                                         to="/contactus"
                                     >
-                                        <h2 className={` pb-3 px-3 cursor-pointer uppercase hover:text-[#be9162]`}>Contacts</h2>
+                                        <h2 className={` pb-3 px-3 cursor-pointer uppercase hover:text-[#be9162]`}>Contacts us</h2>
                                     </Link>
                                 </li>
                                 <li>

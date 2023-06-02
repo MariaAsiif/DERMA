@@ -22,7 +22,7 @@ const SingleMap = () => {
                 <GoogleMapReact
                     bootstrapURLKeys={{ key: 'AIzaSyD0tGMAgpuMIlO51AcuBmxpOWtRGa76Fro' }}
                     defaultCenter={{ lat: lat, lng: lng }}
-                    defaultZoom={11}
+                    defaultZoom={15}
                     yesIWantToUseGoogleMapApiInternals
                     onGoogleApiLoaded={({ map, maps }) => renderMarkers(map, maps)}
                 >

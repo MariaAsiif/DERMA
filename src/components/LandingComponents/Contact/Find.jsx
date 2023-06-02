@@ -24,7 +24,7 @@ const Find = () => {
           <div className='absolute xl:top-[10%] md:top-[10%] top-50 xl:right-[10%] pl-10  max-w-[500px]'>
             <h2 className='text-[#B58F2E]  leading-0 lg:text-[60px] md:text-[50px] text-[40px] font-normal font-Herr '>Get In Touch</h2>
             <h1 className='text-[#1F3D64] lg:-mt-[30px] uppercase leading-0 lg:text-[40px] md:text-[30px] text-[22px] font-intr font-normal'>How to Find Us</h1>
-            <p className='text-[#5C636E] leading-[28px]  font-normal font-sans  text-[15px]'>eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            <p className='text-[#5C636E] leading-[28px]  font-normal font-sans  text-[15px]'>We are here to provide you with exceptional care and support. We look forward to welcoming you to our clinic!</p>
 
             <div className='grid xl:grid-cols-2 xl:gap-20'>
               <div className='flex flex-row items-center'>
