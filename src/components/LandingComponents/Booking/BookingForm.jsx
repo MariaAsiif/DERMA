@@ -4,6 +4,8 @@ import '@hassanmojab/react-modern-calendar-datepicker/lib/DatePicker.css';
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
+import { SendContactUs } from '../../../lib/Api/RequestsApi';
+import { toast } from 'react-toastify';
 
 const schema = yup.object({
     name: yup.string().required(),
@@ -15,7 +17,7 @@ const schema = yup.object({
 });
 
 const BookingForm = () => {
-
+    const [buttonAction, setButtonAction] = useState(false);
     const { register, handleSubmit, formState: { errors } } = useForm({ mode: 'onChange', resolver: yupResolver(schema) });
 
     const list = ["Acne", "Hair loss", "Alopecia", "Skin tag", "Mole check"]
@@ -29,7 +31,6 @@ const BookingForm = () => {
         year: yyyy,
     });
 
-    console.log("Date", quoteDate)
 
     // ****************** Datepicker Content ***********
     const renderCustomInput = ({ ref }) => (
@@ -50,8 +51,25 @@ const BookingForm = () => {
 
 
     const onSubmit = async (data) => {
-
+        setButtonAction(true);
+    let varDate=`${quoteDate.day}/${quoteDate.month}/${quoteDate.year}`
+    const endpoint = process.env.REACT_APP_BOOKING_ENDPOINTS;
+    let payload = {
+      name: data.name,
+      email: data.email,
+      phoneNumber: data.phone,
+      service: data.service,
+      date: varDate,
+      description: data.desc,
+      city: "London",
+    };
+    try {
+      await SendContactUs(endpoint, payload);
+      setButtonAction(false);
+    } catch (err) {
+      toast.error(err);
     }
+      };
 
     return (
         <>
@@ -158,12 +176,12 @@ const BookingForm = () => {
                             </div>
 
                         </div>
-                        <textarea placeholder='DESCRIPTION' {...register('desc')} rows={2} className={`font-sans focus:outline-none font-normal mt-5  w-full border-b ${errors.desc ? 'border-red-500' : ' border-[#1F3D64]'} placeholder:text-[#1F3D64] bg-transparent text-white`}></textarea>
+                        <textarea placeholder='DESCRIPTION' {...register('desc')} rows={2} className={`font-sans focus:outline-none font-normal mt-5  w-full border-b ${errors.desc ? 'border-red-500' : ' border-[#1F3D64]'} placeholder:text-black bg-transparent text-[#1F3D64]`}></textarea>
                         {errors.desc && (
                             <p className="text-red-500 text-sm text-left pb-3">{errors.desc.message}</p>
                         )}
                         <div className='flex justify-center items-center py-5'>
-                            <button type='submit' className=' w-full  bg-[#1F3D64] text-white  uppercase px-8 py-3 text-[14px] font-semibold font-sans  rounded-full text-center transform delay-100 ease-out hover:border  hover:bg-white hover:border-[#1F3D64] hover:text-[#1F3D64] '>book now</button>
+                            <button disabled={buttonAction} type='submit' className=' w-full  bg-[#1F3D64] text-white  uppercase px-8 py-3 text-[14px] font-semibold font-sans  rounded-full text-center transform delay-100 ease-out hover:border  hover:bg-white hover:border-[#1F3D64] hover:text-[#1F3D64] '>book now</button>
                         </div>
                     </form>
                 </div>
