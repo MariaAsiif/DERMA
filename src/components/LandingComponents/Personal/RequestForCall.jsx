@@ -5,6 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { SendContactUs } from "../../../lib/Api/RequestsApi";
 import { toast } from "react-toastify";
+import SuccessModal from "../../../util/popup/SuccessModal";
 
 const schema = yup.object({
   name: yup.string().required(),
@@ -13,29 +14,34 @@ const schema = yup.object({
   service: yup.string().required(),
 });
 
-const RequestForCall = () => {
+const RequestForCall = ({ onCloseRequestModal }) => {
   const [buttonAction, setButtonAction] = useState(false);
   const list = ["Acne", "Hair loss", "Alopecia", "Skin tag", "Mole check"];
+  const [showModal, setShowModal] = useState(false);
 
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({ mode: "onChange", resolver: yupResolver(schema) });
   const onSubmit = async (data) => {
     setButtonAction(true);
     const endpoint = process.env.REACT_APP_CALLBACK_ENDPOINTS;
-    
+
     let payload = {
-        name: data.name,
-        email: data.email,
-        phoneNumber: data.phone,
-        service: data.service,
+      name: data.name,
+      email: data.email,
+      phoneNumber: data.phone,
+      service: data.service,
     };
-    
+
     try {
       await SendContactUs(endpoint, payload);
+      reset();
+      setShowModal(true);
       setButtonAction(false);
+      
     } catch (err) {
       toast.error(err);
     }
@@ -43,6 +49,7 @@ const RequestForCall = () => {
 
   return (
     <>
+    
       <div className=" w-full px-10">
         <h2 className="font-Herr font-normal text-[#C9E065] text-[72px] text-center">
           Request Call Back
@@ -59,7 +66,7 @@ const RequestForCall = () => {
               errors.name ? "border-red-500 mt-5" : "border-[#1F3D64] my-5"
             }`}
           />
-          {errors.email && (
+          {errors.name && (
             <p className="text-red-500 text-sm text-left">
               {errors.name.message}
             </p>
@@ -85,9 +92,9 @@ const RequestForCall = () => {
               errors.phone ? "border-red-500 mt-5" : "border-[#1F3D64] my-5"
             }`}
           />
-          {errors.phone && (
+          {errors.name && (
             <p className="text-red-500 text-sm text-left">
-              {errors.phone.message}
+              {errors.name.message}
             </p>
           )}
           <select
@@ -103,19 +110,23 @@ const RequestForCall = () => {
               </option>
             ))}
           </select>
-          {errors.service && (
+          {errors.name && (
             <p className="text-red-500 text-sm text-left">
-              {errors.service.message}
+              {errors.name.message}
             </p>
           )}
 
           <div className="flex justify-center items-center py-5">
-            <button disabled={buttonAction} className=" w-[55%] py-[6px] rounded-full bg-[#1F3D64] text-white text-center uppercase">
+            <button
+              disabled={buttonAction}
+              className=" w-[55%] py-[6px] rounded-full bg-[#1F3D64] text-white text-center uppercase"
+            >
               Submit
             </button>
           </div>
         </form>
       </div>
+      <SuccessModal isVisible={showModal} closingAll={onCloseRequestModal}/>
     </>
   );
 };

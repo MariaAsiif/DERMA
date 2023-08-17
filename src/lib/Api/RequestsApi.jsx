@@ -102,7 +102,7 @@ export const SendContactUs = async (endpoint, payload) => {
   try {
     let response = await callingPublicApi(endpoint, "post", payload);
     if (response.message === "Response sent successfully") {
-      toast.success(response.message);
+      
       return {
         res: response.data,
       };

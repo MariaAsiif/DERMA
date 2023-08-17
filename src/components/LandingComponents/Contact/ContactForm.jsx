@@ -4,6 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { SendContactUs } from "../../../lib/Api/RequestsApi.jsx";
 import { toast } from "react-toastify";
+import SuccessModal from "../../../util/popup/SuccessModal.jsx";
 const schema = yup.object({
   name: yup.string().required(),
   email: yup.string().email("Invalid email format").required(),
@@ -11,6 +12,7 @@ const schema = yup.object({
 });
 const ContactForm = () => {
   const [buttonAction, setButtonAction] = useState(false);
+  const [modalShow, setModalShow] = useState(false)
   const {
     register,
     handleSubmit,
@@ -28,6 +30,8 @@ const ContactForm = () => {
     try {
       await SendContactUs(endpoint, payload);
       setButtonAction(false);
+      setModalShow(true)
+
     } catch (err) {
         toast.error(err)
     }
@@ -35,6 +39,7 @@ const ContactForm = () => {
 
   return (
     <>
+    <SuccessModal isVisible={modalShow}  closingAll={"new"}/>
       <div className="xl:pt-[80px] md:pt-[50px] text-center">
         <div className="container mx-auto  xl:px-20 px-5 py-8">
           <h2 className="text-[#C9E065]  leading-0 lg:text-[72px] md:text-[60px] text-[40px] font-normal font-Herr ">

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import DatePicker from '@hassanmojab/react-modern-calendar-datepicker';
 import '@hassanmojab/react-modern-calendar-datepicker/lib/DatePicker.css';
 import { useForm } from "react-hook-form";
@@ -6,6 +6,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import { SendContactUs } from '../../../lib/Api/RequestsApi';
 import { toast } from 'react-toastify';
+import SuccessModal from '../../../util/popup/SuccessModal';
 
 const schema = yup.object({
     name: yup.string().required(),
@@ -18,7 +19,8 @@ const schema = yup.object({
 
 const BookingForm = () => {
     const [buttonAction, setButtonAction] = useState(false);
-    const { register, handleSubmit, formState: { errors } } = useForm({ mode: 'onChange', resolver: yupResolver(schema) });
+    const { register, handleSubmit,reset, formState: { errors } } = useForm({ mode: 'onChange', resolver: yupResolver(schema) });
+    const [modalShow, setModalShow] = useState(false)
 
     const list = ["Acne", "Hair loss", "Alopecia", "Skin tag", "Mole check"]
     var today = new Date();
@@ -31,6 +33,7 @@ const BookingForm = () => {
         year: yyyy,
     });
 
+   
 
     // ****************** Datepicker Content ***********
     const renderCustomInput = ({ ref }) => (
@@ -66,6 +69,8 @@ const BookingForm = () => {
     try {
       await SendContactUs(endpoint, payload);
       setButtonAction(false);
+      reset()
+      setModalShow(true)
     } catch (err) {
       toast.error(err);
     }
@@ -73,6 +78,7 @@ const BookingForm = () => {
 
     return (
         <>
+        
             <div className='xl:pt-[80px] text-center'>
                 <div className='container mx-auto  xl:px-20 px-5 py-8'>
                     <h2 className='text-[#C9E065]  leading-0 lg:text-[72px] md:text-[60px] text-[40px] font-normal font-Herr '>Booking Now</h2>
@@ -187,6 +193,7 @@ const BookingForm = () => {
                 </div>
 
             </div>
+            <SuccessModal isVisible={modalShow}  closingAll={"new"}/>
         </>
     )
 }

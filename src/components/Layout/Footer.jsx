@@ -56,7 +56,6 @@ const Footer = () => {
   }, [])
 
 
-  console.log("feeds", feeds)
 
   return (
     <>
