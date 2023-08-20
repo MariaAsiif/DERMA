@@ -4,7 +4,7 @@ const SummerSkin = () => {
   return (
     <>
       <div className='bg-[#1D1D1D] pb-10'>
-        <div className='container mx-auto text-center xl:px-10 px-5 pt-[80px]  relative'>
+        <div className='container mx-auto text-center relative'>
 
           <h2 className='text-white  leading-0 lg:text-[72px] text-[40px] md:text-[50px] font-normal font-Herr text-center'>Summer Skin Prep</h2>
           <h1 className='text-[#C9E065]  uppercase leading-0 lg:text-[36px] text-[22px] md:text-[25px] font-sans font-medium'>Be the best version of yourself this summer</h1>

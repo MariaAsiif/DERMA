@@ -1,5 +1,17 @@
 import { toast } from "react-toastify";
 import { callPublicApi, callingPublicApi } from "../Apiendpoint";
+import Swal from "sweetalert2";
+
+const showLoadingPopup = () => {
+  
+  Swal.fire({
+    title: 'Loading...',
+    allowOutsideClick: false,
+    onBeforeOpen: () => {
+      Swal.showLoading();
+    },
+  });
+};
 
 // Send Eamil Request
 
@@ -100,9 +112,14 @@ export const SendQuestion = async (data) => {
 
 export const SendContactUs = async (endpoint, payload) => {
   try {
+    showLoadingPopup();
     let response = await callingPublicApi(endpoint, "post", payload);
     if (response.message === "Response sent successfully") {
-      
+      Swal.fire(
+        'Congratulation!',
+        'Request sent successfully!',
+        'success'
+      )
       return {
         res: response.data,
       };

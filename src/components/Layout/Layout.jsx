@@ -39,7 +39,7 @@ const Layout = ({ children }) => {
           data={<RequestForCall onCloseRequestModal={() => setShow(false)}/>}
         />
       )}
-      <div className="relative">
+      <div className="relative w-full">
         <div className="fixed w-full shadow-md z-50">
           <TopMarquee />
           {location === "/personal" ? (

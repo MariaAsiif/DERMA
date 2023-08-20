@@ -191,7 +191,7 @@ const Policies = () => {
 
 
                                             {
-                                                i === 0 || i === 3 &&
+                                                (i === 0 || i === 3 )&&
                                                 <>
                                                     <div className='pt-5 text-[#999999] text-[15px] font-normal font-sans'>
                                                         <h2>{`1) Informally –`}</h2>

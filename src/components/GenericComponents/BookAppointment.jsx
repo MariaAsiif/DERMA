@@ -20,6 +20,7 @@ const BookAppointment = ({ setShow }) => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({ mode: "onChange", resolver: yupResolver(schema) });
 
@@ -66,6 +67,7 @@ const BookAppointment = ({ setShow }) => {
     };
     try {
       await SendContactUs(endpoint, payload);
+      reset()
       setButtonAction(false);
     } catch (err) {
       toast.error(err);
@@ -73,14 +75,15 @@ const BookAppointment = ({ setShow }) => {
   };
   return (
     <>
+      
       <div className="container mx-auto text-center xl:px-10 px-5 pt-[80px]">
-        <div className="grid lg:grid-cols-2 md:grid-cols-2 gap-5">
+        <div className="grid md:grid-cols-2 gap-5">
           <div className="bg-[#1F3D64] rounded-2xl h-full p-4 ">
             <form
               className="pt-6 max-w-[700px] mx-auto"
               onSubmit={handleSubmit(onSubmit)}
             >
-              <div className="grid xl:grid-cols-2 md:grid-cols-2 xl:gap-10 md:gap-10">
+              <div className="grid md:grid-cols-2 md:gap-10">
                 <div>
                   <input
                     type="text"
@@ -101,7 +104,7 @@ const BookAppointment = ({ setShow }) => {
                     type="text"
                     placeholder="EMAIL"
                     {...register("email")}
-                    className={`font-sans focus:outline-none font-normal bg-transparent text-white  w-full border-b ${
+                    className={`font-sans focus:outline-none font-normal md:pt-0 pt-5 bg-transparent text-white  w-full border-b ${
                       errors.email ? "border-red-500" : " border-white "
                     } placeholder:text-white`}
                   />
@@ -112,8 +115,8 @@ const BookAppointment = ({ setShow }) => {
                   )}
                 </div>
               </div>
-              <div className="grid xl:grid-cols-2 md:grid-cols-2 xl:gap-10 md:gap-10">
-                <div className="!w-full ">
+              <div className="grid md:grid-cols-2 md:gap-10">
+                <div className="">
                   <DatePicker
                     value={quoteDate}
                     style={{ width: "100% !important" }}
@@ -130,7 +133,7 @@ const BookAppointment = ({ setShow }) => {
                     type="text"
                     {...register("phone")}
                     placeholder="PHONE NUMBER"
-                    className={` font-sans focus:outline-none font-normal mt-5 w-full text-white border-b  placeholder:text-white bg-transparent ${
+                    className={` font-sans focus:outline-none font-normal mt-0 md:mt-5 w-full text-white border-b  placeholder:text-white bg-transparent ${
                       errors.phone ? "border-red-500" : " border-white "
                     }`}
                   />
@@ -141,7 +144,7 @@ const BookAppointment = ({ setShow }) => {
                   )}
                 </div>
               </div>
-              <div className="grid xl:grid-cols-2 md:grid-cols-2 xl:gap-10 md:gap-10">
+              <div className="grid md:grid-cols-2 md:gap-10">
                 <div>
                   <select className="focus:outline-none font-sans font-normal my-5 w-full text-white border-b border-white placeholder:text-white bg-transparent">
                     <option>London</option>

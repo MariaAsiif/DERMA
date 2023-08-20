@@ -1,28 +1,27 @@
-import React from 'react'
-import sr1 from '../../../assests/Group 29.png'
-import sr2 from '../../../assests/Group 29 (1).png'
-import sr3 from '../../../assests/Group 29 (2).png'
+import React from "react";
+import sr1 from "../../../assests/Group 29.png";
+import sr2 from "../../../assests/Group 29 (1).png";
+import sr3 from "../../../assests/Group 29 (2).png";
 const Services = () => {
-    return (
-        <>
-            <div className='container mx-auto pt-[40px] xl:px-20 px-5'>
-                <div className='grid xl:grid-cols-3 md:grid-cols-3  gap-5'>
-                    <div className='flex  items-center'>
-                        <img src={sr1} alt={sr1} className='object-cover md:w-[20%] w-[15%]' />
-                        <h2 className='text-[#1D1D1D] text-[23px] px-[15px] font-intr font-normal'>Easy Accessibility</h2>
-                    </div>
-                    <div className='flex  items-center'>
-                        <img src={sr2} alt={sr2} className='object-cover md:w-[20%] w-[15%]' />
-                        <h2 className='text-[#1D1D1D] text-[23px] px-[15px] font-intr font-normal'>Individualised Care</h2>
-                    </div>
-                    <div className='flex  items-center'>
-                        <img src={sr3} alt={sr3} className='object-cover md:w-[20%] w-[15%]' />
-                        <h2 className='text-[#1D1D1D] w-full text-[23px] px-[15px] font-intr font-normal'>In-Depth Consulation</h2>
-                    </div>
-                </div>
-            </div>
-        </>
-    )
-}
+  return (
+    <div className="flex flex-col md:flex-row md:space-x-6 items-center justify-center pt-10">
+      {/* First Image Block */}
+      <div className="flex flex-col md:flex-row items-center md:px-5 py-5 ">
+        <img src={sr1} alt={sr1} className="lg:w-32 h-auto mx-auto w-20" />
+        <p className="mt-2 text-3xl px-5 ">Easy Accessibility</p>
+      </div>
+      {/* Second Image Block */}
+      <div className="flex flex-col md:flex-row items-center md:px-5 py-5 ">
+        <img src={sr2} alt={sr2} className="lg:w-32 h-auto mx-auto w-20" />
+        <p className="mt-2 text-3xl px-5">Individualised Care</p>
+      </div>
+      {/* Third Image Block */}
+      <div className="flex flex-col md:flex-row items-center md:px-5 py-5 ">
+        <img src={sr3} alt={sr3} className="lg:w-32 h-auto mx-auto w-20" />
+        <p className="mt-2 text-3xl px-5">In-Depth Consulation</p>
+      </div>
+    </div>
+  );
+};
 
-export default Services
+export default Services;

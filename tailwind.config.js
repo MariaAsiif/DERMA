@@ -8,10 +8,7 @@ module.exports = {
     extend: {
 
       screens: {
-        'tablet': { 'min': '600px', 'max': '767px' },
-        'xtra-small': { 'min': '520px', 'max': '599px' },
-        'xxtra-small': { 'min': '200px' , 'max':'280px'},
-
+       
         // => @media (min-width: 640px) { ... }
       },
       backgroundImage: {

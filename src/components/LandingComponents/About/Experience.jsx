@@ -4,7 +4,7 @@ import exp from '../../../assests/exp.png'
 const Experience = () => {
   return (
     <>
-      <div className=' pt-[30px] bg-[#1F3D64] h-full pb-8 mt-10'>
+      <div className=' bg-[#1F3D64] h-full pb-8 '>
         <div className='container mx-auto  xl:px-20 px-5'>
           <div className='text-center'>
             <h2 className='text-white  leading-0 lg:text-[60px] md:text-[50px] text-[40px] font-normal font-Herr '>Our Experience & Expertise</h2>

@@ -9,7 +9,6 @@ import follow7 from '../../assests/bf7.png'
 import follow8 from '../../assests/bf8.png'
 import follow9 from '../../assests/bf9.png'
 import follow10 from '../../assests/bf10-.png'
-import send from '../../assests/pseudo.png'
 import { Swiper, SwiperSlide } from "swiper/react";
 // import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
 // Import Swiper styles
@@ -173,7 +172,7 @@ const Footer = () => {
                     <div className='grid grid-cols-3 gap-5'>
                       {
                         feeds.slice(0, 6).map((item, i) => (
-                          <a href={item?.permalink} target='_blank'>
+                          <a href={item?.permalink} target='_blank' rel='noreferrer'>
                             <img key={i} src={item?.media_url} alt={item?.media_url} className='object-cover w-[70px] h-[70px]' />
                           </a>
                         ))

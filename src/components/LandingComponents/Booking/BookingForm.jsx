@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import DatePicker from '@hassanmojab/react-modern-calendar-datepicker';
 import '@hassanmojab/react-modern-calendar-datepicker/lib/DatePicker.css';
 import { useForm } from "react-hook-form";
@@ -6,7 +6,6 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import { SendContactUs } from '../../../lib/Api/RequestsApi';
 import { toast } from 'react-toastify';
-import SuccessModal from '../../../util/popup/SuccessModal';
 
 const schema = yup.object({
     name: yup.string().required(),
@@ -20,7 +19,6 @@ const schema = yup.object({
 const BookingForm = () => {
     const [buttonAction, setButtonAction] = useState(false);
     const { register, handleSubmit,reset, formState: { errors } } = useForm({ mode: 'onChange', resolver: yupResolver(schema) });
-    const [modalShow, setModalShow] = useState(false)
 
     const list = ["Acne", "Hair loss", "Alopecia", "Skin tag", "Mole check"]
     var today = new Date();
@@ -70,7 +68,6 @@ const BookingForm = () => {
       await SendContactUs(endpoint, payload);
       setButtonAction(false);
       reset()
-      setModalShow(true)
     } catch (err) {
       toast.error(err);
     }
@@ -193,7 +190,6 @@ const BookingForm = () => {
                 </div>
 
             </div>
-            <SuccessModal isVisible={modalShow}  closingAll={"new"}/>
         </>
     )
 }

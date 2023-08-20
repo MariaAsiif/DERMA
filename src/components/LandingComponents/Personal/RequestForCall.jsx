@@ -5,7 +5,6 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { SendContactUs } from "../../../lib/Api/RequestsApi";
 import { toast } from "react-toastify";
-import SuccessModal from "../../../util/popup/SuccessModal";
 
 const schema = yup.object({
   name: yup.string().required(),
@@ -17,8 +16,7 @@ const schema = yup.object({
 const RequestForCall = ({ onCloseRequestModal }) => {
   const [buttonAction, setButtonAction] = useState(false);
   const list = ["Acne", "Hair loss", "Alopecia", "Skin tag", "Mole check"];
-  const [showModal, setShowModal] = useState(false);
-
+  
   const {
     register,
     handleSubmit,
@@ -26,6 +24,7 @@ const RequestForCall = ({ onCloseRequestModal }) => {
     formState: { errors },
   } = useForm({ mode: "onChange", resolver: yupResolver(schema) });
   const onSubmit = async (data) => {
+    
     setButtonAction(true);
     const endpoint = process.env.REACT_APP_CALLBACK_ENDPOINTS;
 
@@ -39,8 +38,9 @@ const RequestForCall = ({ onCloseRequestModal }) => {
     try {
       await SendContactUs(endpoint, payload);
       reset();
-      setShowModal(true);
+      
       setButtonAction(false);
+      onCloseRequestModal()
       
     } catch (err) {
       toast.error(err);
@@ -126,7 +126,7 @@ const RequestForCall = ({ onCloseRequestModal }) => {
           </div>
         </form>
       </div>
-      <SuccessModal isVisible={showModal} closingAll={onCloseRequestModal}/>
+      
     </>
   );
 };

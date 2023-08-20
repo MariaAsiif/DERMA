@@ -1,75 +1,100 @@
-import React from 'react'
-// import map from '../../../assests/map.png'
-import location from '../../../assests/location.png'
-// import facebook from '../../../assests/facebook.png'
-// import twitter from '../../../assests/twitter.png'
-import phone from '../../../assests/phone.png'
-import message from '../../../assests/messge.png'
-// import insta from '../../../assests/isnsta.png'
-import { FaFacebookF } from 'react-icons/fa'
-import SingleMap from '../Contact/Map'
-import { AiOutlineInstagram, AiOutlineTwitter } from 'react-icons/ai'
+import React from "react";
+import location from "../../../assests/location.png";
+import phone from "../../../assests/phone.png";
+import message from "../../../assests/messge.png";
+import { FaFacebookF } from "react-icons/fa";
+import { AiOutlineInstagram, AiOutlineTwitter } from "react-icons/ai";
+const address = "4 Harley St, London W1G 9QY, UK";
 const Find = () => {
   return (
-    <>
-      <div className=' relative '>
-        <div className='bg-[#C9E065]  lg:h-[450px] md:h-[450px] h-[750px]  max-w-[970px] mr-auto lg:py-0 md:py-4 py-4 '>
-          <div className='container mx-auto  xl:px-20 px-5'>
-            <div className='xl:max-w-[750px] md:max-w-[400px] overflow-hidden xl:pt-[40px] md:pt-[40px] xl:ml-0 md:ml-[350px] flex xl:justify-start md:justify-end justify-center'>
-              {/* <img src={map} alt={map} className='object-cover xl:w-[90%] md:w-[80%]  w-[80%] ' /> */}
-              <SingleMap />
+    <div className="container my-2 mx-auto md:px-6">
+      <div className="block rounded-lg bg-[#C9E065] shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] ">
+        <div className="flex flex-wrap items-center">
+          <div className="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
+            <div className="h-[500px] w-full">
+              <iframe
+                title="google map address"
+                src={`https://maps.google.com/maps?q=${address}&t=&z=13&ie=UTF8&iwloc=&output=embed`}
+                className="left-0 top-0 h-full w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
+              
+                allowFullScreen
+              ></iframe>
             </div>
-
           </div>
-          <div className='absolute xl:top-[10%] md:top-[10%] top-50 xl:right-[10%] pl-10  max-w-[500px]'>
-            <h2 className='text-[#B58F2E]  leading-0 lg:text-[60px] md:text-[50px] text-[40px] font-normal font-Herr '>Get In Touch</h2>
-            <h1 className='text-[#1F3D64] lg:-mt-[30px] uppercase leading-0 lg:text-[40px] md:text-[30px] text-[22px] font-intr font-normal'>How to Find Us</h1>
-            <p className='text-[#5C636E] leading-[28px]  font-normal font-sans  text-[15px]'>We are here to provide you with exceptional care and support. We look forward to welcoming you to our clinic!</p>
-
-            <div className='grid xl:grid-cols-2 xl:gap-20'>
-              <div className='flex flex-row items-center'>
-                <img src={message} alt={message} className='object-cover' />
-                <div className='mx-3 mt-3'>
-                  <h1 className='text-[14px] font-sans  font-semibold'>E-mail</h1>
-                  <p className='text-[15px] font-sans  font-normal'>info@londonacneclinic.co.uk</p>
+          <div className="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12 text-black">
+            <div className="flex flex-wrap px-3 pt-12 pb-2 md:pb-0 lg:pt-0">
+              <div className="mb-12 w-full shrink-0 grow-0 basis-auto px-3 md:w-6/12 md:px-6 lg:w-full xl:w-6/12 xl:px-12">
+                <div className="flex items-start">
+                  <div className="shrink-0">
+                    <div className="inline-block rounded-md p-4 ">
+                      <img src={phone} alt={phone} className="object-cover" />
+                    </div>
+                  </div>
+                  <div className="ml-6 grow">
+                    <p className="mb-2 font-bold ">Technical support</p>
+                    <p className="text-neutral-500 ">020 3916 5407</p>
+                    <p className="text-neutral-500 ">077 0669 5644</p>
+                  </div>
                 </div>
               </div>
-              <div className='flex '>
-                <img src={location} alt={location} className='object-contain ' />
-                <div className='mx-3 pt-3 xl:mt-3'>
-                  <h1 className='text-[14px] font-sans  font-semibold'>Adress:</h1>
-                  <p className='text-[15px] font-sans  font-normal'>4 Harley Street, London, W1G 9BP</p>
+              <div className="mb-12 w-full shrink-0 grow-0 basis-auto px-3 md:w-6/12 md:px-6 lg:w-full xl:w-6/12 xl:px-12">
+                <div className="flex items-start">
+                  <div className="shrink-0">
+                    <div className="inline-block rounded-md p-4 ">
+                      <img
+                        src={location}
+                        alt={location}
+                        className="object-cover"
+                      />
+                    </div>
+                  </div>
+                  <div className="ml-6 grow">
+                    <p className="mb-2 font-bold ">Address</p>
+                    <p className="text-neutral-500 ">4 Harley Street,</p>
+                    <p className="text-neutral-500 ">London, W1G 9BP</p>
+                  </div>
+                </div>
+              </div>
+              <div className="mb-12 w-full shrink-0 grow-0 basis-auto px-3 md:w-6/12 md:px-6 lg:w-full xl:w-6/12 xl:px-12">
+                <div className="flex items-start">
+                  <div className="shrink-0">
+                    <div className="inline-block rounded-md p-4 ">
+                      <img
+                        src={message}
+                        alt={message}
+                        className="object-cover"
+                      />
+                    </div>
+                  </div>
+                  <div className="ml-6 grow">
+                    <p className="mb-2 font-bold ">E-mail</p>
+                    <p className="text-neutral-500 ">info@londonacneclinic.co.uk</p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className='grid grid-cols-2 gap-5 mt-0'>
-              <div className='flex flex-row items-center'>
-                <img src={phone} alt={phone} className='object-cover' />
-                <div className='mx-3 mt-3'>
-                  <h1 className='text-[14px] font-sans  font-semibold'>Phone:</h1>
-                  <p className='text-[15px] font-sans  font-normal'>020 3916 5407 <br /> 077 0669 5644</p>
-                </div>
-              </div>
-              <div className='flex flex-row items-center justify-center'>
-                <AiOutlineTwitter className='text-[20px] text-[#1F3D64]' />
-                <a href="https://www.instagram.com/drmahamk/" target='_blank'>
-                  <AiOutlineInstagram className='text-[20px] mx-4 text-[#1F3D64]' />
-                </a>
-                <a href="https://www.facebook.com/profile.php?id=100091451258849" target='_blank'>
-                  <FaFacebookF className='text-[20px] text-[#1F3D64]' />
-                </a>
-                {/* <img src={twitter} alt={twitter} className='object-contain w-[40px] h-[40px]' />
-                <img src={insta} alt={insta} className='object-contain w-[40px] h-[40px]' />
-                <img src={facebook} alt={facebook} className='object-contain w-[40px] h-[40px]' /> */}
-
-              </div>
+            <div className="flex justify-center items-center pb-4">
+              <AiOutlineTwitter className="text-[20px] text-[#1F3D64]" />
+              <a
+                href="https://www.instagram.com/drmahamk/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <AiOutlineInstagram className="text-[20px] mx-4 text-[#1F3D64]" />
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=100091451258849"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaFacebookF className="text-[20px] text-[#1F3D64]" />
+              </a>
             </div>
-
           </div>
         </div>
       </div>
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default Find
+export default Find;
