@@ -4,7 +4,8 @@ import exp from '../../../assests/exp.png'
 const Experience = () => {
   return (
     <>
-      <div className=' bg-[#1F3D64] h-full pb-8 '>
+    <div className="mb-5 lg:mb-10 px-2 md:px-0">
+      <div className=' bg-[#1F3D64] h-full pb-8 pt-2'>
         <div className='container mx-auto  xl:px-20 px-5'>
           <div className='text-center'>
             <h2 className='text-white  leading-0 lg:text-[60px] md:text-[50px] text-[40px] font-normal font-Herr '>Our Experience & Expertise</h2>
@@ -14,6 +15,7 @@ const Experience = () => {
             <img src={exp} alt={exp} className='object-cover md:w-[70%] ' />
           </div>
         </div>
+      </div>
       </div>
     </>
   )

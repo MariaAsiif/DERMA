@@ -2,6 +2,7 @@ import React from "react";
 import mes from "../../../assests/mess.png";
 const Mession = () => {
   return (
+    <div className=" mb-5 lg:mb-10 px-2">
       <div className="container  mx-auto md:px-6 bg-[#C9E065]">
           <div className="px-6 py-12 text-center md:px-12 lg:text-left">
             <div className="container mx-auto xl:px-32">
@@ -31,6 +32,7 @@ const Mession = () => {
                 </div>
               </div>
             </div>
+          </div>
           </div>
       </div>
   );

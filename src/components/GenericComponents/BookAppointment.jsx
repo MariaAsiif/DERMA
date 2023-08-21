@@ -76,7 +76,7 @@ const BookAppointment = ({ setShow }) => {
   return (
     <>
       
-      <div className="container mx-auto text-center xl:px-10 px-5 pt-[80px]">
+      <div className="container mx-auto md:px-6 mb-5 lg:mb-10 px-2">
         <div className="grid md:grid-cols-2 gap-5">
           <div className="bg-[#1F3D64] rounded-2xl h-full p-4 ">
             <form

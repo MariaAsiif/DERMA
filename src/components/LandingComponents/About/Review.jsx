@@ -2,7 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper";
+import { Autoplay } from "swiper";
 import R1 from "../../../assests/male.png";
 import R2 from "../../../assests/female.png";
 const Review = () => {
@@ -35,7 +35,8 @@ const Review = () => {
   ];
   return (
     <>
-      <div className="container mx-auto xl:px-20 px-5 xl:pt-[80px] pt-[40px]">
+    <div className="mb-5 lg:mb-10 px-2">
+      <div className="container mx-auto xl:px-20 ">
         <div className="text-center">
           <h2 className="text-[#C9E065]  leading-0 lg:text-[60px] md:text-[50px] text-[40px] font-normal font-Herr ">
             Testimonialss
@@ -49,8 +50,9 @@ const Review = () => {
           <Swiper
             slidesPerView={2}
             spaceBetween={2}
-            pagination={{
-              clickable: true,
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
             }}
             breakpoints={{
               375: {
@@ -70,7 +72,7 @@ const Review = () => {
                 spaceBetween: 50,
               },
             }}
-            modules={[Pagination]}
+            modules={[Autoplay]}
             className="swiper_review"
           >
             <div className="grid gap-5 ">
@@ -98,6 +100,7 @@ const Review = () => {
             </div>
           </Swiper>
         </div>
+      </div>
       </div>
     </>
   );

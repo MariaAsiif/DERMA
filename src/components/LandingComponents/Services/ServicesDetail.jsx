@@ -29,8 +29,8 @@ const ServicesDetails = ({ serviceDetail }) => {
   return (
     <>
       {/* Section 1  */}
-      <div className="container mx-auto  xl:px-10 px-5 lg:py-8 py-5 ">
-        <div className="flex xl:flex-nowrap flex-wrap justify-between pt-[50px]">
+      <div className="container px-5 md:my-5 mx-auto md:px-6 mb-5 lg:mb-10">
+        <div className="flex xl:flex-nowrap flex-wrap justify-between">
           <div className="xl:w-[30%] w-full md:w-[40%]">
             <ul>
               {list.map((item, i) => (
@@ -120,11 +120,11 @@ const ServicesDetails = ({ serviceDetail }) => {
       </div>
 
       {/* Section 2 */}
+
       <div
-        div
-        className="bg-gradient-to-r from-[#BACD67] to-[#A8B95D] relative "
+        className="px-2 mb-5 lg:mb-10 relative "
       >
-        <div className="container mx-auto  xl:px-10 px-5 lg:py-8 py-5 ">
+        <div className="container mx-auto bg-gradient-to-r from-[#BACD67] to-[#A8B95D] xl:px-10 px-2 lg:py-8 py-5 ">
           <div
             className={`${
               serviceDetail?.symptoms

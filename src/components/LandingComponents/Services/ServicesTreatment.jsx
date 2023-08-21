@@ -3,8 +3,9 @@ import sr1 from "../../../assests/div.custom-video-player (1).png";
 import sr2 from "../../../assests/div.custom-video-player.png";
 const ServicesTreatment = () => {
   return (
-    <div className="bg-[#1F3D64] mt-[126px] pb-[40px] services" id="services">
-      <div className="container mx-auto px-10 pt-[40px]">
+    
+    <div className=" px-2 md:px-0 mb-5 lg:mb-10 services" id="services">
+      <div className="container mx-auto px-10 py-5 bg-[#1F3D64]">
         <h1 className="text-center font-normal font-Herr xl:text-[60px] md:text-[45px] text-[40px] text-white ">
           How We Do It
         </h1>

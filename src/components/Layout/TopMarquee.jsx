@@ -5,7 +5,7 @@ import { AiTwotonePhone } from 'react-icons/ai'
 const TopMarquee = () => {
     return (
         <>
-            <Marquee className='bg-white'>
+            <Marquee className='bg-[#C9E065]'>
                 <div className='py-2 flex items-center'>
                     <div className='flex items-center'>
                         <h2 className='mx-2'>For Appointment Call</h2>

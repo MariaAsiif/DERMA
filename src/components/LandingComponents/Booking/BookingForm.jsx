@@ -76,8 +76,8 @@ const BookingForm = () => {
     return (
         <>
         
-            <div className='xl:pt-[80px] text-center'>
-                <div className='container mx-auto  xl:px-20 px-5 py-8'>
+            <div className='mb-5 lg:mb-10 text-center'>
+                <div className='container mx-auto  xl:px-20 px-5'>
                     <h2 className='text-[#C9E065]  leading-0 lg:text-[72px] md:text-[60px] text-[40px] font-normal font-Herr '>Booking Now</h2>
                     <h1 className='text-[#1F3D64] lg:-mt-[30px] uppercase leading-0 lg:text-[41px] md:text-[30px] text-[22px] font-sans font-semibold'>"Transform Yourself with Personalize Solutions"</h1>
 
@@ -183,7 +183,7 @@ const BookingForm = () => {
                         {errors.desc && (
                             <p className="text-red-500 text-sm text-left pb-3">{errors.desc.message}</p>
                         )}
-                        <div className='flex justify-center items-center py-5'>
+                        <div className='flex justify-center items-center pt-5'>
                             <button disabled={buttonAction} type='submit' className=' w-full  bg-[#1F3D64] text-white  uppercase px-8 py-3 text-[14px] font-semibold font-sans  rounded-full text-center transform delay-100 ease-out hover:border  hover:bg-white hover:border-[#1F3D64] hover:text-[#1F3D64] '>book now</button>
                         </div>
                     </form>

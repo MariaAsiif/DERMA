@@ -48,15 +48,15 @@ const ServicesList = () => {
   ];
   return (
     <>
-      <div className="container mx-auto  xl:px-20 px-5 pt-[80px]">
-        <div className="grid md:grid-cols-2 xl:gap-20 md:gap-10 gap-5">
+      <div className="container mx-auto  xl:px-20 px-2">
+        <div className="grid md:grid-cols-2 gap-5">
           {Services.map((item, i) => (
             <div className="group">
               <div className="group-hover:border-2 group-hover:border-[#C9E065] p-2">
                 <Link
                   to={`/service-detail/${i}`}
                   key={i}
-                  className="p-3 cursor-pointer rounded-md"
+                  className="cursor-pointer rounded-md"
                 >
                   <img
                     src={item?.pic}

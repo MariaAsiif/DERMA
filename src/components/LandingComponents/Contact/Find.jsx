@@ -7,7 +7,7 @@ import { AiOutlineInstagram, AiOutlineTwitter } from "react-icons/ai";
 const address = "4 Harley St, London W1G 9QY, UK";
 const Find = () => {
   return (
-    <div className="container my-2 mx-auto md:px-6">
+    <div className="container px-2 mb-5 lg:mb-10 mx-auto md:px-6">
       <div className="block rounded-lg bg-[#C9E065] shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] ">
         <div className="flex flex-wrap items-center">
           <div className="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">

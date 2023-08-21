@@ -28,13 +28,13 @@ const HomeHeader = ({ type, open }) => {
       <Sidebar sidebarOpen={sideNavShow} setSidebarOpen={setSideNavShow} />
       
       <div className="flex justify-between w-full bg-white border-t">
-        <div className="w-1/6 p-4">
+        <div className="w-1/6 p-2 pl-5">
           <Link to="/">
-            <img src={logo} alt="personal" className="object-cover" />
+            <img src={logo} alt="personal" className="object-cover w-[70px]" />
           </Link>
         </div>
-        <div className="hidden lg:flex lg:w-5/6 flex justify-center items-center">
-          <nav className="flex space-x-10 relative">
+        <div className=" lg:w-5/6 flex justify-end items-center">
+          <nav className="flex space-x-10 hidden lg:flex relative">
             <Link
               to="/"
               className={`block hover:text-[#be9162] ${
@@ -55,6 +55,7 @@ const HomeHeader = ({ type, open }) => {
               className="block relative"
               onMouseEnter={toggleDropdown}
               onMouseLeave={toggleDropdown}
+              style={{ zIndex: 1 }}
             >
               <span className="flex items-center">
                 <Link
@@ -76,7 +77,7 @@ const HomeHeader = ({ type, open }) => {
                       <li key={index}>
                         <Link
                           to={`/service-detail/${index}`}
-                          className="block hover:bg-green-500 p-1"
+                          className="block hover:bg-green-500 p-1 "
                         >
                           {item}
                         </Link>
@@ -103,8 +104,22 @@ const HomeHeader = ({ type, open }) => {
               CONTACT US
             </Link>
           </nav>
+
+         
+        <div className="px-10 lg:px-10">
+        <GoThreeBars
+            className="text-[30px] cursor-pointer text-[#1E154E] lg:hidden"
+            onClick={() => setSideNavShow(true)}
+          />
+          <div
+            onClick={() => open(true)}
+            className="hidden lg:block border cursor-pointer rounded-full py-2 bg-[#1F3D64] transform delay-100 ease-out text-[#C9E065] hover:bg-white hover:text-[#1F3D64] px-5"
+          >
+            <h2 className="font-bold text-[16px]">REQUEST CALL BACK</h2>
+          </div>
+          </div>
         </div>
-        <div className="w-2/6 p-4 flex justify-end items-center">
+        {/* <div className="w-2/6 p-4 flex justify-end items-center">
           <GoThreeBars
             className="text-[30px] cursor-pointer text-[#1E154E] lg:hidden"
             onClick={() => setSideNavShow(true)}
@@ -116,7 +131,7 @@ const HomeHeader = ({ type, open }) => {
           >
             <h2 className="font-bold text-[16px]">REQUEST CALL BACK</h2>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

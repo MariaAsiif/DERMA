@@ -38,8 +38,8 @@ const ContactForm = () => {
 
   return (
     <>
-      <div className="xl:pt-[80px] md:pt-[50px] text-center">
-        <div className="container mx-auto  xl:px-20 px-5 py-8">
+      <div className="px-5 mb-5 lg:mb-10 text-center">
+        <div className="container mx-autox">
           <h2 className="text-[#C9E065]  leading-0 lg:text-[72px] md:text-[60px] text-[40px] font-normal font-Herr ">
             Contact Us{" "}
           </h2>
@@ -107,7 +107,7 @@ const ContactForm = () => {
               </p>
             </div>
 
-            <div className="flex justify-center items-center py-5">
+            <div className="flex justify-center items-center pt-5">
               <button
                 disabled={buttonAction}
                 className=" w-[55%] py-3 text-[10px] font-semibold font-sans  rounded-full bg-[#1F3D64] text-white text-center transform delay-100 ease-out hover:border  hover:bg-white hover:border-[#1F3D64] hover:text-[#1F3D64] uppercase"

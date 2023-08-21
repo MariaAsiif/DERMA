@@ -3,8 +3,9 @@ import whyChooseImg from "../../../assests/Group 24.png";
 const WhyChoose = () => {
   return (
     <>
-      <div className="bg-[#1F3D64] pb-8 mt-[40px]">
-        <div className="container mx-auto  xl:px-20 px-5 pt-[80px] ">
+    <div className="px-2 md:my-20 mx-auto md:px-6 mb-5 lg:mb-10">
+      <div className="bg-[#1F3D64] py-5 ">
+        <div className="container mx-auto  xl:px-20 px-2 py-2 ">
           <div className="flex md:items-center lg:flex-nowrap md:flex-nowrap flex-wrap ">
             <div className="w-full ">
               <img
@@ -42,6 +43,7 @@ const WhyChoose = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

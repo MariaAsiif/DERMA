@@ -40,7 +40,7 @@ const Layout = ({ children }) => {
         />
       )}
       <div className="relative w-full">
-        <div className="fixed w-full shadow-md z-50">
+        <div className="shadow-md z-50 sticky">
           <TopMarquee />
           {location === "/personal" ? (
             <Header type={scrollTop} open={setShow} />
@@ -48,7 +48,7 @@ const Layout = ({ children }) => {
             <HomeHeader type={scrollTop} open={setShow} />
           )}
         </div>
-        <main className="xl:pt-32 pt-20">{children}</main>
+        <main>{children}</main>
         <div>
           {location === "/personal" ? (
             <Footer />

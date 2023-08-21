@@ -7,6 +7,7 @@ const showLoadingPopup = () => {
   Swal.fire({
     title: 'Loading...',
     allowOutsideClick: false,
+    showConfirmButton: false,
     onBeforeOpen: () => {
       Swal.showLoading();
     },
@@ -115,11 +116,19 @@ export const SendContactUs = async (endpoint, payload) => {
     showLoadingPopup();
     let response = await callingPublicApi(endpoint, "post", payload);
     if (response.message === "Response sent successfully") {
-      Swal.fire(
-        'Congratulation!',
-        'Request sent successfully!',
-        'success'
-      )
+      Swal.fire({
+        title: 'Congratulation!',
+        text: 'Request sent successfully!',
+        icon: 'success',
+        showConfirmButton: false,
+        footer: '<button class="w-[55%] py-[6px] rounded-full bg-[#1F3D64] text-white text-center uppercase" id="customButton">OK</button>',
+        didOpen: () => {
+          
+          document.getElementById('customButton').addEventListener('click', () => {
+            Swal.close();
+          });
+        },
+      });
       return {
         res: response.data,
       };

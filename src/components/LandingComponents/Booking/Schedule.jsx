@@ -2,11 +2,12 @@ import React from "react";
 import mes from "../../../assests/secdule.png";
 const Schedule = () => {
   return (
+    <div className="px-2 mb-5 lg:mb-10">
     <div className="container  mx-auto md:px-6 bg-[#C9E065]">
-      <div className="px-6 py-12 text-center md:px-12 lg:text-left">
+      <div className="px-6 py-5 lg:py-12 text-center md:px-12 lg:text-left">
         <div className="container mx-auto xl:px-32">
-          <div className="flex grid items-center gap-12 lg:grid-cols-2">
-            <div className="mt-12 lg:mt-0">
+          <div className="flex grid items-center gap-6 lg:grid-cols-2">
+            <div className=" lg:mt-0">
               <h2 className="text-[#B58F2E]  leading-0 lg:text-[60px] md:text-[50px] text-[40px] font-normal font-Herr ">
                 Book Now for a Better You
               </h2>
@@ -19,11 +20,12 @@ const Schedule = () => {
                 healthier and happier life!
               </p>
             </div>
-            <div className="mb-12 lg:mb-0">
+            <div className="mb-2 lg:mb-0">
               <img src={mes} alt={mes} className="w-full rounded-lg shadow-lg" />
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

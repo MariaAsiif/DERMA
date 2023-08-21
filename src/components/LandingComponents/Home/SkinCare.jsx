@@ -35,9 +35,9 @@ const SkinCare = () => {
   ];
   return (
     <>
-      <div className="flex pt-[80px]">
+      <div className="flex mb-10 sm:max-md:px-2">
         <div className="w-full">
-          <div className="lg:ml-[9%] md:ml-[4%] ml-[4%]">
+          <div className="lg:ml-[9%] ml-[4%]">
             <h2 className="text-[#C9E065]  leading-0 lg:text-[60px] md:text-[50px] text-[40px] font-normal font-Herr ">
               Our Services
             </h2>
@@ -45,7 +45,7 @@ const SkinCare = () => {
               Skin Care Treatment Options
             </h1>
             <div>
-              <div className="container my-24 mx-auto md:px-6">
+              <div className="container my-2 md:my-5 mx-auto md:px-2">
                 <section className=" text-center">
                   <div className="grid gap-x-6 md:grid-cols-3 lg:gap-x-12">
                     {treatment?.map((item, i) => (
