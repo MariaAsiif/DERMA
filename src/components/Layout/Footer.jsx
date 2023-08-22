@@ -31,37 +31,37 @@ const Footer = () => {
     follow10,
   ];
   let location = useLocation().pathname;
-  //const [feeds, setFeedsData] = useState([]);
+  const [feeds, setFeedsData] = useState([]);
   //use useRef to store the latest value of the prop without firing the effect
-  //let apiUrl =`https://graph.instagram.com/${process.env.REACT_APP_userId}/media?fields=id,media_type,media_url,thumbnail_url,caption,timestamp&limit=5&access_token=${process.env.REACT_APP_accessToken}`;
+  let apiUrl =`https://graph.instagram.com/${process.env.REACT_APP_userId}/media?fields=id,media_type,media_url,thumbnail_url,caption,timestamp&limit=5&access_token=${process.env.REACT_APP_accessToken}`;
   
-  // useEffect(() => {
-  //   // this is to avoid memory leaks
-  //   const abortController = new AbortController();
+  useEffect(() => {
+    // this is to avoid memory leaks
+    const abortController = new AbortController();
 
-  //   async function fetchInstagramPost() {
-  //     try {
-  //       axios
-  //         .get(apiUrl)
-  //         .then((resp) => {
-  //           let justImgs = resp.data.data.filter(
-  //             (f) => f.media_type === "IMAGE"
-  //           );
-  //           setFeedsData(justImgs);
-  //         });
-  //     } catch (err) {
-  //       console.log("error", err);
-  //     }
-  //   }
+    async function fetchInstagramPost() {
+      try {
+        axios
+          .get(apiUrl)
+          .then((resp) => {
+            let justImgs = resp.data.data.filter(
+              (f) => f.media_type === "IMAGE"
+            );
+            setFeedsData(justImgs);
+          });
+      } catch (err) {
+        console.log("error", err);
+      }
+    }
 
-  //   // manually call the fecth function
-  //   fetchInstagramPost();
+    // manually call the fecth function
+    fetchInstagramPost();
 
-  //   return () => {
-  //     // cancel pending fetch request on component unmount
-  //     abortController.abort();
-  //   };
-  // }, []);
+    return () => {
+      // cancel pending fetch request on component unmount
+      abortController.abort();
+    };
+  }, []);
 
   return (
     <>

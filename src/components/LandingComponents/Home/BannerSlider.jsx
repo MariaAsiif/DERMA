@@ -8,11 +8,12 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper';
 import banner1 from "../../../assests/bannerslider1.png";
+import banner2 from "../../../assests/Awaken Your.png";
 import banner3 from "../../../assests/bannerslider2.png";
 const BannerSlider = () => {
-  const bannerImages = [banner1, banner3];
+  const bannerImages = [banner1,banner2, banner3];
   return (
-    <div className="relative slider-container w-full overflow-hidden">
+    <div className="bg-contain bg-center relative slider-container w-full lg:h-[calc(100vh-114px)] overflow-hidden">
     <Swiper
       spaceBetween={30}
       centeredSlides={true}

@@ -38,12 +38,12 @@ const ContactForm = () => {
 
   return (
     <>
-      <div className="px-5 mb-5 lg:mb-10 text-center">
+      {/* <div className="px-5 mb-5 lg:mb-10 text-center"> */}
         <div className="container mx-autox">
           <h2 className="text-[#C9E065]  leading-0 lg:text-[72px] md:text-[60px] text-[40px] font-normal font-Herr ">
             Contact Us{" "}
           </h2>
-          <h1 className="text-[#1F3D64] lg:-mt-[30px] uppercase leading-0 lg:text-[41px] md:text-[30px] text-[22px] font-sans font-semibold">
+          <h1 className="text-[#1F3D64] lg:mt-[30px] uppercase leading-0 lg:text-[41px] md:text-[30px] text-[22px] font-sans font-semibold">
             HAVE ANY QUESTIONS?
           </h1>
           <form
@@ -56,7 +56,7 @@ const ContactForm = () => {
                   type="text"
                   placeholder="NAME"
                   {...register("name")}
-                  className={`font-sans focus:outline-none font-normal  w-full border-b ${
+                  className={`font-sans bg-white/10 focus:outline-none font-normal  w-full border-b ${
                     errors.name ? "border-red-500" : " border-[#1F3D64]"
                   } placeholder:text-[#1F3D64]`}
                 />
@@ -71,7 +71,7 @@ const ContactForm = () => {
                   type="text"
                   placeholder="EMAIL"
                   {...register("email")}
-                  className={`font-sans focus:outline-none font-normal  w-full border-b ${
+                  className={`font-sans bg-white/10 focus:outline-none font-normal  w-full border-b ${
                     errors.email ? "border-red-500" : " border-[#1F3D64]"
                   } placeholder:text-[#1F3D64]`}
                 />
@@ -87,7 +87,7 @@ const ContactForm = () => {
               placeholder="DESCRIPTION"
               {...register("desc")}
               rows={2}
-              className={`font-sans focus:outline-none font-normal mt-5  w-full border-b ${
+              className={`font-sans bg-white/10 focus:outline-none font-normal mt-5  w-full border-b ${
                 errors.desc ? "border-red-500" : " border-[#1F3D64]"
               } placeholder:text-[#1F3D64]`}
             ></textarea>
@@ -110,14 +110,14 @@ const ContactForm = () => {
             <div className="flex justify-center items-center pt-5">
               <button
                 disabled={buttonAction}
-                className=" w-[55%] py-3 text-[10px] font-semibold font-sans  rounded-full bg-[#1F3D64] text-white text-center transform delay-100 ease-out hover:border  hover:bg-white hover:border-[#1F3D64] hover:text-[#1F3D64] uppercase"
+                className=" w-[55%] py-3 text-[10px] font-semibold font-sans  rounded-full bg-[#1F3D64] text-white text-center transform delay-100 ease-out hover:border  hover:bg-white/10 hover:border-[#1F3D64] hover:text-[#1F3D64] uppercase"
               >
                 Send Message
               </button>
             </div>
           </form>
         </div>
-      </div>
+      {/* </div> */}
     </>
   );
 };

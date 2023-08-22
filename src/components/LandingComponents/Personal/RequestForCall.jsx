@@ -16,7 +16,7 @@ const schema = yup.object({
 const RequestForCall = ({ onCloseRequestModal }) => {
   const [buttonAction, setButtonAction] = useState(false);
   const list = ["Acne", "Hair loss", "Alopecia", "Skin tag", "Mole check"];
-  
+
   const {
     register,
     handleSubmit,
@@ -24,7 +24,6 @@ const RequestForCall = ({ onCloseRequestModal }) => {
     formState: { errors },
   } = useForm({ mode: "onChange", resolver: yupResolver(schema) });
   const onSubmit = async (data) => {
-    
     setButtonAction(true);
     const endpoint = process.env.REACT_APP_CALLBACK_ENDPOINTS;
 
@@ -38,10 +37,9 @@ const RequestForCall = ({ onCloseRequestModal }) => {
     try {
       await SendContactUs(endpoint, payload);
       reset();
-      
+
       setButtonAction(false);
-      onCloseRequestModal()
-      
+      onCloseRequestModal();
     } catch (err) {
       toast.error(err);
     }
@@ -49,21 +47,22 @@ const RequestForCall = ({ onCloseRequestModal }) => {
 
   return (
     <>
-    
-      <div className=" w-full px-10">
-        <h2 className="font-Herr font-normal text-[#C9E065] text-[72px] text-center">
+      <div className=" w-full px-2 md:px-10">
+        <h2 className="font-Herr font-normal text-[#C9E065] text-[52px] md:text-[72px] text-center">
           Request Call Back
         </h2>
-        <h1 className="text-[30px] font-normal font-intr text-center ">
+        <h1 className="text-[20px] md:text-[20px] font-normal font-intr text-center ">
           Let's Talk! Schedule a Call with Us Today.
         </h1>
-        <form className="pt-6" onSubmit={handleSubmit(onSubmit)}>
+        <form className="md:pt-6" onSubmit={handleSubmit(onSubmit)}>
           <input
             type="text"
             {...register("name")}
             placeholder="NAME"
             className={`font-sans focus:outline-none font-normal  w-full border-b  placeholder:text-[#1F3D64] ${
-              errors.name ? "border-red-500 mt-5" : "border-[#1F3D64] my-5"
+              errors.name
+                ? "border-red-500 mt-5"
+                : "border-[#1F3D64] my-3 md:my-5"
             }`}
           />
           {errors.name && (
@@ -76,7 +75,9 @@ const RequestForCall = ({ onCloseRequestModal }) => {
             {...register("email")}
             placeholder="EMAIL"
             className={`font-sans focus:outline-none font-normal  w-full border-b  placeholder:text-[#1F3D64] ${
-              errors.email ? "border-red-500 mt-5" : "border-[#1F3D64] my-5"
+              errors.email
+                ? "border-red-500 mt-5"
+                : "border-[#1F3D64] my-3 md:my-5"
             }`}
           />
           {errors.email && (
@@ -89,18 +90,22 @@ const RequestForCall = ({ onCloseRequestModal }) => {
             {...register("phone")}
             placeholder="PHONE NUMBER"
             className={`font-sans focus:outline-none font-normal  w-full border-b  placeholder:text-[#1F3D64] ${
-              errors.phone ? "border-red-500 mt-5" : "border-[#1F3D64] my-5"
+              errors.phone
+                ? "border-red-500 mt-5"
+                : "border-[#1F3D64] my-3 md:my-5"
             }`}
           />
           {errors.name && (
             <p className="text-red-500 text-sm text-left">
-              {errors.name.message}
+              {errors.phone.message}
             </p>
           )}
           <select
             {...register("service")}
             className={`focus:outline-none font-sans font-normal w-full border-b border-[#1F3D64] placeholder:text-[#1F3D64] ${
-              errors.service ? "border-red-500 mt-5" : "border-[#1F3D64] my-5"
+              errors.service
+                ? "border-red-500 mt-5"
+                : "border-[#1F3D64] my-3 md:my-5"
             }`}
           >
             <option value="">SELECT SERVICE</option>
@@ -112,7 +117,7 @@ const RequestForCall = ({ onCloseRequestModal }) => {
           </select>
           {errors.name && (
             <p className="text-red-500 text-sm text-left">
-              {errors.name.message}
+              {errors.service.message}
             </p>
           )}
 
@@ -126,7 +131,6 @@ const RequestForCall = ({ onCloseRequestModal }) => {
           </div>
         </form>
       </div>
-      
     </>
   );
 };

@@ -4,7 +4,7 @@ import { GoThreeBars } from "react-icons/go";
 import Sidebar from "./Sidebar";
 import { useLocation, Link } from "react-router-dom";
 import { RiArrowDropDownLine } from "react-icons/ri";
-const HomeHeader = ({ type, open }) => {
+const HomeHeader = ({ open }) => {
   const location = useLocation().pathname;
   // const location = "/"
   const [sideNavShow, setSideNavShow] = useState(false);
@@ -26,7 +26,7 @@ const HomeHeader = ({ type, open }) => {
   return (
     <>
       <Sidebar sidebarOpen={sideNavShow} setSidebarOpen={setSideNavShow} />
-      
+
       <div className="flex justify-between w-full bg-white border-t">
         <div className="w-1/6 p-2 pl-5">
           <Link to="/">
@@ -38,7 +38,7 @@ const HomeHeader = ({ type, open }) => {
             <Link
               to="/"
               className={`block hover:text-[#be9162] ${
-                location === "/" ? "border-b-2 border-green-500" : ""
+                location === "/" ? "border-b-4 border-[#1F3D64]" : ""
               }`}
             >
               HOME
@@ -46,7 +46,7 @@ const HomeHeader = ({ type, open }) => {
             <Link
               to="/aboutus"
               className={`block hover:text-[#be9162] ${
-                location === "/aboutus" ? "border-b-2 border-green-500" : ""
+                location === "/aboutus" ? "border-b-4 border-[#1F3D64]" : ""
               }`}
             >
               ABOUT
@@ -62,7 +62,7 @@ const HomeHeader = ({ type, open }) => {
                   to="/services"
                   className={`block hover:text-[#be9162] ${
                     location === "/services"
-                      ? "border-b-2 border-green-500"
+                      ? "border-b-4 border-[#1F3D64]"
                       : ""
                   }`}
                 >
@@ -90,7 +90,7 @@ const HomeHeader = ({ type, open }) => {
             <Link
               to="/booking"
               className={`block hover:text-[#be9162] ${
-                location === "/booking" ? "border-b-2 border-green-500" : ""
+                location === "/booking" ? "border-b-4 border-[#1F3D64]" : ""
               }`}
             >
               BOOKING
@@ -98,25 +98,24 @@ const HomeHeader = ({ type, open }) => {
             <Link
               to="/contactus"
               className={`block hover:text-[#be9162] ${
-                location === "/contactus" ? "border-b-2 border-green-500" : ""
+                location === "/contactus" ? "border-b-4 border-[#1F3D64]" : ""
               }`}
             >
               CONTACT US
             </Link>
           </nav>
 
-         
-        <div className="px-10 lg:px-10">
-        <GoThreeBars
-            className="text-[30px] cursor-pointer text-[#1E154E] lg:hidden"
-            onClick={() => setSideNavShow(true)}
-          />
-          <div
-            onClick={() => open(true)}
-            className="hidden lg:block border cursor-pointer rounded-full py-2 bg-[#1F3D64] transform delay-100 ease-out text-[#C9E065] hover:bg-white hover:text-[#1F3D64] px-5"
-          >
-            <h2 className="font-bold text-[16px]">REQUEST CALL BACK</h2>
-          </div>
+          <div className="px-10 lg:px-10">
+            <GoThreeBars
+              className="text-[30px] cursor-pointer text-[#1E154E] lg:hidden"
+              onClick={() => setSideNavShow(true)}
+            />
+            <div
+              onClick={() => open(true)}
+              className="hidden lg:block border cursor-pointer rounded-full py-2 bg-[#1F3D64] transform delay-100 ease-out text-[#C9E065] hover:bg-white hover:text-[#1F3D64] px-5"
+            >
+              <h2 className="font-bold text-[16px]">REQUEST CALL BACK</h2>
+            </div>
           </div>
         </div>
         {/* <div className="w-2/6 p-4 flex justify-end items-center">

@@ -4,30 +4,75 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 // import required modules
-import { Pagination } from "swiper";
-import { BsStarFill } from "react-icons/bs";
+import { Autoplay, Pagination } from "swiper";
+import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
 import avatar from "../../../assests/avatar.png";
 const Review = () => {
   const review = [
     {
       UserName: "Taylor Perkins",
       desc: " Very efficient and painless treatment",
+      rating: (
+        <>
+          <BsStarFill className="text-[#B58F2E] text-[20px]" />
+          <BsStarFill className="text-[#B58F2E] text-[20px]" />
+          <BsStarFill className="text-[#B58F2E] text-[20px]" />
+          <BsStarFill className="text-[#B58F2E] text-[20px]" />
+          <BsStarFill className="text-[#B58F2E] text-[20px]" />
+        </>
+      ),
     },
     {
       UserName: "George Thomas",
       desc: " Highly effective acne treatment that cleared my skin in no time!",
+      rating: (
+        <>
+          <BsStarFill className="text-[#B58F2E] text-[20px]" />
+          <BsStarFill className="text-[#B58F2E] text-[20px]" />
+          <BsStarFill className="text-[#B58F2E] text-[20px]" />
+          <BsStarFill className="text-[#B58F2E] text-[20px]" />
+          <BsStarFill className="text-[#B58F2E] text-[20px]" />
+        </>
+      ),
     },
     {
       UserName: "Amy Le Mar",
       desc: " Impressive results! This acne treatment minimized my blemishes and prevented new ones.",
+      rating: (
+        <>
+          <BsStarFill className="text-[#B58F2E] text-[20px]" />
+          <BsStarFill className="text-[#B58F2E] text-[20px]" />
+          <BsStarFill className="text-[#B58F2E] text-[20px]" />
+          <BsStarFill className="text-[#B58F2E] text-[20px]" />
+          <BsStar className="text-[#B58F2E] text-[20px]" />
+        </>
+      ),
     },
     {
       UserName: "Olivia Greens",
       desc: "Regained my confidence thanks to this effective acne treatment",
+      rating: (
+        <>
+          <BsStarFill className="text-[#B58F2E] text-[20px]" />
+          <BsStarFill className="text-[#B58F2E] text-[20px]" />
+          <BsStarFill className="text-[#B58F2E] text-[20px]" />
+          <BsStarFill className="text-[#B58F2E] text-[20px]" />
+          <BsStarHalf className="text-[#B58F2E] text-[20px]" />
+        </>
+      ),
     },
     {
       UserName: "Liam Jones ",
       desc: " Clear skin at last! This acne treatment exceeded my expectations",
+      rating: (
+        <>
+          <BsStarFill className="text-[#B58F2E] text-[20px]" />
+          <BsStarFill className="text-[#B58F2E] text-[20px]" />
+          <BsStarFill className="text-[#B58F2E] text-[20px]" />
+          <BsStarFill className="text-[#B58F2E] text-[20px]" />
+          <BsStarFill className="text-[#B58F2E] text-[20px]" />
+        </>
+      ),
     },
   ];
   return (
@@ -43,20 +88,16 @@ const Review = () => {
         </div>
         <div className="pt-[40px]">
           <Swiper
-            slidesPerView={4}
+            slidesPerView={1}
             spaceBetween={20}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+            }}
             pagination={{
               clickable: true,
             }}
             breakpoints={{
-              280: {
-                slidesPerView: 1,
-                spaceBetween: 20,
-              },
-              375: {
-                slidesPerView: 1,
-                spaceBetween: 20,
-              },
               640: {
                 slidesPerView: 2,
                 spaceBetween: 20,
@@ -70,38 +111,32 @@ const Review = () => {
                 spaceBetween: 50,
               },
             }}
-            modules={[Pagination]}
+            modules={[Pagination, Autoplay]}
             className="swiper_review"
           >
             <div className="grid lg:grid-cols-4 gap-5 ">
               {review.map((item, i) => (
                 <SwiperSlide key={i}>
-                  <div
-                    className=" p-4 rounded-md h-[280px] bg-white"
-                    style={{
-                      boxShadow: "0px 12px 12px rgba(0, 0, 0, 0.16)",
-                      border: " 3px solid rgba(28, 28, 28, 0.1)",
-                    }}
-                  >
-                    <div className="flex flex-col justify-center items-center">
-                      <img
-                        src={avatar}
-                        alt={avatar}
-                        className="object-cover rounded-full w-[32%]"
-                      />
-                      <div className=" flex items-center">
-                        <BsStarFill className="text-[#B58F2E] text-[22px]" />
-                        <span className="pl-2 font-mons font-extrabold text-[22px] text-[#1E1E1E]">
-                          5
-                        </span>
-                      </div>
-                      <h1 className="text-[#1F3D64] font-mons font-bold text-[18px] ">
-                        {item?.UserName}
-                      </h1>
-                      <p className=" pt-3  text-[#8C8C8C] text-center font-mons text-[14px] font-normal">
-                        {item?.desc}
-                      </p>
+                  <div className=" flex flex-col justify-center items-center p-4 rounded-md h-[180px] rounded-lg bg-gray-200 shadow-xl ">
+                    <h1 className="text-[#1F3D64] font-mons font-bold text-[18px] ">
+                      {item?.UserName}
+                    </h1>
+                    <div className=" flex items-center pt-3">
+                      {item?.rating}
                     </div>
+                    <p className=" pt-3 text-center font-mons text-[14px] font-normal">
+                      {item?.desc}
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 96 960 960"
+                        className="inline-block w-6"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M580 556h160V396H580v160Zm-360 0h160V396H220v160Zm406 220 80-160H520V336h280v288l-76 152h-98Zm-360 0 80-160H160V336h280v288l-76 152h-98Zm34-300Zm360 0Z"
+                        />
+                      </svg>
+                    </p>
                   </div>
                 </SwiperSlide>
               ))}

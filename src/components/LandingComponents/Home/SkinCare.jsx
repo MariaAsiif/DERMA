@@ -20,7 +20,7 @@ const SkinCare = () => {
     {
       pic: tr3,
       heading: "Allergy testing",
-      desc: "Allergy testing is a diagnostic procedure that helps identify specific substances (allergens) that trigger an allergic reaction in an individual...",
+      desc: "Allergy testing is a diagnostic procedure that helps identify specific substances that trigger an allergic reaction...",
     },
     {
       pic: tr4,
@@ -30,7 +30,7 @@ const SkinCare = () => {
     {
       pic: tr1,
       heading: "Mole Removel",
-      desc: "Mole removal refers to the medical procedure of removing a mole from the skin's surface. Moles, also known as nevi, are small clusters of pigmented cells...",
+      desc: "Mole removal refers to the medical procedure of removing a mole from the skin's surface.Mole are small clusters of pigmented cells...",
     },
   ];
   return (

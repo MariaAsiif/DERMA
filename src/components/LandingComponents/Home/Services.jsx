@@ -3,65 +3,45 @@ import sr1 from "../../../assests/Group 29.png";
 import sr2 from "../../../assests/Group 29 (1).png";
 import sr3 from "../../../assests/Group 29 (2).png";
 const Services = () => {
+  const myServices = [
+    {
+      pic: sr1,
+      heading: "Easy Accessibility",
+      desc: "Connect with us effortlessly via WhatsApp and email for quick and convenient communication.",
+    },
+    {
+      pic: sr2,
+      heading: "Individualized Care",
+      desc: "Receive personalized and tailored skincare solutions that cater to your unique needs and concerns.",
+    },
+    {
+      pic: sr3,
+      heading: "In-Depth Consultation",
+      desc: "Benefit from comprehensive consultations that delve deep into your skin health, ensuring thorough understanding and expert guidance.",
+    },
+  ];
   return (
-    <div className="container px-2 my-10 md:my-20 mx-auto md:px-6">
-  <section className="mb-5 lg:mb-10 text-center">
-    
-
-    <div className="grid lg:grid-cols-3 lg:gap-x-12">
-      <div className="mb-12 lg:mb-0">
-        <div
-          className="block h-full rounded-lg bg-[#1F3D64]">
-          <div className="flex justify-center">
-            <div className="-mt-8 inline-block rounded-full bg-[#C9E065] p-4 shadow-md">
-            <img src={sr1} alt={sr1} className="h-7 w-7" />
+    <div className="container px-2 mt-10 md:my-20 mx-auto md:px-6">
+      <section className="lg:mb-10 text-center">
+        <div className="grid lg:grid-cols-3 lg:gap-x-12">
+          {myServices.map((item, i) => (
+            <div className="mb-9 lg:mb-0" key={i + item.heading}>
+              <div className="block h-full rounded-lg bg-gray-200 shadow-xl">
+                <div className="flex justify-center">
+                  <div className="-mt-8 inline-block rounded-full bg-[#1F3D64] p-4 shadow-xl">
+                    <img src={item.pic} alt={item.pic} className="h-7 w-7" />
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h5 className="mb-4 text-lg font-semibold">{item.heading}</h5>
+                  <p>{item.desc}</p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="p-6 text-white">
-            <h5 className="mb-4 text-lg font-semibold text-[#C9E065]">Easy Accessibility</h5>
-            <p>
-            Connect with us effortlessly via WhatsApp and email for quick and convenient communication.
-            </p>
-          </div>
+          ))}
         </div>
-      </div>
-      <div className="mb-12 lg:mb-0">
-        <div
-          className="block h-full rounded-lg bg-[#1F3D64]">
-          <div className="flex justify-center">
-            <div className="-mt-8 inline-block rounded-full bg-[#C9E065] p-4 shadow-md">
-            <img src={sr2} alt={sr2} className="h-7 w-7" />
-            </div>
-          </div>
-          <div className="p-6 text-white">
-            <h5 className="mb-4 text-lg font-semibold text-[#C9E065]">Individualized Care</h5>
-            <p>
-            Receive personalized and tailored skincare solutions that cater to your unique needs and concerns.
-
-            </p>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div
-          className="block h-full rounded-lg bg-[#1F3D64]">
-          <div className="flex justify-center">
-            <div className="-mt-8 inline-block rounded-full bg-[#C9E065] p-4 shadow-md">
-            <img src={sr3} alt={sr3} className="h-7 w-7" />
-            </div>
-          </div>
-          <div className="p-6 text-white">
-            <h5 className="mb-4 text-lg font-semibold text-[#C9E065]">In-Depth Consultation</h5>
-            <p>
-            Benefit from comprehensive consultations that delve deep into your skin health, ensuring thorough understanding and expert guidance.
-            </p>
-          </div>
-        </div>
-      </div>
-
+      </section>
     </div>
-  </section>
-</div>
     // <div className="flex flex-col md:flex-row md:space-x-6 items-center justify-center pt-10">
     //   {/* First Image Block */}
     //   <div className="flex flex-col md:flex-row items-center md:px-5 py-5 ">

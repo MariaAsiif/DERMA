@@ -16,7 +16,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-import { Autoplay, EffectCards, EffectCoverflow, Pagination } from 'swiper';
+import 'swiper/css/free-mode';
+import { Autoplay, EffectCards, EffectCoverflow, FreeMode, Pagination } from 'swiper';
 
 // import required modules
 //import { EffectCoverflow, Pagination } from 'swiper/modules';
@@ -35,11 +36,13 @@ export default function BeforeAfter() {
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
+        freeMode={true}
         autoplay={{
           delay: 2000,
           disableOnInteraction: false,
         }}
-        slidesPerView={3}
+        slidesPerView={1}
+        loop={true}
         coverflowEffect={{
           rotate: 50,
           stretch: 0,
@@ -47,8 +50,17 @@ export default function BeforeAfter() {
           modifier: 1,
           slideShadows: true,
         }}
-        modules={[EffectCoverflow,Autoplay]}
+        initialSlide={1}
+        modules={[EffectCoverflow,Autoplay,FreeMode]}
         className="mySwiper"
+        breakpoints={{
+          
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+         
+        }}
       >
             {
               lists.map((item, i) => (
