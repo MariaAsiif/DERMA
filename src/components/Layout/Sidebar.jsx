@@ -248,7 +248,10 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen, show }) => {
                   </li>
                   <li className="pt-3">
                     <div
-                      onClick={() => setShowPopup(true)}
+                      onClick={() => {
+                        setShowPopup(true);
+                        setSidebarOpen(false);
+                      }}
                       className="border cursor-pointer rounded-full py-3 bg-[#1F3D64] text-[#C9E065] px-5"
                     >
                       <h2 className="font-bold text-[16px] cursor-pointer">
