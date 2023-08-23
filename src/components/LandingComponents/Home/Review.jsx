@@ -6,7 +6,6 @@ import "swiper/css/pagination";
 // import required modules
 import { Autoplay, Pagination } from "swiper";
 import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
-import avatar from "../../../assests/avatar.png";
 const Review = () => {
   const review = [
     {
