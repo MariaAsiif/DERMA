@@ -1,21 +1,20 @@
 import React from "react";
-import sr1 from "../../../assests/Group 29.png";
-import sr2 from "../../../assests/Group 29 (1).png";
-import sr3 from "../../../assests/Group 29 (2).png";
+import {IoIosMedkit} from 'react-icons/io'
+import { BsShieldPlus, BsSnow3 } from "react-icons/bs";
 const Services = () => {
   const myServices = [
     {
-      pic: sr1,
+      pic: <BsSnow3 className="h-7 w-7" color="white"/>,
       heading: "Easy Accessibility",
       desc: "Connect with us effortlessly via WhatsApp and email for quick and convenient communication.",
     },
     {
-      pic: sr2,
+      pic: <BsShieldPlus className="h-7 w-7" color="white"/>,
       heading: "Individualized Care",
       desc: "Receive personalized and tailored skincare solutions that cater to your unique needs and concerns.",
     },
     {
-      pic: sr3,
+      pic: <IoIosMedkit className="h-7 w-7" color="white"/>,
       heading: "In-Depth Consultation",
       desc: "Benefit from comprehensive consultations that delve deep into your skin health, ensuring thorough understanding and expert guidance.",
     },
@@ -29,7 +28,8 @@ const Services = () => {
               <div className="block h-full rounded-lg bg-gray-200 shadow-xl">
                 <div className="flex justify-center">
                   <div className="-mt-8 inline-block rounded-full bg-[#1F3D64] p-4 shadow-xl">
-                    <img src={item.pic} alt={item.pic} className="h-7 w-7" />
+                  {item.pic}
+                    
                   </div>
                 </div>
                 <div className="p-6">

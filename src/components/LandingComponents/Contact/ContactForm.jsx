@@ -40,7 +40,7 @@ const ContactForm = () => {
     <>
       {/* <div className="px-5 mb-5 lg:mb-10 text-center"> */}
         <div className="container mx-autox">
-          <h2 className="text-[#C9E065]  leading-0 lg:text-[72px] md:text-[60px] text-[40px] font-normal font-Herr ">
+          <h2 className="text-[#C9E065]  leading-0 lg:text-[72px] md:text-[60px] text-[40px] font-normal ">
             Contact Us{" "}
           </h2>
           <h1 className="text-[#1F3D64] lg:mt-[30px] uppercase leading-0 lg:text-[41px] md:text-[30px] text-[22px] font-sans font-semibold">

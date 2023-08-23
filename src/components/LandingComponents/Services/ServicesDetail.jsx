@@ -80,7 +80,7 @@ const ServicesDetails = ({ serviceDetail }) => {
             />
           </div>
           <div className="xl:w-[50%]">
-            <h2 className="text-[#B58F2E]  leading-0 lg:text-[60px] md:text-[50px] text-[40px] font-normal font-Herr ">
+            <h2 className="text-[#B58F2E]  leading-0 lg:text-[60px] md:text-[50px] text-[40px] font-normal">
               {serviceDetail?.Heading}{" "}
             </h2>
             <h1 className="text-[#1D1D1D] lg:-mt-[30px] uppercase leading-0 lg:text-[42px] md:text-[30px] text-[22px] font-intr font-normal">

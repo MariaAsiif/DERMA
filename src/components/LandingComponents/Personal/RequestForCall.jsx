@@ -48,7 +48,7 @@ const RequestForCall = ({ onCloseRequestModal }) => {
   return (
     <>
       <div className=" w-full px-2 md:px-10">
-        <h2 className="font-Herr font-normal text-[#C9E065] text-[52px] md:text-[72px] text-center">
+        <h2 className="font-normal text-[#C9E065] text-[52px] md:text-[72px] text-center">
           Request Call Back
         </h2>
         <h1 className="text-[20px] md:text-[20px] font-normal font-intr text-center ">

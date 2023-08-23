@@ -71,13 +71,13 @@ const HomeHeader = ({ open }) => {
                 <RiArrowDropDownLine className="ml-1 text-lg" />
               </span>
               {isDropdownOpen && (
-                <div className="absolute top-full left-0 bg-black text-white p-2 w-40 rounded-md shadow-md">
+                <div className="absolute top-full left-0 bg-black/80 text-white p-2 w-40 rounded-md shadow-md">
                   <ul>
                     {list.map((item, index) => (
                       <li key={index}>
                         <Link
                           to={`/service-detail/${index}`}
-                          className="block hover:bg-green-500 p-1 "
+                          className="block rounded-md hover:bg-[#C9E065] hover:text-black p-1 "
                         >
                           {item}
                         </Link>

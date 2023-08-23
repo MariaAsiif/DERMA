@@ -6,7 +6,7 @@ const SummerSkin = () => {
       <div className=" mb-5 lg:mb-10">
         <div className="bg-sky-200 pb-5">
           <div className="container mx-auto text-center relative">
-            <h2 className="text-white  leading-0 lg:text-[72px] text-[40px] md:text-[50px] font-normal font-Herr text-center">
+            <h2 className="text-white  leading-0 lg:text-[72px] text-[40px] md:text-[50px] font-normal text-center">
               Summer Skin Prep
             </h2>
             <h1 className="text-[#1F3D64]  uppercase leading-0 lg:text-[36px] text-[22px] md:text-[25px] font-sans font-medium">

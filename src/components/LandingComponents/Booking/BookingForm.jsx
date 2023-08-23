@@ -78,7 +78,7 @@ const BookingForm = () => {
         
             <div className='mb-5 lg:mb-10 text-center'>
                 <div className='container mx-auto  xl:px-20 px-5'>
-                    <h2 className='text-[#C9E065]  leading-0 lg:text-[72px] md:text-[60px] text-[40px] font-normal font-Herr '>Booking Now</h2>
+                    <h2 className='text-[#C9E065]  leading-0 lg:text-[72px] md:text-[60px] text-[40px] font-normal '>Booking Now</h2>
                     <h1 className='text-[#1F3D64] lg:-mt-[30px] uppercase leading-0 lg:text-[41px] md:text-[30px] text-[22px] font-sans font-semibold'>"Transform Yourself with Personalize Solutions"</h1>
 
                     {/* <form className='pt-6 max-w-[700px] mx-auto'>

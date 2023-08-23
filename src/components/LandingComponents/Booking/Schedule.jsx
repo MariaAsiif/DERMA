@@ -8,7 +8,7 @@ const Schedule = () => {
         <div className="container mx-auto xl:px-32">
           <div className="flex grid items-center gap-6 lg:grid-cols-2">
             <div className=" lg:mt-0">
-              <h2 className="text-[#B58F2E]  leading-0 lg:text-[60px] md:text-[50px] text-[40px] font-normal font-Herr ">
+              <h2 className="text-[#B58F2E]  leading-0 lg:text-[50px] md:text-[40px] text-[30px] font-normal mb-2">
                 Book Now for a Better You
               </h2>
               <h1 className="text-[#1F3D64] lg:-mt-[25px] uppercase leading-0 lg:text-[35px] md:text-[25px] text-[22px] font-sans font-semibold">

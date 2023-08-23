@@ -9,7 +9,7 @@ const Results = () => {
   return (
     <>
       <div className="container mx-auto  xl:px-20 px-5 pt-[50px] ">
-        <h2 className="text-[#C9E065]  leading-0 lg:text-[60px] text-[40px] md:text-[50px] font-normal font-Herr ">
+        <h2 className="text-[#C9E065]  leading-0 lg:text-[60px] text-[40px] md:text-[50px] font-normal">
           Acne Result
         </h2>
         <div className="flex lg:flex-nowrap flex-wrap justify-between items-center lg:-mt-[30px]">

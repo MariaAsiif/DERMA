@@ -6,7 +6,7 @@ const ServicesTreatment = () => {
     
     <div className=" px-2 md:px-0 mb-5 lg:mb-10 services" id="services">
       <div className="container mx-auto px-10 py-5 bg-[#1F3D64]">
-        <h1 className="text-center font-normal font-Herr xl:text-[60px] md:text-[45px] text-[40px] text-white ">
+        <h1 className="text-center font-normal xl:text-[60px] md:text-[45px] text-[40px] text-white ">
           How We Do It
         </h1>
         <h2 className="xl:text-[41px] md:text-[30px] text-[20px] text-[#C9E065] text-center uppercase">

@@ -55,7 +55,7 @@ const SurgeryDetail = ({surDetail}) => {
             <img src={surDetail?.pic} alt={surDetail?.pic} className='objet-cover' />
           </div>
           <div className='xl:w-[50%]'>
-            <h2 className='text-[#B58F2E]  leading-0 lg:text-[60px] md:text-[50px] text-[40px] font-normal font-Herr '>{surDetail?.Heading} </h2>
+            <h2 className='text-[#B58F2E]  leading-0 lg:text-[60px] md:text-[50px] text-[40px] font-normal '>{surDetail?.Heading} </h2>
             <h1 className='text-[#1D1D1D] lg:-mt-[30px] uppercase leading-0 lg:text-[42px] md:text-[30px] text-[22px] font-intr font-normal'>{surDetail?.subHeading}</h1>
 
             <p className='text-[16px] text-[#555555] font-mons font-medium pt-[20px] leading-[32px]'>{surDetail?.desc}</p>

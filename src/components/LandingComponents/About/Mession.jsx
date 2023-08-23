@@ -8,7 +8,7 @@ const Mession = () => {
             <div className="container mx-auto xl:px-32">
               <div className="flex grid items-center gap-12 lg:grid-cols-2">
                 <div className="mt-12 lg:mt-0">
-                  <h2 className="text-[#B58F2E]  leading-0 lg:text-[60px] md:text-[50px] text-[40px] font-normal font-Herr ">
+                  <h2 className="text-[#B58F2E]  leading-0 lg:text-[50px] md:text-[40px] text-[30px] font-normal mb-4">
                     Healthy Skin Begins Here{" "}
                   </h2>
                   <h1 className="text-[#1F3D64] lg:-mt-[30px] uppercase leading-0 lg:text-[41px] md:text-[30px] text-[22px] font-sans font-semibold">

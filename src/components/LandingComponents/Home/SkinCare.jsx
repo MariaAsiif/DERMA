@@ -24,12 +24,12 @@ const SkinCare = () => {
     },
     {
       pic: tr4,
-      heading: "Skin tag",
+      heading: "Skin Tag Removal",
       desc: "medically known as acrochordons, are small, soft, benign growths that typically appear as tiny, flesh-colored or slightly darker skin flaps...",
     },
     {
       pic: tr1,
-      heading: "Mole Removel",
+      heading: "Mole Check",
       desc: "Mole removal refers to the medical procedure of removing a mole from the skin's surface.Mole are small clusters of pigmented cells...",
     },
   ];
@@ -38,7 +38,7 @@ const SkinCare = () => {
       <div className="flex mb-10 sm:max-md:px-2">
         <div className="w-full">
           <div className="lg:ml-[9%] ml-[4%]">
-            <h2 className="text-[#C9E065]  leading-0 lg:text-[60px] md:text-[50px] text-[40px] font-normal font-Herr ">
+            <h2 className="text-[#C9E065]  leading-0 lg:text-[60px] md:text-[50px] text-[40px] font-normal">
               Our Services
             </h2>
             <h1 className="text-[#1F3D64] lg:-mt-[30px] uppercase leading-0 lg:text-[41px] text-[25px] md:text-[35px] font-sans font-semibold">
@@ -47,7 +47,7 @@ const SkinCare = () => {
             <div>
               <div className="container my-2 md:my-5 mx-auto md:px-2">
                 <section className=" text-center">
-                  <div className="grid gap-x-6 md:grid-cols-3 lg:gap-x-12">
+                  <div className="grid gap-x-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-x-12">
                     {treatment?.map((item, i) => (
                       <div className="mb-12" key={i}>
                         <div className="mb-6 flex justify-center">
@@ -62,7 +62,7 @@ const SkinCare = () => {
                           {item?.heading}
                         </h5>
 
-                        <p className="mb-4">{item?.desc}</p>
+                        <p className="mb-4 md:h-[130px] lg:h-[180px] xl:h-[110px] 2xl:h-[90px]">{item?.desc}</p>
                         <div className="mb-0 flex justify-center">
                           <Link
                             to={`/service-detail`}

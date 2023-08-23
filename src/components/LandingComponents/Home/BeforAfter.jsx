@@ -29,9 +29,10 @@ export default function BeforeAfter() {
     return (
         <>
         <div className='mb-5 lg:mb-10 px-2'>
-        <h2 className="text-center font-sans  font-medium text-[23px] p-2">
-            Before | After
-          </h2>
+        <h2 className="mb-2  leading-0 lg:text-[60px] md:text-[50px] text-[40px] font-normal text-center">
+        Before | After
+            </h2>
+        
           <Swiper
         effect={'coverflow'}
         grabCursor={true}
@@ -42,6 +43,7 @@ export default function BeforeAfter() {
           disableOnInteraction: false,
         }}
         slidesPerView={1}
+        spaceBetween={80}
         loop={true}
         coverflowEffect={{
           rotate: 50,
@@ -57,7 +59,7 @@ export default function BeforeAfter() {
           
           768: {
             slidesPerView: 3,
-            spaceBetween: 20,
+            spaceBetween: 50,
           },
          
         }}

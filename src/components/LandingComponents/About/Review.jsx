@@ -38,7 +38,7 @@ const Review = () => {
       <div className="mb-5 lg:mb-10 px-2">
         <div className="container mx-auto xl:px-20 ">
           <div className="text-center">
-            <h2 className="text-[#C9E065]  leading-0 lg:text-[60px] md:text-[50px] text-[40px] font-normal font-Herr ">
+            <h2 className="text-[#C9E065]  leading-0 lg:text-[60px] md:text-[50px] text-[40px] font-normal mb-2">
               Testimonialss
             </h2>
             <h1 className="text-[#1F3D64] lg:-mt-[30px] uppercase leading-0 lg:text-[41px] md:text-[30px] text-[22px] font-sans font-semibold">

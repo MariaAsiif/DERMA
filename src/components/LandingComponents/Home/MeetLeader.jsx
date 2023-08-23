@@ -11,7 +11,7 @@ const MeetLeader = () => {
               <div className="flex grid items-center lg:grid-cols-2">
                 <div className="mb-2 md:mt-12 lg:mt-0 lg:mb-0">
                   <div className="relative z-[1] block rounded-lg bg-[hsla(0,0%,100%,0.55)] px-6 py-2 md:py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] backdrop-blur-[25px] dark:bg-[hsla(0,0%,5%,0.7)] dark:shadow-black/20 md:px-12 lg:-mr-14">
-                    <h2 className="text-[#C9E065] text-[60px] font-normal font-Herr text-center mb-2">
+                    <h2 className="text-[#C9E065] text-[60px] font-normal text-center mb-2">
                       About Us
                     </h2>
                     <h1 className="text-[#1F3D64]  mb-4 uppercase lg:text-[30px] text-[20px] font-sans font-medium">

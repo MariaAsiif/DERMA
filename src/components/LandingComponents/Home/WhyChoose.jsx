@@ -15,7 +15,7 @@ const WhyChoose = () => {
               />
             </div>
             <div className="lg:pl-10 md:pl-5 w-[100%]">
-              <h2 className="text-white leading-0 lg:text-[60px] text-[40px] font-normal font-Herr ">
+              <h2 className="text-white leading-0 lg:text-[60px] text-[40px] font-normal">
                 Why Choose Us
               </h2>
               <h1 className="text-[#C9E065]  -mt-[10px] uppercase leading-0 lg:text-[41px] text-[25px] font-sans font-medium">
